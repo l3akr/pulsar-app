@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulsar — Collect PSR</title>
+<style>
+  :root {
+    --void: #09090f;
+    --surface: #12121e;
+    --border: #1e1e32;
+    --signal: #9945ff;
+    --ion: #00e5c3;
+    --solar: #F7CF31;
+    --text: #f0eeff;
+    --text-sec: rgba(240,238,255,0.6);
+    --text-mut: rgba(240,238,255,0.38);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--void);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Stars */
+  .stars {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  }
+  .star {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle var(--d, 3s) ease-in-out infinite alternate;
+    animation-delay: var(--delay, 0s);
+  }
+  @keyframes twinkle {
+    from { opacity: var(--min-op, 0.1); }
+    to   { opacity: var(--max-op, 0.6); }
+  }
+
+  .container {
+    position: relative; z-index: 1;
+    max-width: 860px; margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* Nav */
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 0 0;
+  }
+  .nav-logo {
+    font-size: 16px; letter-spacing: 6px; font-weight: 300;
+    color: var(--text-mut);
+  }
+  .nav-badge {
+    font-size: 11px; letter-spacing: 2px; color: var(--signal);
+    border: 0.5px solid rgba(153,69,255,0.4);
+    padding: 4px 10px; border-radius: 20px;
+    background: rgba(153,69,255,0.08);
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 80px 0 64px;
+  }  .hero-logo svg { width: 70px; height: 70px; }
+  .hero-title {
+    font-size: clamp(48px, 10vw, 80px);
+    font-weight: 200; letter-spacing: 12px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 0%, var(--signal) 60%, var(--ion) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .hero-ticker {
+    font-size: 13px; letter-spacing: 4px;
+    color: var(--signal); opacity: 0.8; margin-bottom: 20px;
+  }
+  .hero-sub {
+    font-size: 17px; color: var(--text-sec);
+    font-weight: 300; line-height: 1.7;
+    max-width: 520px; margin: 0 auto 40px;
+  }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--signal);
+    color: #fff; text-decoration: none;
+    padding: 14px 32px; border-radius: 12px;
+    font-size: 15px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+  }
+  .hero-cta:hover { opacity: 0.85; }
+
+  /* Stats */
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin: 48px 0;
+  }
+  .stat {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 20px;
+    text-align: center;
+  }
+  .stat-val {
+    font-size: 28px; font-weight: 200; margin-bottom: 4px;
+  }
+  .stat-lbl {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-mut);
+  }
+
+  /* Features */
+  .section-title {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--text-mut); margin-bottom: 20px;
+  }
+  .features {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+    margin-bottom: 48px;
+  }
+  .feature {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 20px;
+  }
+  .feature-icon { font-size: 24px; margin-bottom: 10px; }
+  .feature-title {
+    font-size: 15px; font-weight: 400; margin-bottom: 6px;
+  }
+  .feature-desc { font-size: 13px; color: var(--text-sec); line-height: 1.6; }
+
+  /* Roadmap */
+  .roadmap { margin-bottom: 48px; }
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
+    width: 1px; background: linear-gradient(to bottom, var(--signal), transparent);
+  }
+  .tl-item { position: relative; margin-bottom: 24px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -22px; top: 5px;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--border);
+  }
+  .tl-item.done::before { background: var(--ion); box-shadow: 0 0 8px rgba(0,229,195,0.5); }
+  .tl-item.active::before { background: var(--solar); box-shadow: 0 0 8px rgba(247,207,49,0.5); }
+  .tl-item.next::before { background: var(--signal); box-shadow: 0 0 8px rgba(153,69,255,0.4); }
+  .tl-label {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .tl-item.done .tl-label  { color: var(--ion); }
+  .tl-item.active .tl-label { color: var(--solar); }
+  .tl-item.next .tl-label  { color: var(--signal); }
+  .tl-item.future .tl-label { color: var(--text-mut); }
+  .tl-title { font-size: 15px; color: var(--text); margin-bottom: 3px; }
+  .tl-desc  { font-size: 13px; color: var(--text-sec); }
+
+  /* Contact */
+  .contact {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 28px; text-align: center;
+    margin-bottom: 48px;
+  }
+  .contact h3 { font-size: 18px; font-weight: 300; margin-bottom: 8px; }
+  .contact p  { font-size: 14px; color: var(--text-sec); margin-bottom: 16px; }
+  .contact a  {
+    color: var(--ion); text-decoration: none;
+    font-size: 14px; letter-spacing: 0.5px;
+  }
+  .contact a:hover { opacity: 0.8; }
+
+  /* Footer */
+  footer {
+    border-top: 0.5px solid var(--border); padding-top: 24px;
+    text-align: center; font-size: 12px; color: var(--text-mut);
+    letter-spacing: 1px;
+  }
+  footer strong { color: var(--signal); }
+
+  /* Disclaimer */
+  .disclaimer {
+    background: rgba(255,77,109,0.05);
+    border: 0.5px solid rgba(255,77,109,0.25);
+    border-radius: 10px; padding: 14px 18px;
+    font-size: 12px; color: rgba(255,77,109,0.8);
+    line-height: 1.7; margin-bottom: 32px;
+  }
+
+  @media (max-width: 600px) {
+    .stats    { grid-template-columns: 1fr; }
+    .features { grid-template-columns: 1fr; }
+    .hero-title { letter-spacing: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Stars -->
+<div class="stars" id="stars"></div>
+
+<div class="container">
+  <nav>
+    <span class="nav-logo">PULSAR</span>
+    <span class="nav-badge">$PSR · SOLANA</span>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">    <div class="hero-title">PULSAR</div>
+    <div class="hero-ticker">$PSR · SOLANA BLOCKCHAIN</div>
+    <p class="hero-sub">
+      Active ta station spatiale et accumule des points PSR chaque jour.
+      Les premiers utilisateurs gagnent beaucoup plus — rejoins tôt.
+    </p>
+    <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="hero-cta">
+      ▶ Disponible sur Google Play
+    </a>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-val" style="color:#00e5c3">0.1</div>
+      <div class="stat-lbl">PSR / heure (taux initial)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" style="color:#9945ff">21</div>
+      <div class="stat-lbl">Paliers de réduction</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val" style="color:#F7CF31">10M</div>
+      <div class="stat-lbl">Supply totale $PSR</div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="section-title">Fonctionnalités</div>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title" style="color:#00e5c3">Sessions 12h</div>
+      <div class="feature-desc">Lance une session toutes les 12 heures et accumule des PSR automatiquement. Reviens à la fin pour en lancer une nouvelle.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📉</div>
+      <div class="feature-title" style="color:#F7CF31">Taux dégressif</div>
+      <div class="feature-desc">Le taux de récompense diminue à chaque palier d'utilisateurs. Les pionniers gagnent significativement plus.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👥</div>
+      <div class="feature-title" style="color:#9945ff">Parrainage</div>
+      <div class="feature-desc">Partage ton code personnel. +1% de taux par filleul actif dans les 48 dernières heures. Sans limite.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⭐</div>
+      <div class="feature-title" style="color:#F7CF31">VIP</div>
+      <div class="feature-desc">Bonus permanent de +5% à +20% sur ton taux de récompense et suppression des publicités.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🚀</div>
+      <div class="feature-title" style="color:#00e5c3">Boost</div>
+      <div class="feature-desc">Regarde une courte pub pour activer +2% pendant 1 heure. Gratuit pour les membres VIP.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-title" style="color:#9945ff">Confidentialité</div>
+      <div class="feature-desc">Aucun email requis. Inscription avec pseudonyme et mot de passe uniquement. Aucune donnée personnelle collectée.</div>
+    </div>
+  </div>
+
+  <!-- Roadmap -->
+  <div class="roadmap">
+    <div class="section-title">Roadmap</div>
+    <div class="timeline">
+      <div class="tl-item done">
+        <div class="tl-label">✓ Complété</div>
+        <div class="tl-title">Phase 0 + 1 — Core</div>
+        <div class="tl-desc">Auth, collecte, paliers, parrainage, Station, onboarding.</div>
+      </div>
+      <div class="tl-item active">
+        <div class="tl-label">En cours</div>
+        <div class="tl-title">Phase 2 — Monétisation</div>
+        <div class="tl-desc">AdMob, RevenueCat, notifications push, retrait avec PIN, Google Play.</div>
+      </div>
+      <div class="tl-item next">
+        <div class="tl-label">Q3 2026</div>
+        <div class="tl-title">Phase 3 — Blockchain</div>
+        <div class="tl-desc">Token SPL $PSR sur Solana mainnet, mint automatique, iOS App Store.</div>
+      </div>
+      <div class="tl-item future">
+        <div class="tl-label">2027</div>
+        <div class="tl-title">Phase 4 — Écosystème</div>
+        <div class="tl-desc">Verrouillage de PSR, loterie on-chain, WalletConnect, vote DAO.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact">
+    <h3>Contact & Support</h3>
+    <p>Une question ? Un problème avec l'application ?</p>
+    <a href="mailto:mine.pulsar@proton.me">mine.pulsar@proton.me</a>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="disclaimer">
+    Les points PSR sont des récompenses virtuelles accumulées dans l'application. Cette application est une simulation de divertissement et n'implique pas d'argent réel ni de jeux d'argent. Le token $PSR est un token utilitaire de récompense dont la valeur peut être nulle.
+  </div>
+
+  <footer>
+    <p><strong>PULSAR</strong> · $PSR Token · Solana Blockchain · © 2026</p>
+  </footer>
+</div>
+
+<script>
+  // Generate stars
+  const container = document.getElementById('stars');
+  const count = 180;
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = 0.8 + Math.random() * 2.2;
+    s.style.cssText = `
+      width: ${size}px; height: ${size}px;
+      left: ${Math.random() * 100}%;
+      top: ${Math.random() * 100}%;
+      --min-op: ${0.05 + Math.random() * 0.15};
+      --max-op: ${0.3 + Math.random() * 0.5};
+      --d: ${2 + Math.random() * 4}s;
+      --delay: ${Math.random() * 5}s;
+    `;
+    container.appendChild(s);
+  }
+</script>
+</body>
+</html>
