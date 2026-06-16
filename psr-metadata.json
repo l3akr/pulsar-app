@@ -1,0 +1,17 @@
+{
+  "name": "Pulsar",
+  "symbol": "PSR",
+  "description": "Pulsar: Space Rewards token on Solana",
+  "image": "https://l3akr.github.io/pulsar-app/icon.png",
+  "external_url": "https://l3akr.github.io/pulsar-app/",
+  "attributes": [],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://l3akr.github.io/pulsar-app/icon.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
