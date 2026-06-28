@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="EVICt9A1UcUioZi3C_gRhvcUnY8bRk7mDEge3Q3YzXw" />
+<link rel="icon" type="image/png" href="pulsar-logo.png">
+<link rel="apple-touch-icon" href="pulsar-logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pulsar — Collect PSR</title>
 <style>
@@ -25,8 +27,10 @@
   .nav-wp { font-size: 11px; letter-spacing: 2px; color: var(--text-mut); border: 0.5px solid var(--border); padding: 4px 10px; border-radius: 20px; background: rgba(255,255,255,0.03); text-decoration: none; transition: color 0.2s, border-color 0.2s; cursor: pointer; }
   .nav-wp:hover { color: var(--text-sec); border-color: rgba(255,255,255,0.15); }
   .hero { text-align: center; padding: 80px 0 64px; }
-  .hero-title { font-size: clamp(48px, 10vw, 80px); font-weight: 200; letter-spacing: 12px; text-transform: uppercase; color: #ffffff; margin-bottom: 6px; }
-  .hero-tagline { font-size: clamp(13px, 3vw, 18px); font-weight: 300; letter-spacing: 6px; text-transform: uppercase; color: var(--signal); opacity: 0.85; margin-bottom: 20px; }
+  .hero-logo { width: 140px; height: 140px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; overflow: hidden; box-shadow: 0 0 32px rgba(153,69,255,0.25); }
+  .hero-logo img { width: 124px; height: 124px; object-fit: contain; }
+  .hero-tagline { font-size: clamp(17px, 3.4vw, 22px); font-weight: 300; letter-spacing: 6px; text-transform: uppercase; color: var(--signal); opacity: 0.75; margin-bottom: 20px; }
+  .hero-title { font-size: clamp(52px, 11vw, 88px); font-weight: 100; letter-spacing: 12px; text-transform: uppercase; color: #ffffff; margin-bottom: 4px; }
   .hero-sub { font-size: 17px; color: var(--text-sec); font-weight: 300; line-height: 1.7; max-width: 520px; margin: 0 auto 40px; }
   .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--signal); color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-size: 15px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: opacity 0.2s; }
@@ -164,6 +168,7 @@
   </nav>
 
   <div class="hero">
+    <div class="hero-logo"><img src="pulsar-logo.png" alt="Pulsar"></div>
     <div class="hero-title">PULSAR</div>
     <div class="hero-tagline">SPACE REWARDS</div>
     <p class="hero-sub" id="hero-sub">Active ta station spatiale et accumule des points PSR chaque jour. Les premiers utilisateurs gagnent beaucoup plus — rejoins tôt.</p>
