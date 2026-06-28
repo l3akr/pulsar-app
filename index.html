@@ -6,12 +6,65 @@
 <link rel="icon" type="image/png" href="pulsar-logo.png">
 <link rel="apple-touch-icon" href="pulsar-logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulsar — Space Rewards · Collect $PSR</title>
+
+<!-- SEO primary -->
+<meta name="description" content="Pulsar is a mobile app that lets you collect $PSR tokens every day. Start a 12h session, earn rewards, and join the space mining community.">
+<meta name="keywords" content="Pulsar, PSR, PSR token, collect crypto, mobile mining, Solana, space rewards, crypto app, token, airdrop">
+<meta name="author" content="Pulsar">
+<link rel="canonical" href="https://pulsarminer.space">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="fr" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="en" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="es" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="pt" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="de" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="ru" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="hi" href="https://pulsarminer.space">
+<link rel="alternate" hreflang="x-default" href="https://pulsarminer.space">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pulsarminer.space">
+<meta property="og:title" content="Pulsar — Space Rewards · Collect $PSR">
+<meta property="og:description" content="Collect $PSR tokens every day with Pulsar. Start a 12h session, earn rewards, and join the space mining community on Solana.">
+<meta property="og:image" content="https://pulsarminer.space/pulsar-logo.png">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pulsar — Space Rewards · Collect $PSR">
+<meta name="twitter:description" content="Collect $PSR tokens every day with Pulsar. Available on Google Play.">
+<meta name="twitter:image" content="https://pulsarminer.space/pulsar-logo.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Pulsar — Space Rewards",
+  "description": "Mobile app to collect $PSR tokens daily through 12h sessions on Solana.",
+  "url": "https://pulsarminer.space",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Android",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "installUrl": "https://play.google.com/store/apps/details?id=com.pulsar.mine",
+  "image": "https://pulsarminer.space/pulsar-logo.png",
+  "inLanguage": ["fr","en","es","pt","de","ru","hi"]
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pulsar — Collect PSR</title>
 <style>
   :root {
     --void: #09090f; --surface: #12121e; --border: #1e1e32;
     --signal: #9945ff; --ion: #00e5c3; --solar: #F7CF31; --nova: #ff4d6d;
-    --text: #f0eeff; --text-sec: rgba(240,238,255,0.6); --text-mut: rgba(240,238,255,0.38);
+    --text: #f0eeff; --text-sec: rgba(240,238,255,0.75); --text-mut: rgba(240,238,255,0.65);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--void); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; overflow-x: hidden; }
@@ -22,14 +75,14 @@
   nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0 0; }
   .nav-logo { font-size: 16px; letter-spacing: 6px; font-weight: 300; color: var(--text-mut); }
   .nav-right { display: flex; align-items: center; gap: 12px; }
-  .nav-badge { font-size: 11px; letter-spacing: 2px; color: var(--signal); border: 0.5px solid rgba(153,69,255,0.4); padding: 4px 10px; border-radius: 20px; background: rgba(153,69,255,0.08); text-decoration: none; transition: opacity 0.2s; }
+  .nav-badge { font-size: 13px; letter-spacing: 2px; color: var(--signal); border: 0.5px solid rgba(153,69,255,0.4); padding: 4px 10px; border-radius: 20px; background: rgba(153,69,255,0.08); text-decoration: none; transition: opacity 0.2s; }
   .nav-badge:hover { opacity: 0.8; }
-  .nav-wp { font-size: 11px; letter-spacing: 2px; color: var(--text-mut); border: 0.5px solid var(--border); padding: 4px 10px; border-radius: 20px; background: rgba(255,255,255,0.03); text-decoration: none; transition: color 0.2s, border-color 0.2s; cursor: pointer; }
+  .nav-wp { font-size: 13px; letter-spacing: 2px; color: var(--text-mut); border: 0.5px solid var(--border); padding: 4px 10px; border-radius: 20px; background: rgba(255,255,255,0.03); text-decoration: none; transition: color 0.2s, border-color 0.2s; cursor: pointer; }
   .nav-wp:hover { color: var(--text-sec); border-color: rgba(255,255,255,0.15); }
   .hero { text-align: center; padding: 80px 0 64px; }
   .hero-logo { width: 140px; height: 140px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; overflow: hidden; box-shadow: 0 0 32px rgba(153,69,255,0.25); }
   .hero-logo img { width: 124px; height: 124px; object-fit: contain; }
-  .hero-tagline { font-size: clamp(17px, 3.4vw, 22px); font-weight: 300; letter-spacing: 6px; text-transform: uppercase; color: var(--signal); opacity: 0.75; margin-bottom: 20px; }
+  .hero-tagline { font-size: clamp(17px, 3.4vw, 22px); font-weight: 300; letter-spacing: 6px; text-transform: uppercase; color: var(--signal); opacity: 0.9; margin-bottom: 20px; }
   .hero-title { font-size: clamp(52px, 11vw, 88px); font-weight: 100; letter-spacing: 12px; text-transform: uppercase; color: #ffffff; margin-bottom: 4px; }
   .hero-sub { font-size: 17px; color: var(--text-sec); font-weight: 300; line-height: 1.7; max-width: 520px; margin: 0 auto 40px; }
   .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
@@ -40,13 +93,13 @@
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 48px 0; }
   .stat { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
   .stat-val { font-size: 28px; font-weight: 200; margin-bottom: 4px; }
-  .stat-lbl { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-mut); }
-  .section-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-mut); margin-bottom: 20px; }
+  .stat-lbl { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-mut); }
+  .section-title { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-mut); margin-bottom: 20px; }
   .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 48px; }
   .feature { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 20px; }
   .feature-icon { font-size: 24px; margin-bottom: 10px; }
-  .feature-title { font-size: 15px; font-weight: 400; margin-bottom: 6px; }
-  .feature-desc { font-size: 13px; color: var(--text-sec); line-height: 1.6; }
+  .feature-title { font-size: 17px; font-weight: 400; margin-bottom: 6px; }
+  .feature-desc { font-size: 15px; color: var(--text-sec); line-height: 1.6; }
   .roadmap { margin-bottom: 48px; }
   .timeline { position: relative; padding-left: 28px; }
   .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(to bottom, var(--signal), transparent); }
@@ -55,21 +108,21 @@
   .tl-item.done::before { background: var(--ion); box-shadow: 0 0 8px rgba(0,229,195,0.5); }
   .tl-item.active::before { background: var(--solar); box-shadow: 0 0 8px rgba(247,207,49,0.5); }
   .tl-item.next::before { background: var(--signal); box-shadow: 0 0 8px rgba(153,69,255,0.4); }
-  .tl-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px; }
+  .tl-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px; }
   .tl-item.done .tl-label { color: var(--ion); }
   .tl-item.active .tl-label { color: var(--solar); }
   .tl-item.next .tl-label { color: var(--signal); }
   .tl-item.future .tl-label { color: var(--text-mut); }
-  .tl-title { font-size: 15px; color: var(--text); margin-bottom: 3px; }
-  .tl-desc { font-size: 13px; color: var(--text-sec); }
+  .tl-title { font-size: 17px; color: var(--text); margin-bottom: 3px; }
+  .tl-desc { font-size: 15px; color: var(--text-sec); }
   .contact { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 28px; text-align: center; margin-bottom: 48px; }
   .contact h3 { font-size: 18px; font-weight: 300; margin-bottom: 8px; }
-  .contact p { font-size: 14px; color: var(--text-sec); margin-bottom: 16px; }
-  .contact a { color: var(--ion); text-decoration: none; font-size: 14px; letter-spacing: 0.5px; }
+  .contact p { font-size: 16px; color: var(--text-sec); margin-bottom: 16px; }
+  .contact a { color: var(--ion); text-decoration: none; font-size: 16px; letter-spacing: 0.5px; }
   .contact a:hover { opacity: 0.8; }
-  footer { border-top: 0.5px solid var(--border); padding-top: 24px; text-align: center; font-size: 12px; color: var(--text-mut); letter-spacing: 1px; }
+  footer { border-top: 0.5px solid var(--border); padding-top: 24px; text-align: center; font-size: 14px; color: var(--text-mut); letter-spacing: 1px; }
   footer strong { color: var(--signal); }
-  .disclaimer { background: rgba(255,77,109,0.05); border: 0.5px solid rgba(255,77,109,0.25); border-radius: 10px; padding: 14px 18px; font-size: 12px; color: rgba(255,77,109,0.8); line-height: 1.7; margin-bottom: 32px; }
+  .disclaimer { background: rgba(255,77,109,0.05); border: 0.5px solid rgba(255,77,109,0.25); border-radius: 10px; padding: 14px 18px; font-size: 14px; color: rgba(255,77,109,0.8); line-height: 1.7; margin-bottom: 32px; }
 
   /* Whitepaper overlay */
   #wp-overlay { display: none; position: fixed; inset: 0; z-index: 100; background: var(--void); overflow-y: auto; }
