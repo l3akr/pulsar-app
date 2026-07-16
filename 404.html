@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  const path = window.location.pathname;
+  if (path.startsWith('/ref/')) {
+    // Extrait le code et redirige vers ref/index.html avec le code en query param
+    const code = path.replace('/ref/', '').replace(/\/$/, '');
+    window.location.replace('/ref/?code=' + encodeURIComponent(code));
+  } else {
+    window.location.replace('/');
+  }
+</script>
+</head>
+</html>
