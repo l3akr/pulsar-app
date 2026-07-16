@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.pulsar.mine",
+    "sha256_cert_fingerprints": [
+      "B0:BA:5C:BE:58:3C:DB:D3:38:10:1B:56:56:EA:13:14:06:9D:8F:94:DB:1E:B0:94:2F:0F:A3:A9:FA:0C:0F:2E"
+    ]
+  }
+}]
