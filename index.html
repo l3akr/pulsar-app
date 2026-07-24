@@ -190,6 +190,8 @@
   .wp-content .nova-card p { color: rgba(255,77,109,0.9); font-size: 12px; line-height: 1.8; }
   .wp-content .mono { font-family: monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--ion); }
 
+  .social-link { font-size: 13px; letter-spacing: 1.5px; color: var(--text-mut); text-decoration: none; border: 0.5px solid var(--border); border-radius: 20px; padding: 6px 14px; background: rgba(255,255,255,0.03); transition: color 0.2s, border-color 0.2s; }
+  .social-link:hover { color: var(--text-sec); border-color: rgba(255,255,255,0.15); }
   @media (max-width: 600px) {
     .stats { grid-template-columns: 1fr; }
     .features { grid-template-columns: 1fr; }
@@ -230,6 +232,18 @@
       <a class="hero-cta-sec" onclick="openWP()" id="cta-wp">📄 Whitepaper</a>
     </div>
     <a href="https://explorer.solana.com/address/6pw7HhQqyvumXdHh53BhhaqtwTZUC2Gw2SEEbG6xCNyW" target="_blank" rel="noopener" id="explorer-link" style="display:inline-block;margin-top:18px;font-size:12px;letter-spacing:1.5px;color:var(--text-mut);text-decoration:none;border-bottom:0.5px solid rgba(255,255,255,0.12);padding-bottom:2px;transition:color 0.2s;">🔍 Voir le token sur Solana Explorer</a>
+    <!-- Social links -->
+    <div id="social-links" style="display:flex;gap:16px;justify-content:center;align-items:center;margin-top:24px;flex-wrap:wrap;">
+      <a href="https://x.com/pulsarminer" target="_blank" rel="noopener" class="social-link">𝕏 Twitter</a>
+      <a href="https://t.me/pulsarminer" target="_blank" rel="noopener" class="social-link">✈ Telegram</a>
+      <a href="https://instagram.com/pulsar.miner" target="_blank" rel="noopener" class="social-link">◎ Instagram</a>
+    </div>
+    <!-- Product Hunt badge -->
+    <div style="margin-top:24px;">
+      <a href="https://www.producthunt.com/products/pulsar-space-rewards?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-pulsar-space-rewards" target="_blank" rel="noopener noreferrer">
+        <img alt="Pulsar — Space Rewards on Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1204016&theme=dark&t=1784935755626" style="display:block;margin:0 auto;">
+      </a>
+    </div>
   </div>
 
   <div class="stats">
@@ -387,6 +401,9 @@ const T = {
   disclaimer:   FR ? 'Les points PSR sont des récompenses virtuelles accumulées dans l\'application. Cette application est une simulation de divertissement et n\'implique pas d\'argent réel ni de jeux d\'argent. Le token $PSR est un token utilitaire de récompense dont la valeur peut être nulle.'
                    : 'PSR points are virtual rewards accumulated in the app. This application is an entertainment simulation and does not involve real money or gambling. The $PSR token is a utility reward token whose value may be zero.',
   explorerLink: FR ? '🔍 Voir le token sur Solana Explorer' : '🔍 View token on Solana Explorer',
+  socialX:    'X / Twitter',
+  socialTg:   'Telegram',
+  socialIg:   'Instagram',
   wpClose: FR ? '✕ Fermer' : '✕ Close',
 };
 
