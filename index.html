@@ -70,7 +70,7 @@
   .nav-badge:hover { opacity: 0.8; }
 
   /* Hero */
-  .hero { text-align: center; padding: 72px 0 56px; }
+  .hero { text-align: center; padding: 72px 0 56px; min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
   .hero-logo { width: 130px; height: 130px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; overflow: hidden; animation: pulse-glow 3s ease-in-out infinite; }
   @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 40px rgba(153,69,255,0.25), 0 0 80px rgba(153,69,255,0.1); } 50% { box-shadow: 0 0 70px rgba(153,69,255,0.45), 0 0 140px rgba(153,69,255,0.18); } }
   .hero-logo img { width: 114px; height: 114px; object-fit: contain; }
@@ -264,6 +264,7 @@
 
     <p class="hero-sub" id="hero-sub-1">Collect $PSR tokens every day.</p>
     <p class="hero-sub" id="hero-sub-2">No email. No KYC. No data collected.</p>
+    <div style="height:20px"></div>
     <div class="hero-cta-wrap">
       <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="hero-cta" id="cta-play">▶ Download on Google Play</a>
       <div class="hero-sec-links">
