@@ -6,15 +6,11 @@
 <link rel="icon" type="image/png" href="pulsar-logo.png">
 <link rel="apple-touch-icon" href="pulsar-logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulsar — Space Rewards · Collect $PSR</title>
-
-<!-- SEO primary -->
-<meta name="description" content="Pulsar is a mobile app that lets you collect $PSR tokens every day. Start a 12h session, earn rewards, and join the space mining community.">
-<meta name="keywords" content="Pulsar, PSR, PSR token, collect crypto, mobile mining, Solana, space rewards, crypto app, token, airdrop">
+<title>Pulsar: Space Rewards — Collect $PSR · No KYC · Solana</title>
+<meta name="description" content="Pulsar: Space Rewards is a privacy-first mobile crypto app. Collect $PSR tokens daily with no KYC, no email, no data collected. Open beta on Android — Solana blockchain.">
+<meta name="keywords" content="Pulsar, PSR, PSR token, pulsar miner, pulsar space rewards, collect crypto, mobile mining, Solana, space rewards, crypto app, no kyc crypto, anonymous crypto app, pulsar psr solana">
 <meta name="author" content="Pulsar">
 <link rel="canonical" href="https://pulsarminer.space">
-
-<!-- Hreflang -->
 <link rel="alternate" hreflang="fr" href="https://pulsarminer.space">
 <link rel="alternate" hreflang="en" href="https://pulsarminer.space">
 <link rel="alternate" hreflang="es" href="https://pulsarminer.space">
@@ -23,32 +19,23 @@
 <link rel="alternate" hreflang="ru" href="https://pulsarminer.space">
 <link rel="alternate" hreflang="hi" href="https://pulsarminer.space">
 <link rel="alternate" hreflang="x-default" href="https://pulsarminer.space">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pulsarminer.space">
-<meta property="og:title" content="Pulsar — Space Rewards · Collect $PSR">
-<meta property="og:description" content="Collect $PSR tokens every day with Pulsar. Start a 12h session, earn rewards, and join the space mining community on Solana.">
+<meta property="og:title" content="Pulsar: Space Rewards — Collect $PSR · No KYC · Solana">
+<meta property="og:description" content="Collect $PSR tokens every day. No email, no KYC, no data collected. Open beta on Android.">
 <meta property="og:image" content="https://pulsarminer.space/pulsar-logo.png">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="pt_BR">
-<meta property="og:locale:alternate" content="de_DE">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pulsar — Space Rewards · Collect $PSR">
-<meta name="twitter:description" content="Collect $PSR tokens every day with Pulsar. Available on Google Play.">
+<meta name="twitter:title" content="Pulsar: Space Rewards — Collect $PSR · No KYC · Solana">
+<meta name="twitter:description" content="Collect $PSR tokens every day with Pulsar. No email, no KYC. Available on Google Play.">
 <meta name="twitter:image" content="https://pulsarminer.space/pulsar-logo.png">
-
-<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MobileApplication",
-  "name": "Pulsar — Space Rewards",
-  "description": "Mobile app to collect $PSR tokens daily through 12h sessions on Solana.",
+  "name": "Pulsar: Space Rewards",
+  "description": "Privacy-first mobile app to collect $PSR tokens daily. No KYC, no email, no data collected. Solana blockchain.",
   "url": "https://pulsarminer.space",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Android",
@@ -58,82 +45,105 @@
   "inLanguage": ["fr","en","es","pt","de","ru","hi"]
 }
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulsar — Collect PSR</title>
 <style>
   :root {
     --void: #09090f; --surface: #12121e; --border: #1e1e32;
     --signal: #9945ff; --ion: #00e5c3; --solar: #F7CF31; --nova: #ff4d6d;
-    --text: #f0eeff; --text-sec: rgba(240,238,255,0.75); --text-mut: rgba(240,238,255,0.65);
+    --text: #f0eeff; --text-sec: rgba(240,238,255,0.75); --text-mut: rgba(240,238,255,0.42);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--void); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; overflow-x: hidden; }
   .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-  .star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle var(--d, 3s) ease-in-out infinite alternate; animation-delay: var(--delay, 0s); }
-  @keyframes twinkle { from { opacity: var(--min-op, 0.1); } to { opacity: var(--max-op, 0.6); } }
-  .container { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+  .star { position: absolute; background: #fff; border-radius: 50%; animation: twinkle var(--d,3s) ease-in-out infinite alternate; animation-delay: var(--delay,0s); }
+  @keyframes twinkle { from { opacity: var(--min-op,0.1); } to { opacity: var(--max-op,0.6); } }
+  .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 48px 80px; }
+
+  /* Nav */
   nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0 0; }
-  .nav-logo { font-size: 16px; letter-spacing: 6px; font-weight: 300; color: var(--text-mut); }
+  .nav-socials { display: flex; align-items: center; gap: 10px; }
+  .nav-social-icon { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; border: 0.5px solid var(--border); background: rgba(255,255,255,0.03); text-decoration: none; color: var(--text-mut); transition: border-color 0.2s, color 0.2s; }
+  .nav-social-icon:hover { border-color: rgba(255,255,255,0.2); color: var(--text-sec); }
   .nav-right { display: flex; align-items: center; gap: 12px; }
-  .nav-badge { font-size: 13px; letter-spacing: 2px; color: var(--signal); border: 0.5px solid rgba(153,69,255,0.4); padding: 4px 10px; border-radius: 20px; background: rgba(153,69,255,0.08); text-decoration: none; transition: opacity 0.2s; }
+  .nav-wp { font-size: 13px; letter-spacing: 2px; color: var(--text-mut); border: 0.5px solid var(--border); padding: 6px 14px; border-radius: 20px; background: rgba(255,255,255,0.03); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+  .nav-wp:hover { color: var(--text-sec); }
+  .nav-badge { font-size: 13px; letter-spacing: 2px; color: var(--signal); border: 0.5px solid rgba(153,69,255,0.4); padding: 6px 14px; border-radius: 20px; background: rgba(153,69,255,0.08); text-decoration: none; transition: opacity 0.2s; }
   .nav-badge:hover { opacity: 0.8; }
-  .nav-wp { font-size: 13px; letter-spacing: 2px; color: var(--text-mut); border: 0.5px solid var(--border); padding: 4px 10px; border-radius: 20px; background: rgba(255,255,255,0.03); text-decoration: none; transition: color 0.2s, border-color 0.2s; cursor: pointer; }
-  .nav-wp:hover { color: var(--text-sec); border-color: rgba(255,255,255,0.15); }
-  .hero { text-align: center; padding: 80px 0 64px; }
-  .hero-logo { width: 140px; height: 140px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; overflow: hidden; box-shadow: 0 0 32px rgba(153,69,255,0.25); }
-  .hero-logo img { width: 124px; height: 124px; object-fit: contain; }
-  .hero-tagline { font-size: clamp(17px, 3.4vw, 22px); font-weight: 300; letter-spacing: 6px; text-transform: uppercase; color: var(--signal); opacity: 0.9; margin-bottom: 20px; }
-  .hero-title { font-size: clamp(52px, 11vw, 88px); font-weight: 100; letter-spacing: 12px; text-transform: uppercase; color: #ffffff; margin-bottom: 4px; }
-  .hero-sub { font-size: 17px; color: var(--text-sec); font-weight: 300; line-height: 1.7; max-width: 520px; margin: 0 auto 40px; }
-  .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--signal); color: #fff; text-decoration: none; padding: 14px 32px; border-radius: 12px; font-size: 15px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: opacity 0.2s; }
-  .hero-cta:hover { opacity: 0.85; }
-  .hero-cta-sec { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--text-sec); text-decoration: none; padding: 14px 32px; border-radius: 12px; font-size: 15px; font-weight: 400; letter-spacing: 1.5px; text-transform: uppercase; border: 0.5px solid var(--border); transition: border-color 0.2s, color 0.2s; cursor: pointer; }
-  .hero-cta-sec:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 48px 0; }
-  .stat { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; }
-  .stat-val { font-size: 28px; font-weight: 200; margin-bottom: 4px; }
-  .stat-lbl { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-mut); }
-  .section-title { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-mut); margin-bottom: 20px; }
-  .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 48px; }
-  .feature { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 20px; }
-  .feature-icon { font-size: 24px; margin-bottom: 10px; }
-  .feature-title { font-size: 17px; font-weight: 400; margin-bottom: 6px; }
-  .feature-desc { font-size: 15px; color: var(--text-sec); line-height: 1.6; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 72px 0 56px; }
+  .hero-logo { width: 130px; height: 130px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; overflow: hidden; animation: pulse-glow 3s ease-in-out infinite; }
+  @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 40px rgba(153,69,255,0.25), 0 0 80px rgba(153,69,255,0.1); } 50% { box-shadow: 0 0 70px rgba(153,69,255,0.45), 0 0 140px rgba(153,69,255,0.18); } }
+  .hero-logo img { width: 114px; height: 114px; object-fit: contain; }
+  .hero-title { font-size: clamp(56px,10vw,100px); font-weight: 100; letter-spacing: 14px; text-transform: uppercase; color: #fff; margin-bottom: 4px; }
+  .hero-tagline { font-size: clamp(16px,3vw,22px); font-weight: 300; letter-spacing: 6px; text-transform: uppercase; color: var(--signal); opacity: 0.9; margin-bottom: 20px; }
+
+
+
+  .hero-sub { font-size: 20px; color: var(--text-sec); font-weight: 300; line-height: 1.7; max-width: 640px; margin: 0 auto 8px; }
+  .hero-cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--signal); color: #fff; text-decoration: none; padding: 16px 40px; border-radius: 14px; font-size: 16px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 8px 32px rgba(153,69,255,0.25); }
+  .hero-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+  .hero-sec-links { display: flex; gap: 20px; align-items: center; }
+  .hero-sec-link { font-size: 13px; letter-spacing: 1.5px; color: var(--text-mut); text-decoration: none; border-bottom: 0.5px solid rgba(255,255,255,0.1); padding-bottom: 2px; transition: color 0.2s; cursor: pointer; }
+  .hero-sec-link:hover { color: var(--text-sec); }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 48px 0; }
+  .stat { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; transition: border-color 0.3s; }
+  .stat:hover { border-color: rgba(153,69,255,0.3); }
+  .stat-val { font-size: 40px; font-weight: 200; margin-bottom: 6px; }
+  .stat-lbl { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-mut); }
+
+  /* Features */
+  .section-title { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-mut); margin-bottom: 18px; }
+  .features { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 56px; }
+  .feature { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 20px; transition: border-color 0.3s, transform 0.2s; }
+  .feature:hover { border-color: rgba(153,69,255,0.2); transform: translateY(-2px); }
+  .feature-title { font-size: 20px; font-weight: 500; margin-bottom: 10px; }
+  .feature-desc { font-size: 16px; color: var(--text-sec); line-height: 1.6; }
+
+  /* Roadmap */
   .roadmap { margin-bottom: 48px; }
   .timeline { position: relative; padding-left: 28px; }
-  .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(to bottom, var(--signal), transparent); }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(to bottom,var(--signal),transparent); }
   .tl-item { position: relative; margin-bottom: 24px; }
   .tl-item::before { content: ''; position: absolute; left: -22px; top: 5px; width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
   .tl-item.done::before { background: var(--ion); box-shadow: 0 0 8px rgba(0,229,195,0.5); }
   .tl-item.active::before { background: var(--solar); box-shadow: 0 0 8px rgba(247,207,49,0.5); }
-  .tl-item.next::before { background: var(--signal); box-shadow: 0 0 8px rgba(153,69,255,0.4); }
-  .tl-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px; }
+  .tl-item.future::before { background: var(--border); }
+  .tl-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2px; }
   .tl-item.done .tl-label { color: var(--ion); }
   .tl-item.active .tl-label { color: var(--solar); }
-  .tl-item.next .tl-label { color: var(--signal); }
   .tl-item.future .tl-label { color: var(--text-mut); }
-  .tl-title { font-size: 17px; color: var(--text); margin-bottom: 3px; }
-  .tl-desc { font-size: 15px; color: var(--text-sec); }
+  .tl-title { font-size: 18px; color: var(--text); margin-bottom: 4px; }
+  .tl-desc { font-size: 16px; color: var(--text-sec); }
+
+  /* Contact */
   .contact { background: var(--surface); border: 0.5px solid var(--border); border-radius: 14px; padding: 28px; text-align: center; margin-bottom: 48px; }
   .contact h3 { font-size: 18px; font-weight: 300; margin-bottom: 8px; }
-  .contact p { font-size: 16px; color: var(--text-sec); margin-bottom: 16px; }
-  .contact a { color: var(--ion); text-decoration: none; font-size: 16px; letter-spacing: 0.5px; }
-  .contact a:hover { opacity: 0.8; }
-  footer { border-top: 0.5px solid var(--border); padding-top: 24px; text-align: center; font-size: 14px; color: var(--text-mut); letter-spacing: 1px; }
+  .contact p { font-size: 15px; color: var(--text-sec); margin-bottom: 16px; }
+  .contact a { color: var(--ion); text-decoration: none; font-size: 15px; }
+
+  /* Footer */
+  .footer-badges { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+  footer { border-top: 0.5px solid var(--border); padding-top: 32px; text-align: center; font-size: 13px; color: var(--text-mut); letter-spacing: 1px; }
   footer strong { color: var(--signal); }
-  .disclaimer { background: rgba(255,77,109,0.05); border: 0.5px solid rgba(255,77,109,0.25); border-radius: 10px; padding: 14px 18px; font-size: 14px; color: rgba(255,77,109,0.8); line-height: 1.7; margin-bottom: 32px; }
+  .disclaimer { background: rgba(255,77,109,0.05); border: 0.5px solid rgba(255,77,109,0.2); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: rgba(255,77,109,0.7); line-height: 1.7; margin-bottom: 32px; }
+
+  /* SEO hidden text */
+  .seo-keywords { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  /* Fade-in */
+  .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade-in.visible { opacity: 1; transform: none; }
 
   /* Whitepaper overlay */
   #wp-overlay { display: none; position: fixed; inset: 0; z-index: 100; background: var(--void); overflow-y: auto; }
   #wp-overlay.visible { display: block; }
   .wp-nav { position: sticky; top: 0; z-index: 10; background: rgba(9,9,15,0.95); backdrop-filter: blur(8px); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; }
-  .wp-nav-title { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-mut); }
-  .wp-close { font-size: 13px; letter-spacing: 2px; color: var(--text-sec); background: none; border: 0.5px solid var(--border); border-radius: 8px; padding: 6px 14px; cursor: pointer; transition: color 0.2s; }
-  .wp-close:hover { color: var(--text); }
+  .wp-nav-title { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-mut); }
+  .wp-close { font-size: 13px; color: var(--text-sec); background: none; border: 0.5px solid var(--border); border-radius: 8px; padding: 6px 14px; cursor: pointer; }
   .wp-content { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
-
-  /* Whitepaper styles */
   .wp-content .cover { padding: 40px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 40px; text-align: center; }
   .wp-content .cover-title { font-size: 40px; font-weight: 200; letter-spacing: 10px; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
   .wp-content .cover-subtitle { font-size: 13px; color: var(--text-sec); font-weight: 300; line-height: 1.6; margin-bottom: 24px; }
@@ -167,12 +177,12 @@
   .wp-content th { background: var(--surface); border: 1px solid var(--border); padding: 8px 10px; text-align: left; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-mut); font-weight: 500; }
   .wp-content td { border: 1px solid var(--border); padding: 8px 10px; color: var(--text-sec); font-weight: 300; }
   .wp-content td:first-child { color: var(--text); font-weight: 400; }
-  .wp-content .ion-text { color: var(--ion) !important; }
-  .wp-content .solar-text { color: var(--solar) !important; }
+  .wp-content .ion-text { color: var(--ion)!important; }
+  .wp-content .solar-text { color: var(--solar)!important; }
   .wp-content .timeline-wp { position: relative; padding-left: 24px; }
-  .wp-content .timeline-wp::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(to bottom, var(--signal), transparent); }
+  .wp-content .timeline-wp::before { content:''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(to bottom,var(--signal),transparent); }
   .wp-content .timeline-item { position: relative; margin-bottom: 20px; }
-  .wp-content .timeline-item::before { content: ''; position: absolute; left: -20px; top: 5px; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 8px rgba(153,69,255,0.5); }
+  .wp-content .timeline-item::before { content:''; position: absolute; left: -20px; top: 5px; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 8px rgba(153,69,255,0.5); }
   .wp-content .timeline-item.done::before { background: var(--ion); box-shadow: 0 0 8px rgba(0,229,195,0.5); }
   .wp-content .timeline-item.next::before { background: var(--solar); box-shadow: 0 0 8px rgba(247,207,49,0.5); }
   .wp-content .timeline-item.future::before { background: var(--border); box-shadow: none; }
@@ -185,22 +195,35 @@
   .wp-content .info-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-left: 3px solid var(--signal); border-radius: 0 7px 7px 0; padding: 11px 14px; margin: 14px 0; font-size: 12px; color: var(--text-sec); }
   .wp-content .wp-footer { border-top: 1px solid var(--border); padding-top: 24px; margin-top: 40px; text-align: center; font-size: 11px; color: var(--text-mut); letter-spacing: 1px; }
   .wp-content .wp-footer strong { color: var(--signal); }
-  .wp-content .halving-current td:first-child { color: var(--ion) !important; }
+  .wp-content .halving-current td:first-child { color: var(--ion)!important; }
   .wp-content .nova-card { background: rgba(255,77,109,0.05); border-color: rgba(255,77,109,0.3); }
   .wp-content .nova-card p { color: rgba(255,77,109,0.9); font-size: 12px; line-height: 1.8; }
-  .wp-content .mono { font-family: monospace; font-size: 12px; letter-spacing: 0.5px; color: var(--ion); }
+  .wp-content .mono { font-family: monospace; font-size: 12px; color: var(--ion); }
 
-  .social-link { font-size: 13px; letter-spacing: 1.5px; color: var(--text-mut); text-decoration: none; border: 0.5px solid var(--border); border-radius: 20px; padding: 6px 14px; background: rgba(255,255,255,0.03); transition: color 0.2s, border-color 0.2s; }
-  .social-link:hover { color: var(--text-sec); border-color: rgba(255,255,255,0.15); }
+  @media (max-width: 900px) {
+    .features { grid-template-columns: repeat(2,1fr); }
+  }
   @media (max-width: 600px) {
     .stats { grid-template-columns: 1fr; }
     .features { grid-template-columns: 1fr; }
     .hero-title { letter-spacing: 8px; }
     .wp-content .grid-2 { grid-template-columns: 1fr; }
+    .container { padding: 0 20px 60px; }
   }
 </style>
 </head>
 <body>
+
+<!-- SEO hidden keywords — multilingual -->
+<div class="seo-keywords" aria-hidden="true">
+  Pulsar miner, Pulsar PSR, PSR token, Pulsar Space Rewards, mobile mining app, collect crypto, no KYC crypto app, anonymous crypto, Solana token, pulsar crypto, psr solana, mine crypto phone, earn crypto free, mobile crypto android —
+  application crypto mobile, collecter des PSR, minage mobile, token solana, sans KYC, anonyme —
+  aplicación minería móvil, coleccionar PSR, token Solana, sin KYC —
+  Krypto App mobil, PSR Token Solana, ohne KYC —
+  aplicativo mineração mobile, coletar PSR, Solana token —
+  мобильный майнинг, PSR токен, без KYC, Solana —
+  मोबाइल माइनिंग, PSR टोकन, बिना KYC
+</div>
 
 <div class="stars" id="stars"></div>
 
@@ -208,136 +231,143 @@
 <div id="wp-overlay">
   <div class="wp-nav">
     <span class="wp-nav-title">WHITEPAPER</span>
-    <button class="wp-close" onclick="closeWP()">✕ Fermer</button>
+    <button class="wp-close" onclick="closeWP()" id="wp-close-btn">✕ Close</button>
   </div>
   <div class="wp-content" id="wp-content"></div>
 </div>
 
 <div class="container">
   <nav>
-    <span class="nav-logo">PULSAR</span>
+    <!-- Social icons LEFT -->
+    <div class="nav-socials">
+      <a href="https://x.com/pulsarminer" target="_blank" rel="noopener" class="nav-social-icon" title="X / Twitter">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.261 5.636zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://t.me/pulsarminer" target="_blank" rel="noopener" class="nav-social-icon" title="Telegram">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </a>
+      <a href="https://instagram.com/pulsar.miner" target="_blank" rel="noopener" class="nav-social-icon" title="Instagram">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+    </div>
+    <!-- Right nav -->
     <div class="nav-right">
       <a class="nav-wp" onclick="openWP()" id="nav-wp-btn">Whitepaper</a>
       <a href="https://explorer.solana.com/address/6pw7HhQqyvumXdHh53BhhaqtwTZUC2Gw2SEEbG6xCNyW" target="_blank" rel="noopener" class="nav-badge">$PSR · SOLANA</a>
     </div>
   </nav>
 
-  <div class="hero">
-    <div class="hero-logo"><img src="pulsar-logo.png" alt="Pulsar"></div>
+  <div class="hero fade-in">
+    <div class="hero-logo"><img src="pulsar-logo.png" alt="Pulsar: Space Rewards"></div>
     <div class="hero-title">PULSAR</div>
     <div class="hero-tagline">SPACE REWARDS</div>
-    <p class="hero-sub" id="hero-sub">Active ta station spatiale et accumule des points PSR chaque jour. Les premiers utilisateurs gagnent beaucoup plus — rejoins tôt.</p>
-    <div class="hero-ctas">
-      <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="hero-cta" id="cta-play">▶ Google Play</a>
-      <a class="hero-cta-sec" onclick="openWP()" id="cta-wp">📄 Whitepaper</a>
-    </div>
-    <a href="https://explorer.solana.com/address/6pw7HhQqyvumXdHh53BhhaqtwTZUC2Gw2SEEbG6xCNyW" target="_blank" rel="noopener" id="explorer-link" style="display:inline-block;margin-top:18px;font-size:12px;letter-spacing:1.5px;color:var(--text-mut);text-decoration:none;border-bottom:0.5px solid rgba(255,255,255,0.12);padding-bottom:2px;transition:color 0.2s;">🔍 Voir le token sur Solana Explorer</a>
-    <!-- Social links -->
-    <div id="social-links" style="display:flex;gap:16px;justify-content:center;align-items:center;margin-top:24px;flex-wrap:wrap;">
-      <a href="https://x.com/pulsarminer" target="_blank" rel="noopener" class="social-link">𝕏 Twitter</a>
-      <a href="https://t.me/pulsarminer" target="_blank" rel="noopener" class="social-link">✈ Telegram</a>
-      <a href="https://instagram.com/pulsar.miner" target="_blank" rel="noopener" class="social-link">◎ Instagram</a>
-    </div>
-    <!-- Product Hunt badge -->
-    <div style="margin-top:24px;">
-      <a href="https://www.producthunt.com/products/pulsar-space-rewards?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-pulsar-space-rewards" target="_blank" rel="noopener noreferrer">
-        <img alt="Pulsar — Space Rewards on Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1204016&theme=dark&t=1784935755626" style="display:block;margin:0 auto;">
-      </a>
+
+    <p class="hero-sub" id="hero-sub-1">Collect $PSR tokens every day.</p>
+    <p class="hero-sub" id="hero-sub-2">No email. No KYC. No data collected.</p>
+    <div class="hero-cta-wrap">
+      <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="hero-cta" id="cta-play">▶ Download on Google Play</a>
+      <div class="hero-sec-links">
+        <a class="hero-sec-link" onclick="openWP()" id="cta-wp">Whitepaper</a>
+        <span style="color:var(--border)">·</span>
+        <a href="https://explorer.solana.com/address/6pw7HhQqyvumXdHh53BhhaqtwTZUC2Gw2SEEbG6xCNyW" target="_blank" rel="noopener" class="hero-sec-link" id="explorer-link">Token Explorer</a>
+      </div>
     </div>
   </div>
 
-  <div class="stats">
+  <div class="stats fade-in">
     <div class="stat">
       <div class="stat-val" style="color:#00e5c3">0.1</div>
-      <div class="stat-lbl" id="stat1-lbl">PSR / heure (taux initial)</div>
+      <div class="stat-lbl" id="stat1-lbl">PSR / hour (initial rate)</div>
     </div>
     <div class="stat">
       <div class="stat-val" style="color:#9945ff">21</div>
-      <div class="stat-lbl" id="stat2-lbl">Paliers de réduction</div>
+      <div class="stat-lbl" id="stat2-lbl">Rate milestones</div>
     </div>
     <div class="stat">
       <div class="stat-val" style="color:#F7CF31">10M</div>
-      <div class="stat-lbl" id="stat3-lbl">Supply totale $PSR</div>
+      <div class="stat-lbl" id="stat3-lbl">Total $PSR supply</div>
     </div>
   </div>
 
-  <div class="section-title" id="feat-title">Fonctionnalités</div>
-  <div class="features">
+  <div class="section-title fade-in" id="feat-title">Features</div>
+  <div class="features fade-in">
     <div class="feature">
-      <div class="feature-icon">⚡</div>
-      <div class="feature-title" style="color:#00e5c3" id="f1t">Sessions 12h</div>
-      <div class="feature-desc" id="f1d">Lance une session toutes les 12 heures et accumule des PSR automatiquement. Reviens à la fin pour en lancer une nouvelle.</div>
+      <div class="feature-title" style="color:#00e5c3" id="f1t">12h Sessions</div>
+      <div class="feature-desc" id="f1d">One tap. 12 hours. Your balance grows automatically.</div>
     </div>
     <div class="feature">
-      <div class="feature-icon">📉</div>
-      <div class="feature-title" style="color:#F7CF31" id="f2t">Taux dégressif</div>
-      <div class="feature-desc" id="f2d">Le taux de récompense diminue à chaque palier d'utilisateurs. Les pionniers gagnent significativement plus.</div>
+      <div class="feature-title" style="color:#F7CF31" id="f2t">Decreasing rate</div>
+      <div class="feature-desc" id="f2d">Rate drops as community grows. Join early, earn more — permanently.</div>
     </div>
     <div class="feature">
-      <div class="feature-icon">👥</div>
-      <div class="feature-title" style="color:#9945ff" id="f3t">Parrainage</div>
-      <div class="feature-desc" id="f3d">Partage ton code personnel. +1% de taux par filleul actif dans les 48 dernières heures. Sans limite.</div>
+      <div class="feature-title" style="color:#9945ff" id="f3t">Referral</div>
+      <div class="feature-desc" id="f3d">+1% rate per active friend. No cap, no expiry.</div>
     </div>
     <div class="feature">
-      <div class="feature-icon">⭐</div>
       <div class="feature-title" style="color:#F7CF31" id="f4t">VIP</div>
-      <div class="feature-desc" id="f4d">Supprime les publicités et booste ton taux de collecte de 0% à +15% selon le niveau choisi.</div>
+      <div class="feature-desc" id="f4d">No ads. Rate boost from 0% to +15%.</div>
     </div>
     <div class="feature">
-      <div class="feature-icon">🚀</div>
       <div class="feature-title" style="color:#00e5c3" id="f5t">Boost</div>
-      <div class="feature-desc" id="f5d">Regarde une courte pub pour activer +2% pendant 1 heure. Gratuit pour les membres VIP.</div>
+      <div class="feature-desc" id="f5d">Watch an ad for +2% / 1h. Free for VIP.</div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">🔒</div>
-      <div class="feature-title" style="color:#9945ff" id="f6t">Confidentialité</div>
-      <div class="feature-desc" id="f6d">Aucun email requis. Inscription avec pseudonyme et mot de passe uniquement. Aucune donnée personnelle collectée.</div>
+    <div class="feature" style="border-color:rgba(0,229,195,0.25);background:rgba(0,229,195,0.04)">
+      <div class="feature-title" style="color:#00e5c3" id="f6t">Privacy first</div>
+      <div class="feature-desc" id="f6d">No email. No KYC. No data. Ever.</div>
     </div>
   </div>
 
-  <div class="roadmap">
+  <div class="roadmap fade-in">
     <div class="section-title" id="rm-title">Roadmap</div>
     <div class="timeline">
       <div class="tl-item done">
-        <div class="tl-label" id="rm1l">✓ Complété</div>
+        <div class="tl-label" id="rm1l">✓ Completed</div>
         <div class="tl-title" id="rm1t">Phase 0 + 1 — Core</div>
-        <div class="tl-desc" id="rm1d">Auth pseudonyme, device lock, collecte 12h, paliers, parrainage, Station complète, onboarding, mini-jeux.</div>
+        <div class="tl-desc" id="rm1d">Pseudonym auth, device lock, 12h collection, milestones, referral, full Station, onboarding, mini-games.</div>
       </div>
       <div class="tl-item done">
-        <div class="tl-label" id="rm2l">✓ Complété</div>
-        <div class="tl-title" id="rm2t">Phase 2 — Monétisation</div>
-        <div class="tl-desc" id="rm2d">AdMob, RevenueCat VIP, FCM v1, notifications push localisées, Google Play Closed Testing.</div>
+        <div class="tl-label" id="rm2l">✓ Completed</div>
+        <div class="tl-title" id="rm2t">Phase 2 — Monetization</div>
+        <div class="tl-desc" id="rm2d">AdMob, RevenueCat VIP, FCM v1, localized push notifications, Google Play open beta.</div>
       </div>
       <div class="tl-item active">
-        <div class="tl-label" id="rm3l">En cours</div>
-        <div class="tl-title" id="rm3t">Phase 3 — Écosystème</div>
-        <div class="tl-desc" id="rm3d">Bêta ouverte, constellations entre collecteurs, réacteur commun, événements aléatoires.</div>
+        <div class="tl-label" id="rm3l">In progress</div>
+        <div class="tl-title" id="rm3t">Phase 3 — Ecosystem</div>
+        <div class="tl-desc" id="rm3d">Collector constellations, shared reactor, random events, gamification layer.</div>
       </div>
       <div class="tl-item future">
         <div class="tl-label" id="rm4l">2027</div>
-        <div class="tl-title" id="rm4t">Phase 4 — Mainnet & Régulation</div>
-        <div class="tl-desc" id="rm4d">Demande d'agrément MiCA, ouverture mainnet Solana, retraits $PSR avec mint automatisé, listing DEX puis CEX.</div>
+        <div class="tl-title" id="rm4t">Phase 4 — Mainnet & Regulation</div>
+        <div class="tl-desc" id="rm4d">MiCA compliance, Solana mainnet opening, $PSR withdrawals with automatic mint, DEX then CEX listing.</div>
       </div>
     </div>
   </div>
 
-  <div class="contact">
+  <div class="contact fade-in">
     <h3 id="contact-title">Contact & Support</h3>
-    <p id="contact-p">Une question ? Un problème avec l'application ?</p>
+    <p id="contact-p">Questions? Issues with the app?</p>
     <a href="mailto:mine.pulsar@proton.me">mine.pulsar@proton.me</a>
   </div>
 
-  <div class="disclaimer" id="disclaimer">
-    Les points PSR sont des récompenses virtuelles accumulées dans l'application. Cette application est une simulation de divertissement et n'implique pas d'argent réel ni de jeux d'argent. Le token $PSR est un token utilitaire de récompense dont la valeur peut être nulle.
+  <div class="disclaimer fade-in" id="disclaimer">
+    PSR points are virtual rewards accumulated in the app. This application is an entertainment simulation and does not involve real money or gambling. The $PSR token is a utility reward token whose value may be zero.
   </div>
 
-  <footer>
-    <p><strong>PULSAR</strong> · $PSR Token · Solana · © 2026</p>
+  <footer class="fade-in">
+    <div class="footer-badges">
+      <a href="https://www.producthunt.com/products/pulsar-space-rewards?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-pulsar-space-rewards" target="_blank" rel="noopener noreferrer">
+        <img alt="Pulsar on Product Hunt" width="210" height="46" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1204016&theme=dark&t=1784935755626" style="display:block;">
+      </a>
+      <a href="https://launchbuff.com" target="_blank" rel="noopener noreferrer" title="Featured on LaunchBuff">
+        <img src="https://launchbuff.com/badge-featured-light.svg" alt="Featured on LaunchBuff" width="210" height="46" style="display:block;">
+      </a>
+    </div>
+    <p><strong>PULSAR</strong> · Space Rewards · $PSR · Solana · © 2026</p>
   </footer>
 </div>
 
 <script>
-// ── Stars ──────────────────────────────────────────────────────────────────────
+// Stars
 const container = document.getElementById('stars');
 for (let i = 0; i < 180; i++) {
   const s = document.createElement('div');
@@ -347,451 +377,128 @@ for (let i = 0; i < 180; i++) {
   container.appendChild(s);
 }
 
-// ── i18n ───────────────────────────────────────────────────────────────────────
-const lang = (navigator.language || navigator.userLanguage || 'fr').slice(0,2).toLowerCase();
+// Fade-in on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// i18n
+const lang = (navigator.language || navigator.userLanguage || 'en').slice(0,2).toLowerCase();
 const FR = lang === 'fr';
 
 const T = {
-  navWp:       FR ? 'Whitepaper' : 'Whitepaper',
-  heroSub:     FR ? 'Active ta station spatiale et accumule des points PSR chaque jour. Les premiers utilisateurs gagnent beaucoup plus — rejoins tôt.'
-                  : 'Activate your space station and accumulate PSR points every day. Early users earn much more — join now.',
-  ctaPlay:     FR ? '▶ Google Play' : '▶ Google Play',
-  ctaWp:       FR ? '📄 Whitepaper' : '📄 Whitepaper',
-  stat1:       FR ? 'PSR / heure (taux initial)' : 'PSR / hour (initial rate)',
-  stat2:       FR ? 'Paliers de réduction'        : 'Reduction milestones',
-  stat3:       FR ? 'Supply totale $PSR'           : 'Total $PSR supply',
-  featTitle:   FR ? 'Fonctionnalités' : 'Features',
-  f1t: FR ? 'Sessions 12h'      : '12h Sessions',
-  f1d: FR ? 'Lance une session toutes les 12 heures et accumule des PSR automatiquement. Reviens à la fin pour en lancer une nouvelle.'
-          : 'Start a session every 12 hours and accumulate PSR automatically. Come back at the end to launch a new one.',
-  f2t: FR ? 'Taux dégressif'    : 'Decreasing rate',
-  f2d: FR ? 'Le taux de récompense diminue à chaque palier d\'utilisateurs. Les pionniers gagnent significativement plus.'
-          : 'The reward rate decreases at each user milestone. Early adopters earn significantly more.',
-  f3t: FR ? 'Parrainage'        : 'Referral',
-  f3d: FR ? 'Partage ton code personnel. +1% de taux par filleul actif dans les 48 dernières heures. Sans limite.'
-          : 'Share your personal code. +1% rate per active referral in the last 48 hours. No limit.',
-  f4t: FR ? 'VIP'               : 'VIP',
-  f4d: FR ? 'Supprime les publicités et booste ton taux de collecte de 0% à +15% selon le niveau choisi.'
-          : 'Removes ads and boosts your collection rate from 0% to +15% depending on the chosen tier.',
-  f5t: FR ? 'Boost'             : 'Boost',
-  f5d: FR ? 'Regarde une courte pub pour activer +2% pendant 1 heure. Gratuit pour les membres VIP.'
-          : 'Watch a short ad to activate +2% for 1 hour. Free for VIP members.',
-  f6t: FR ? 'Confidentialité'   : 'Privacy',
-  f6d: FR ? 'Aucun email requis. Inscription avec pseudonyme et mot de passe uniquement. Aucune donnée personnelle collectée.'
-          : 'No email required. Sign up with a username and password only. No personal data collected.',
-  rmTitle: FR ? 'Roadmap' : 'Roadmap',
-  rm1l: FR ? '✓ Complété'  : '✓ Completed',
-  rm1t: FR ? 'Phase 0 + 1 — Core' : 'Phase 0 + 1 — Core',
-  rm1d: FR ? 'Auth pseudonyme, device lock, collecte 12h, paliers, parrainage, Station complète, onboarding, mini-jeux.'
-           : 'Pseudonym auth, device lock, 12h collection, milestones, referral, full Station, onboarding, mini-games.',
-  rm2l: FR ? '✓ Complété'  : '✓ Completed',
+  heroSub: FR
+    ? 'Collectez des tokens PSR chaque jour. Juste un pseudonyme et un mot de passe — c\'est tout ce qu\'on demande. Les premiers utilisateurs gagnent significativement plus.'
+    : 'Collect $PSR tokens every day. Just a username and a password — that\'s all we ask. Early users earn significantly more.',
+  privacyBadge: FR
+    ? ['Aucun email', 'Aucun KYC', 'Aucune donnée collectée']
+    : ['No email', 'No KYC', 'No data collected'],
+  ctaPlay: FR ? '▶ Télécharger sur Google Play' : '▶ Download on Google Play',
+  ctaWp: 'Whitepaper',
+  explorerLink: 'Token Explorer',
+  stat1: FR ? 'PSR / heure (taux initial)' : 'PSR / hour (initial rate)',
+  stat2: FR ? 'Paliers de réduction' : 'Rate milestones',
+  stat3: FR ? 'Supply totale $PSR' : 'Total $PSR supply',
+  featTitle: FR ? 'Fonctionnalités' : 'Features',
+  f1t: FR ? 'Sessions 12h' : '12h Sessions',
+  f1d: FR ? 'Lance une session toutes les 12 heures et accumule des PSR automatiquement.' : 'Start a session every 12 hours and accumulate PSR automatically.',
+  f2t: FR ? 'Taux dégressif' : 'Decreasing rate',
+  f2d: FR ? 'Le taux diminue à chaque palier. Les pionniers gagnent significativement plus — définitivement.' : 'The reward rate drops at each user milestone. Early adopters earn significantly more — permanently.',
+  f3t: FR ? 'Parrainage' : 'Referral',
+  f3d: FR ? '+1% de taux par filleul actif dans les 48h. Sans limite.' : '+1% rate per active referral in the last 48 hours. No cap.',
+  f4t: 'VIP',
+  f4d: FR ? 'Supprime les publicités et booste ton taux de 0% à +15%.' : 'Remove ads and boost your collection rate from 0% to +15%.',
+  f5t: 'Boost',
+  f5d: FR ? 'Regarde une courte pub pour activer +2% pendant 1h. Gratuit VIP.' : 'Watch a short ad to activate +2% for 1 hour. Free for VIP.',
+  f6t: FR ? 'Confidentialité totale' : 'Privacy first',
+  f6d: FR ? 'Aucun email, aucun KYC, aucune donnée collectée. Pseudonyme + mot de passe uniquement. Votre identité reste la vôtre.' : 'No email, no KYC, no data collected — ever. Username and password only. Your identity stays yours.',
+  rmTitle: 'Roadmap',
+  rm1l: FR ? '✓ Complété' : '✓ Completed',
+  rm1t: 'Phase 0 + 1 — Core',
+  rm1d: FR ? 'Auth pseudonyme, device lock, collecte 12h, paliers, parrainage, Station, onboarding, mini-jeux.' : 'Pseudonym auth, device lock, 12h collection, milestones, referral, full Station, onboarding, mini-games.',
+  rm2l: FR ? '✓ Complété' : '✓ Completed',
   rm2t: FR ? 'Phase 2 — Monétisation' : 'Phase 2 — Monetization',
-  rm2d: FR ? 'AdMob, RevenueCat VIP, FCM v1, notifications push localisées, Google Play Closed Testing.'
-           : 'AdMob, RevenueCat VIP, FCM v1, localized push notifications, Google Play Closed Testing.',
-  rm3l: FR ? 'En cours'    : 'In progress',
+  rm2d: FR ? 'AdMob, RevenueCat VIP, FCM v1, notifications localisées, bêta ouverte Google Play.' : 'AdMob, RevenueCat VIP, FCM v1, localized push notifications, Google Play open beta.',
+  rm3l: FR ? 'En cours' : 'In progress',
   rm3t: FR ? 'Phase 3 — Écosystème' : 'Phase 3 — Ecosystem',
-  rm3d: FR ? 'Bêta ouverte, constellations entre collecteurs, réacteur commun, événements aléatoires.'
-           : 'Open beta, collector constellations, shared reactor, random events.',
+  rm3d: FR ? 'Constellations, réacteur commun, événements aléatoires, gamification.' : 'Collector constellations, shared reactor, random events, gamification layer.',
   rm4l: '2027',
   rm4t: FR ? 'Phase 4 — Mainnet & Régulation' : 'Phase 4 — Mainnet & Regulation',
-  rm4d: FR ? 'Demande d\'agrément MiCA, ouverture mainnet Solana, retraits $PSR avec mint automatisé, listing DEX puis CEX.'
-           : 'MiCA license application, Solana mainnet opening, $PSR withdrawals with automatic mint, DEX then CEX listing.',
+  rm4d: FR ? 'Agrément MiCA, mainnet Solana, retraits $PSR, listing DEX puis CEX.' : 'MiCA compliance, Solana mainnet, $PSR withdrawals, DEX then CEX listing.',
   contactTitle: FR ? 'Contact & Support' : 'Contact & Support',
-  contactP:     FR ? 'Une question ? Un problème avec l\'application ?' : 'A question? A problem with the app?',
-  disclaimer:   FR ? 'Les points PSR sont des récompenses virtuelles accumulées dans l\'application. Cette application est une simulation de divertissement et n\'implique pas d\'argent réel ni de jeux d\'argent. Le token $PSR est un token utilitaire de récompense dont la valeur peut être nulle.'
-                   : 'PSR points are virtual rewards accumulated in the app. This application is an entertainment simulation and does not involve real money or gambling. The $PSR token is a utility reward token whose value may be zero.',
-  explorerLink: FR ? '🔍 Voir le token sur Solana Explorer' : '🔍 View token on Solana Explorer',
-  socialX:    'X / Twitter',
-  socialTg:   'Telegram',
-  socialIg:   'Instagram',
+  contactP: FR ? 'Une question ? Un problème avec l\'app ?' : 'Questions? Issues with the app?',
+  disclaimer: FR
+    ? 'Les points PSR sont des récompenses virtuelles. Cette application est une simulation de divertissement et n\'implique pas d\'argent réel. Le token $PSR est un token utilitaire dont la valeur peut être nulle.'
+    : 'PSR points are virtual rewards accumulated in the app. This is an entertainment simulation and does not involve real money. The $PSR token is a utility reward token whose value may be zero.',
   wpClose: FR ? '✕ Fermer' : '✕ Close',
 };
 
 // Apply translations
-document.getElementById('hero-sub').textContent      = T.heroSub;
-document.getElementById('cta-play').textContent      = T.ctaPlay;
-document.getElementById('cta-wp').textContent        = T.ctaWp;
-document.getElementById('stat1-lbl').textContent     = T.stat1;
-document.getElementById('stat2-lbl').textContent     = T.stat2;
-document.getElementById('stat3-lbl').textContent     = T.stat3;
-document.getElementById('feat-title').textContent    = T.featTitle;
-document.getElementById('f1t').textContent           = T.f1t;
-document.getElementById('f1d').textContent           = T.f1d;
-document.getElementById('f2t').textContent           = T.f2t;
-document.getElementById('f2d').textContent           = T.f2d;
-document.getElementById('f3t').textContent           = T.f3t;
-document.getElementById('f3d').textContent           = T.f3d;
-document.getElementById('f4t').textContent           = T.f4t;
-document.getElementById('f4d').textContent           = T.f4d;
-document.getElementById('f5t').textContent           = T.f5t;
-document.getElementById('f5d').textContent           = T.f5d;
-document.getElementById('f6t').textContent           = T.f6t;
-document.getElementById('f6d').textContent           = T.f6d;
-document.getElementById('rm-title').textContent      = T.rmTitle;
-document.getElementById('rm1l').textContent          = T.rm1l;
-document.getElementById('rm1t').textContent          = T.rm1t;
-document.getElementById('rm1d').textContent          = T.rm1d;
-document.getElementById('rm2l').textContent          = T.rm2l;
-document.getElementById('rm2t').textContent          = T.rm2t;
-document.getElementById('rm2d').textContent          = T.rm2d;
-document.getElementById('rm3l').textContent          = T.rm3l;
-document.getElementById('rm3t').textContent          = T.rm3t;
-document.getElementById('rm3d').textContent          = T.rm3d;
-document.getElementById('rm4l').textContent          = T.rm4l;
-document.getElementById('rm4t').textContent          = T.rm4t;
-document.getElementById('rm4d').textContent          = T.rm4d;
-document.getElementById('contact-title').textContent = T.contactTitle;
-document.getElementById('contact-p').textContent     = T.contactP;
-document.getElementById('disclaimer').textContent    = T.disclaimer;
+const sub1 = document.getElementById('hero-sub-1');
+const sub2 = document.getElementById('hero-sub-2');
+if (FR && sub1 && sub2) {
+  sub1.textContent = 'Collectez des tokens PSR chaque jour.';
+  sub2.innerHTML = 'Aucun email. Aucun KYC. Aucune donnée collectée.';
+}
+document.getElementById('cta-play').textContent = T.ctaPlay;
+document.getElementById('cta-wp').textContent = T.ctaWp;
 document.getElementById('explorer-link').textContent = T.explorerLink;
-document.querySelector('.wp-close').textContent      = T.wpClose;
-document.getElementById('nav-wp-btn').textContent    = T.navWp;
+document.getElementById('stat1-lbl').textContent = T.stat1;
+document.getElementById('stat2-lbl').textContent = T.stat2;
+document.getElementById('stat3-lbl').textContent = T.stat3;
+document.getElementById('feat-title').textContent = T.featTitle;
+document.getElementById('f1t').textContent = T.f1t;
+document.getElementById('f1d').textContent = T.f1d;
+document.getElementById('f2t').textContent = T.f2t;
+document.getElementById('f2d').textContent = T.f2d;
+document.getElementById('f3t').textContent = T.f3t;
+document.getElementById('f3d').textContent = T.f3d;
+document.getElementById('f4t').textContent = T.f4t;
+document.getElementById('f4d').textContent = T.f4d;
+document.getElementById('f5t').textContent = T.f5t;
+document.getElementById('f5d').textContent = T.f5d;
+document.getElementById('f6t').textContent = T.f6t;
+document.getElementById('f6d').textContent = T.f6d;
+document.getElementById('rm-title').textContent = T.rmTitle;
+document.getElementById('rm1l').textContent = T.rm1l;
+document.getElementById('rm1t').textContent = T.rm1t;
+document.getElementById('rm1d').textContent = T.rm1d;
+document.getElementById('rm2l').textContent = T.rm2l;
+document.getElementById('rm2t').textContent = T.rm2t;
+document.getElementById('rm2d').textContent = T.rm2d;
+document.getElementById('rm3l').textContent = T.rm3l;
+document.getElementById('rm3t').textContent = T.rm3t;
+document.getElementById('rm3d').textContent = T.rm3d;
+document.getElementById('rm4l').textContent = T.rm4l;
+document.getElementById('rm4t').textContent = T.rm4t;
+document.getElementById('rm4d').textContent = T.rm4d;
+document.getElementById('contact-title').textContent = T.contactTitle;
+document.getElementById('contact-p').textContent = T.contactP;
+document.getElementById('disclaimer').textContent = T.disclaimer;
+document.getElementById('wp-close-btn').textContent = T.wpClose;
+document.getElementById('nav-wp-btn').textContent = T.ctaWp;
 
-// ── Whitepaper content ────────────────────────────────────────────────────────
-const WP_FR = `
-<div class="cover">
-  <div class="cover-title">PULSAR</div>
-  <div class="cover-subtitle">Application mobile de collecte virtuelle de $PSR avec un système de paliers progressifs et une distribution équitable basée sur l'activité des utilisateurs.</div>
-  <div class="cover-meta"><span>Version 1.1</span><span>Juin 2026</span><span>Réseau Solana</span></div>
-</div>
-<div class="toc">
-  <div class="toc-title">Table des matières</div>
-  <ul class="toc-list">
-    <li><span class="toc-num">01</span><a href="#w-intro">Introduction & Vision</a></li>
-    <li><span class="toc-num">02</span><a href="#w-concept">Concept de la Collecte</a></li>
-    <li><span class="toc-num">03</span><a href="#w-tokenomics">Tokenomics</a></li>
-    <li><span class="toc-num">04</span><a href="#w-halving">Système de Paliers</a></li>
-    <li><span class="toc-num">05</span><a href="#w-features">Fonctionnalités</a></li>
-    <li><span class="toc-num">06</span><a href="#w-referral">Programme de Parrainage</a></li>
-    <li><span class="toc-num">07</span><a href="#w-vip">Abonnement VIP</a></li>
-    <li><span class="toc-num">08</span><a href="#w-withdrawal">Système de Retrait</a></li>
-    <li><span class="toc-num">09</span><a href="#w-tech">Architecture Technique</a></li>
-    <li><span class="toc-num">10</span><a href="#w-roadmap">Roadmap</a></li>
-    <li><span class="toc-num">11</span><a href="#w-security">Sécurité</a></li>
-    <li><span class="toc-num">12</span><a href="#w-disclaimer">Avertissement</a></li>
-  </ul>
-</div>
-<div class="section" id="w-intro">
-  <div class="section-header"><span class="section-num">01</span><h2>Introduction & Vision</h2></div>
-  <p>Pulsar est une application mobile de collecte virtuelle conçue pour rendre l'accumulation de tokens accessible à tous, sans matériel spécialisé et sans barrière technique.</p>
-  <div class="grid-2">
-    <div class="card card-signal"><div class="card-title">Mission</div><p>Démocratiser l'accès aux cryptomonnaies en supprimant les barrières techniques traditionnelles.</p></div>
-    <div class="card card-ion"><div class="card-title">Vision</div><p>Construire une communauté d'utilisateurs mobiles participant à la distribution équitable du token $PSR.</p></div>
-  </div>
-  <div class="card"><p><strong>Accessibilité</strong> — Aucun matériel requis, fonctionne sur n'importe quel smartphone.</p></div>
-  <div class="card"><p><strong>Équité</strong> — Le système de paliers récompense davantage les premiers adoptants.</p></div>
-  <div class="card"><p><strong>Sécurité</strong> — Les retraits sont sécurisés par un PIN personnel validé côté serveur.</p></div>
-</div>
-<div class="section" id="w-concept">
-  <div class="section-header"><span class="section-num">02</span><h2>Concept de la Collecte</h2></div>
-  <p>La collecte virtuelle de Pulsar repose sur un modèle de <strong>preuve de participation temporelle</strong> — l'utilisateur lance une session de 12h et accumule des $PSR.</p>
-  <div class="timeline-wp">
-    <div class="timeline-item done"><div class="timeline-label">Étape 1</div><div class="timeline-title">Lancement</div><div class="timeline-desc">Une publicité non-skippable est diffusée (sauf VIP), puis la session démarre pour 12 heures.</div></div>
-    <div class="timeline-item done"><div class="timeline-label">Étape 2</div><div class="timeline-title">Collecte active</div><div class="timeline-desc">Accumulation de $PSR au taux effectif. Boost +2% disponible via une publicité récompensée.</div></div>
-    <div class="timeline-item done"><div class="timeline-label">Étape 3</div><div class="timeline-title">Crédit</div><div class="timeline-desc">Calcul serveur sécurisé du gain exact. Les tokens sont crédités instantanément.</div></div>
-  </div>
-  <div class="info-box">Le calcul du gain est effectué exclusivement côté serveur (Firebase Cloud Functions).</div>
-</div>
-<div class="section" id="w-tokenomics">
-  <div class="section-header"><span class="section-num">03</span><h2>Tokenomics & Distribution</h2></div>
-  <div class="grid-2">
-    <div class="card card-signal"><div class="card-title">Token</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">$PSR</p><p>Pulsar Token — Solana SPL</p></div>
-    <div class="card card-solar"><div class="card-title">Taux Initial</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">0.1</p><p>PSR / heure</p></div>
-  </div>
-  <div class="card card-signal"><div class="card-title">Distribution 100% équitable</div><p>Chaque token $PSR a été gagné par un utilisateur actif. Aucune réserve cachée, aucun fonds pré-alloué.</p></div>
-  <h3>Calcul du Gain</h3>
-  <div class="card mono">Gain = Taux_Base × (1 + Parrainage + VIP + Boost) × Heures</div>
-  <table>
-    <tr><th>Bonus</th><th>Valeur</th><th>Condition</th></tr>
-    <tr><td>Taux de base</td><td class="ion-text">Variable</td><td>Toujours actif</td></tr>
-    <tr><td>Parrainage</td><td class="ion-text">+1% / filleul</td><td>Filleul actif dans les 48h</td></tr>
-    <tr><td>VIP</td><td class="ion-text">0% à +15%</td><td>Abonnement actif</td></tr>
-    <tr><td>Boost</td><td class="ion-text">+2% / 1h</td><td>Pub regardée (1x/session)</td></tr>
-  </table>
-</div>
-<div class="section" id="w-halving">
-  <div class="section-header"><span class="section-num">04</span><h2>Système de Paliers</h2></div>
-  <p>Le palier est déclenché par le <strong>nombre d'utilisateurs enregistrés</strong>, réduisant le taux d'émission progressivement.</p>
-  <table>
-    <tr><th>Utilisateurs</th><th>Taux (PSR/H)</th><th>Gain / session</th></tr>
-    <tr class="halving-current"><td>&lt; 200</td><td class="ion-text">0.10000</td><td>1.2 PSR</td></tr>
-    <tr><td>&lt; 400</td><td>0.05000</td><td>0.6 PSR</td></tr>
-    <tr><td>&lt; 1 000</td><td>0.02000</td><td>0.24 PSR</td></tr>
-    <tr><td>&lt; 2 000</td><td>0.01000</td><td>0.12 PSR</td></tr>
-    <tr><td>&lt; 5 000</td><td>0.00500</td><td>0.06 PSR</td></tr>
-    <tr><td>&lt; 10 000</td><td>0.00200</td><td>0.024 PSR</td></tr>
-    <tr><td>&lt; 20 000</td><td>0.00100</td><td>0.012 PSR</td></tr>
-    <tr><td>&lt; 50 000</td><td>0.00050</td><td>0.006 PSR</td></tr>
-    <tr><td>&lt; 100 000</td><td>0.00020</td><td>0.0024 PSR</td></tr>
-    <tr><td>&lt; 200 000</td><td>0.00010</td><td>0.0012 PSR</td></tr>
-    <tr><td>&lt; 500 000</td><td>0.00005</td><td>0.0006 PSR</td></tr>
-    <tr><td>&lt; 1 000 000</td><td>0.00002</td><td>0.00024 PSR</td></tr>
-    <tr><td>&lt; 2 000 000</td><td>0.00001</td><td>0.00012 PSR</td></tr>
-    <tr><td>&gt; 2 000 000</td><td>0.000002</td><td>0.000024 PSR</td></tr>
-  </table>
-  <div class="info-box">Notification push instantanée à chaque changement de palier.</div>
-</div>
-<div class="section" id="w-features">
-  <div class="section-header"><span class="section-num">05</span><h2>Fonctionnalités</h2></div>
-  <div class="grid-2">
-    <div class="card"><div class="card-title" style="color:var(--solar)">VIP</div><p>Supprime les publicités et booste le taux de collecte de 0% à +15%.</p></div>
-    <div class="card"><div class="card-title" style="color:var(--signal)">Parrainage</div><p>Code personnel, suivi des filleuls, bonus automatiques.</p></div>
-    <div class="card"><div class="card-title" style="color:var(--ion)">Retrait</div><p>Envoi des $PSR vers wallet Solana toutes les 50 sessions dès l'ouverture du mainnet.</p></div>
-    <div class="card"><div class="card-title" style="color:var(--signal)">Classement</div><p>Top 50 par balance, parrainage et total gagné.</p></div>
-  </div>
-</div>
-<div class="section" id="w-referral">
-  <div class="section-header"><span class="section-num">06</span><h2>Programme de Parrainage</h2></div>
-  <div class="grid-2">
-    <div class="card card-signal"><div class="card-title">Bonus Filleul</div><p>L'équivalent d'une <strong>session de collecte de 12h au taux actuel</strong> crédité à l'inscription.</p></div>
-    <div class="card card-ion"><div class="card-title">Bonus Parrain</div><p><strong>+1%</strong> de taux par filleul actif dans les 48h.</p></div>
-  </div>
-  <div class="card"><p><strong>Device lock</strong> — Un seul compte par appareil physique.</p></div>
-  <div class="card"><p><strong>Anti-abus</strong> — Auto-parrainage et parrainage circulaire impossibles.</p></div>
-</div>
-<div class="section" id="w-vip">
-  <div class="section-header"><span class="section-num">07</span><h2>Abonnement VIP</h2></div>
-  <p>Chaque abonnement VIP supprime les publicités de session. Les niveaux payants ajoutent un boost permanent du taux de collecte.</p>
-  <table>
-    <tr><th>Niveau</th><th>Boost</th><th>1 mois</th><th>3 mois</th><th>12 mois</th></tr>
-    <tr><td>Starter</td><td class="solar-text">0%</td><td>2,39 €</td><td>5,99 €</td><td>18,99 €</td></tr>
-    <tr><td>Bronze</td><td class="solar-text">+5%</td><td>4,79 €</td><td>11,99 €</td><td>37,99 €</td></tr>
-    <tr><td>Silver</td><td class="solar-text">+10%</td><td>8,49 €</td><td>21,99 €</td><td>64,99 €</td></tr>
-    <tr><td>Gold</td><td class="solar-text">+15%</td><td>11,99 €</td><td>30,99 €</td><td>94,99 €</td></tr>
-  </table>
-  <p>Géré via <strong>RevenueCat</strong> — Google Play Billing / Apple In-App Purchase.</p>
-</div>
-<div class="section" id="w-withdrawal">
-  <div class="section-header"><span class="section-num">08</span><h2>Système de Retrait</h2></div>
-  <div class="grid-2">
-    <div class="card card-ion"><div class="card-title">Sessions requises</div><p style="font-size:28px;font-weight:200;color:#00e5c3;margin-bottom:3px">50</p><p>par retrait</p></div>
-    <div class="card"><div class="card-title" style="color:var(--text)">Réseau</div><p style="font-size:18px;font-weight:200;color:#f0eeff;margin-bottom:3px">Solana</p><p>SPL Token</p></div>
-  </div>
-  <p>Les retraits seront disponibles dès l'ouverture du mainnet. Chaque retrait nécessite 50 sessions de collecte complétées depuis le dernier retrait.</p>
-  <div class="timeline-wp">
-    <div class="timeline-item done"><div class="timeline-label">Sécurité</div><div class="timeline-title">PIN SHA-256</div><div class="timeline-desc">Créé au premier retrait, jamais stocké en clair.</div></div>
-    <div class="timeline-item future"><div class="timeline-label">Mainnet</div><div class="timeline-title">Mint automatique via SDK Solana</div><div class="timeline-desc">Les $PSR sont mintés directement vers le wallet de l'utilisateur à chaque demande validée.</div></div>
-  </div>
-</div>
-<div class="section" id="w-tech">
-  <div class="section-header"><span class="section-num">09</span><h2>Architecture Technique</h2></div>
-  <table>
-    <tr><th>Couche</th><th>Technologie</th></tr>
-    <tr><td>Mobile</td><td>React Native + Expo SDK 54</td></tr>
-    <tr><td>Routage</td><td>Expo Router 6</td></tr>
-    <tr><td>État</td><td>Zustand 4</td></tr>
-    <tr><td>Base de données</td><td>Firebase Firestore (userdb, europe-west1)</td></tr>
-    <tr><td>Backend</td><td>Firebase Cloud Functions Gen2 (Node 18)</td></tr>
-    <tr><td>Publicités</td><td>Google AdMob</td></tr>
-    <tr><td>Paiements</td><td>RevenueCat</td></tr>
-    <tr><td>Notifications</td><td>FCM v1 + Expo Push</td></tr>
-    <tr><td>Internationalisation</td><td>i18next — 7 langues</td></tr>
-    <tr><td>Blockchain</td><td>Solana SPL — ouverture mainnet P4</td></tr>
-  </table>
-</div>
-<div class="section" id="w-roadmap">
-  <div class="section-header"><span class="section-num">10</span><h2>Roadmap</h2></div>
-  <div class="timeline-wp">
-    <div class="timeline-item done"><div class="timeline-label">✓ Complété</div><div class="timeline-title">Phase 0 + 1 — Core</div><div class="timeline-desc">Auth pseudonyme, device lock, collecte 12h, paliers, parrainage, Station complète, onboarding, mini-jeux, safe areas, force update.</div></div>
-    <div class="timeline-item done"><div class="timeline-label">✓ Complété</div><div class="timeline-title">Phase 2 — Monétisation</div><div class="timeline-desc">AdMob (interstitiel + rewarded), RevenueCat VIP, FCM v1, notifications push localisées, Google Play Closed Testing.</div></div>
-    <div class="timeline-item next"><div class="timeline-label">En cours</div><div class="timeline-title">Phase 3 — Écosystème</div><div class="timeline-desc">Bêta ouverte, constellations entre collecteurs, réacteur commun, événements aléatoires.</div></div>
-    <div class="timeline-item future"><div class="timeline-label" style="color:var(--text-mut)">2027</div><div class="timeline-title" style="color:var(--text-sec)">Phase 4 — Mainnet & Régulation</div><div class="timeline-desc" style="color:var(--text-mut)">Demande d'agrément MiCA, ouverture mainnet Solana, retraits $PSR avec mint automatisé, listing DEX puis CEX.</div></div>
-  </div>
-</div>
-<div class="section" id="w-security">
-  <div class="section-header"><span class="section-num">11</span><h2>Sécurité</h2></div>
-  <div class="card"><p><strong>Device Lock</strong> — Un seul compte par appareil (SecureStore).</p></div>
-  <div class="card"><p><strong>PIN SHA-256</strong> — PIN de retrait jamais stocké en clair.</p></div>
-  <div class="card"><p><strong>Calcul serveur</strong> — Balance modifiable uniquement par les Cloud Functions.</p></div>
-  <div class="card card-ion"><p>Aucune donnée personnelle collectée. Pseudonyme + mot de passe uniquement.</p></div>
-</div>
-<div class="section" id="w-disclaimer">
-  <div class="section-header"><span class="section-num">12</span><h2>Avertissement</h2></div>
-  <div class="card nova-card"><p>Document informatif uniquement, ne constitue pas un conseil financier. Le token $PSR est un token utilitaire de récompense. Sa valeur peut être nulle. Investissez uniquement ce que vous pouvez vous permettre de perdre.</p></div>
-</div>
-<div class="wp-footer"><p><strong>PULSAR</strong> · $PSR Token · Solana · Version 1.1 · Juin 2026</p></div>
-`;
 
-const WP_EN = `
-<div class="cover">
-  <div class="cover-title">PULSAR</div>
-  <div class="cover-subtitle">Mobile virtual collection app for $PSR with a progressive milestone system and fair distribution based on user activity.</div>
-  <div class="cover-meta"><span>Version 1.1</span><span>June 2026</span><span>Solana Network</span></div>
-</div>
-<div class="toc">
-  <div class="toc-title">Table of contents</div>
-  <ul class="toc-list">
-    <li><span class="toc-num">01</span><a href="#w-intro">Introduction & Vision</a></li>
-    <li><span class="toc-num">02</span><a href="#w-concept">Virtual Collection Concept</a></li>
-    <li><span class="toc-num">03</span><a href="#w-tokenomics">Tokenomics</a></li>
-    <li><span class="toc-num">04</span><a href="#w-halving">Milestone System</a></li>
-    <li><span class="toc-num">05</span><a href="#w-features">Features</a></li>
-    <li><span class="toc-num">06</span><a href="#w-referral">Referral Program</a></li>
-    <li><span class="toc-num">07</span><a href="#w-vip">VIP Subscription</a></li>
-    <li><span class="toc-num">08</span><a href="#w-withdrawal">Withdrawal System</a></li>
-    <li><span class="toc-num">09</span><a href="#w-tech">Technical Architecture</a></li>
-    <li><span class="toc-num">10</span><a href="#w-roadmap">Roadmap</a></li>
-    <li><span class="toc-num">11</span><a href="#w-security">Security</a></li>
-    <li><span class="toc-num">12</span><a href="#w-disclaimer">Disclaimer</a></li>
-  </ul>
-</div>
-<div class="section" id="w-intro">
-  <div class="section-header"><span class="section-num">01</span><h2>Introduction & Vision</h2></div>
-  <p>Pulsar is a mobile virtual collection app designed to make token accumulation accessible to everyone, with no specialized hardware and no technical barriers.</p>
-  <div class="grid-2">
-    <div class="card card-signal"><div class="card-title">Mission</div><p>Democratize access to cryptocurrencies by removing traditional technical barriers.</p></div>
-    <div class="card card-ion"><div class="card-title">Vision</div><p>Build a community of mobile users participating in the fair distribution of the $PSR token.</p></div>
-  </div>
-  <div class="card"><p><strong>Accessibility</strong> — No hardware required, works on any smartphone.</p></div>
-  <div class="card"><p><strong>Fairness</strong> — The milestone system rewards early adopters more generously.</p></div>
-  <div class="card"><p><strong>Security</strong> — Withdrawals are secured by a personal PIN validated server-side.</p></div>
-</div>
-<div class="section" id="w-concept">
-  <div class="section-header"><span class="section-num">02</span><h2>Virtual Collection Concept</h2></div>
-  <p>Pulsar's virtual collection is based on a <strong>temporal proof of participation</strong> model — the user starts a 12h session and accumulates $PSR.</p>
-  <div class="timeline-wp">
-    <div class="timeline-item done"><div class="timeline-label">Step 1</div><div class="timeline-title">Launch</div><div class="timeline-desc">A non-skippable ad plays (except for VIP), then the session starts for 12 hours.</div></div>
-    <div class="timeline-item done"><div class="timeline-label">Step 2</div><div class="timeline-title">Active collection</div><div class="timeline-desc">$PSR accumulates at the effective rate. +2% boost available via a rewarded ad.</div></div>
-    <div class="timeline-item done"><div class="timeline-label">Step 3</div><div class="timeline-title">Credit</div><div class="timeline-desc">Secure server-side calculation of the exact gain. Tokens are credited instantly.</div></div>
-  </div>
-  <div class="info-box">Earnings are calculated exclusively server-side (Firebase Cloud Functions).</div>
-</div>
-<div class="section" id="w-tokenomics">
-  <div class="section-header"><span class="section-num">03</span><h2>Tokenomics & Distribution</h2></div>
-  <div class="grid-2">
-    <div class="card card-signal"><div class="card-title">Token</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">$PSR</p><p>Pulsar Token — Solana SPL</p></div>
-    <div class="card card-solar"><div class="card-title">Initial Rate</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">0.1</p><p>PSR / hour</p></div>
-  </div>
-  <div class="card card-signal"><div class="card-title">100% Fair Distribution</div><p>Every $PSR token has been earned by an active user. No hidden reserve, no pre-allocated funds.</p></div>
-  <h3>Earnings Formula</h3>
-  <div class="card mono">Earned = Base_Rate × (1 + Referral + VIP + Boost) × Hours</div>
-  <table>
-    <tr><th>Bonus</th><th>Value</th><th>Condition</th></tr>
-    <tr><td>Base rate</td><td class="ion-text">Variable</td><td>Always active</td></tr>
-    <tr><td>Referral</td><td class="ion-text">+1% / referral</td><td>Active referral within 48h</td></tr>
-    <tr><td>VIP</td><td class="ion-text">0% to +15%</td><td>Active subscription</td></tr>
-    <tr><td>Boost</td><td class="ion-text">+2% / 1h</td><td>Ad watched (1x/session)</td></tr>
-  </table>
-</div>
-<div class="section" id="w-halving">
-  <div class="section-header"><span class="section-num">04</span><h2>Milestone System</h2></div>
-  <p>Milestones are triggered by the <strong>number of registered users</strong>, progressively reducing the emission rate.</p>
-  <table>
-    <tr><th>Users</th><th>Rate (PSR/H)</th><th>Gain / session</th></tr>
-    <tr class="halving-current"><td>&lt; 200</td><td class="ion-text">0.10000</td><td>1.2 PSR</td></tr>
-    <tr><td>&lt; 400</td><td>0.05000</td><td>0.6 PSR</td></tr>
-    <tr><td>&lt; 1,000</td><td>0.02000</td><td>0.24 PSR</td></tr>
-    <tr><td>&lt; 2,000</td><td>0.01000</td><td>0.12 PSR</td></tr>
-    <tr><td>&lt; 5,000</td><td>0.00500</td><td>0.06 PSR</td></tr>
-    <tr><td>&lt; 10,000</td><td>0.00200</td><td>0.024 PSR</td></tr>
-    <tr><td>&lt; 20,000</td><td>0.00100</td><td>0.012 PSR</td></tr>
-    <tr><td>&lt; 50,000</td><td>0.00050</td><td>0.006 PSR</td></tr>
-    <tr><td>&lt; 100,000</td><td>0.00020</td><td>0.0024 PSR</td></tr>
-    <tr><td>&lt; 200,000</td><td>0.00010</td><td>0.0012 PSR</td></tr>
-    <tr><td>&lt; 500,000</td><td>0.00005</td><td>0.0006 PSR</td></tr>
-    <tr><td>&lt; 1,000,000</td><td>0.00002</td><td>0.00024 PSR</td></tr>
-    <tr><td>&lt; 2,000,000</td><td>0.00001</td><td>0.00012 PSR</td></tr>
-    <tr><td>&gt; 2,000,000</td><td>0.000002</td><td>0.000024 PSR</td></tr>
-  </table>
-  <div class="info-box">Instant push notification on every milestone change.</div>
-</div>
-<div class="section" id="w-features">
-  <div class="section-header"><span class="section-num">05</span><h2>Features</h2></div>
-  <div class="grid-2">
-    <div class="card"><div class="card-title" style="color:var(--solar)">VIP</div><p>Removes ads and boosts the collection rate from 0% to +15%.</p></div>
-    <div class="card"><div class="card-title" style="color:var(--signal)">Referral</div><p>Personal code, referral tracking, automatic bonuses.</p></div>
-    <div class="card"><div class="card-title" style="color:var(--ion)">Withdraw</div><p>Send $PSR to a Solana wallet every 50 sessions once mainnet opens.</p></div>
-    <div class="card"><div class="card-title" style="color:var(--signal)">Leaderboard</div><p>Top 50 by balance, referrals and total earned.</p></div>
-  </div>
-</div>
-<div class="section" id="w-referral">
-  <div class="section-header"><span class="section-num">06</span><h2>Referral Program</h2></div>
-  <div class="grid-2">
-    <div class="card card-signal"><div class="card-title">Referral Bonus</div><p>The equivalent of a <strong>12h collection session at the current rate</strong> credited on sign-up.</p></div>
-    <div class="card card-ion"><div class="card-title">Referrer Bonus</div><p><strong>+1%</strong> rate per active referral within 48h.</p></div>
-  </div>
-  <div class="card"><p><strong>Device lock</strong> — One account per physical device.</p></div>
-  <div class="card"><p><strong>Anti-abuse</strong> — Self-referral and circular referral are impossible.</p></div>
-</div>
-<div class="section" id="w-vip">
-  <div class="section-header"><span class="section-num">07</span><h2>VIP Subscription</h2></div>
-  <p>Every VIP subscription removes session ads. Paid tiers add a permanent collection rate boost.</p>
-  <table>
-    <tr><th>Tier</th><th>Boost</th><th>1 month</th><th>3 months</th><th>12 months</th></tr>
-    <tr><td>Starter</td><td class="solar-text">0%</td><td>€2.39</td><td>€5.99</td><td>€18.99</td></tr>
-    <tr><td>Bronze</td><td class="solar-text">+5%</td><td>€4.79</td><td>€11.99</td><td>€37.99</td></tr>
-    <tr><td>Silver</td><td class="solar-text">+10%</td><td>€8.49</td><td>€21.99</td><td>€64.99</td></tr>
-    <tr><td>Gold</td><td class="solar-text">+15%</td><td>€11.99</td><td>€30.99</td><td>€94.99</td></tr>
-  </table>
-  <p>Managed via <strong>RevenueCat</strong> — Google Play Billing / Apple In-App Purchase.</p>
-</div>
-<div class="section" id="w-withdrawal">
-  <div class="section-header"><span class="section-num">08</span><h2>Withdrawal System</h2></div>
-  <div class="grid-2">
-    <div class="card card-ion"><div class="card-title">Sessions required</div><p style="font-size:28px;font-weight:200;color:#00e5c3;margin-bottom:3px">50</p><p>per withdrawal</p></div>
-    <div class="card"><div class="card-title" style="color:var(--text)">Network</div><p style="font-size:18px;font-weight:200;color:#f0eeff;margin-bottom:3px">Solana</p><p>SPL Token</p></div>
-  </div>
-  <p>Withdrawals will be available once mainnet opens. Each withdrawal requires 50 completed collection sessions since the last withdrawal.</p>
-  <div class="timeline-wp">
-    <div class="timeline-item done"><div class="timeline-label">Security</div><div class="timeline-title">SHA-256 PIN</div><div class="timeline-desc">Created on first withdrawal, never stored in plain text.</div></div>
-    <div class="timeline-item future"><div class="timeline-label">Mainnet</div><div class="timeline-title">Automatic mint via Solana SDK</div><div class="timeline-desc">$PSR tokens are minted directly to the user's wallet on each validated withdrawal request.</div></div>
-  </div>
-</div>
-<div class="section" id="w-tech">
-  <div class="section-header"><span class="section-num">09</span><h2>Technical Architecture</h2></div>
-  <table>
-    <tr><th>Layer</th><th>Technology</th></tr>
-    <tr><td>Mobile</td><td>React Native + Expo SDK 54</td></tr>
-    <tr><td>Routing</td><td>Expo Router 6</td></tr>
-    <tr><td>State</td><td>Zustand 4</td></tr>
-    <tr><td>Database</td><td>Firebase Firestore (userdb, europe-west1)</td></tr>
-    <tr><td>Backend</td><td>Firebase Cloud Functions Gen2 (Node 18)</td></tr>
-    <tr><td>Ads</td><td>Google AdMob</td></tr>
-    <tr><td>Payments</td><td>RevenueCat</td></tr>
-    <tr><td>Notifications</td><td>FCM v1 + Expo Push</td></tr>
-    <tr><td>Internationalization</td><td>i18next — 7 languages</td></tr>
-    <tr><td>Blockchain</td><td>Solana SPL — mainnet opening P4</td></tr>
-  </table>
-</div>
-<div class="section" id="w-roadmap">
-  <div class="section-header"><span class="section-num">10</span><h2>Roadmap</h2></div>
-  <div class="timeline-wp">
-    <div class="timeline-item done"><div class="timeline-label">✓ Completed</div><div class="timeline-title">Phase 0 + 1 — Core</div><div class="timeline-desc">Pseudonym auth, device lock, 12h collection, milestones, referral, full Station, onboarding, mini-games, safe areas, force update.</div></div>
-    <div class="timeline-item done"><div class="timeline-label">✓ Completed</div><div class="timeline-title">Phase 2 — Monetization</div><div class="timeline-desc">AdMob (interstitial + rewarded), RevenueCat VIP, FCM v1, localized push notifications, Google Play Closed Testing.</div></div>
-    <div class="timeline-item next"><div class="timeline-label">In progress</div><div class="timeline-title">Phase 3 — Ecosystem</div><div class="timeline-desc">Open beta, collector constellations, shared reactor, random events.</div></div>
-    <div class="timeline-item future"><div class="timeline-label" style="color:var(--text-mut)">2027</div><div class="timeline-title" style="color:var(--text-sec)">Phase 4 — Mainnet & Regulation</div><div class="timeline-desc" style="color:var(--text-mut)">MiCA license application, Solana mainnet opening, $PSR withdrawals with automatic mint, DEX then CEX listing.</div></div>
-  </div>
-</div>
-<div class="section" id="w-security">
-  <div class="section-header"><span class="section-num">11</span><h2>Security</h2></div>
-  <div class="card"><p><strong>Device Lock</strong> — One account per device (SecureStore).</p></div>
-  <div class="card"><p><strong>SHA-256 PIN</strong> — Withdrawal PIN never stored in plain text.</p></div>
-  <div class="card"><p><strong>Server-side calculation</strong> — Balance can only be modified by Cloud Functions.</p></div>
-  <div class="card card-ion"><p>No personal data collected. Username and password only.</p></div>
-</div>
-<div class="section" id="w-disclaimer">
-  <div class="section-header"><span class="section-num">12</span><h2>Disclaimer</h2></div>
-  <div class="card nova-card"><p>Informational document only, does not constitute financial advice. The $PSR token is a utility reward token. Its value may be zero. Only invest what you can afford to lose.</p></div>
-</div>
-<div class="wp-footer"><p><strong>PULSAR</strong> · $PSR Token · Solana · Version 1.1 · June 2026</p></div>
-`;
 
-// Inject whitepaper content based on language
+// Whitepaper content
+const WP_FR = `<div class="cover"><div class="cover-title">PULSAR</div><div class="cover-subtitle">Application mobile de collecte virtuelle de $PSR avec un système de paliers progressifs et une distribution équitable basée sur l'activité des utilisateurs.</div><div class="cover-meta"><span>Version 1.1</span><span>Juillet 2026</span><span>Réseau Solana</span></div></div><div class="toc"><div class="toc-title">Table des matières</div><ul class="toc-list"><li><span class="toc-num">01</span><a href="#w-intro">Introduction & Vision</a></li><li><span class="toc-num">02</span><a href="#w-concept">Concept de la Collecte</a></li><li><span class="toc-num">03</span><a href="#w-tokenomics">Tokenomics</a></li><li><span class="toc-num">04</span><a href="#w-halving">Système de Paliers</a></li><li><span class="toc-num">05</span><a href="#w-features">Fonctionnalités</a></li><li><span class="toc-num">06</span><a href="#w-referral">Programme de Parrainage</a></li><li><span class="toc-num">07</span><a href="#w-vip">Abonnement VIP</a></li><li><span class="toc-num">08</span><a href="#w-withdrawal">Système de Retrait</a></li><li><span class="toc-num">09</span><a href="#w-tech">Architecture Technique</a></li><li><span class="toc-num">10</span><a href="#w-roadmap">Roadmap</a></li><li><span class="toc-num">11</span><a href="#w-security">Sécurité</a></li><li><span class="toc-num">12</span><a href="#w-disclaimer">Avertissement</a></li></ul></div><div class="section" id="w-intro"><div class="section-header"><span class="section-num">01</span><h2>Introduction & Vision</h2></div><p>Pulsar est une application mobile de collecte virtuelle conçue pour rendre l'accumulation de tokens accessible à tous, sans matériel spécialisé et sans barrière technique.</p><div class="grid-2"><div class="card card-signal"><div class="card-title">Mission</div><p>Démocratiser l'accès aux cryptomonnaies en supprimant les barrières traditionnelles.</p></div><div class="card card-ion"><div class="card-title">Vision</div><p>Construire une communauté mobile participant à la distribution équitable du token $PSR.</p></div></div><div class="card"><p><strong>Accessibilité</strong> — Aucun matériel requis, fonctionne sur n'importe quel smartphone.</p></div><div class="card"><p><strong>Équité</strong> — Le système de paliers récompense davantage les premiers adoptants.</p></div><div class="card card-ion"><p><strong>Confidentialité</strong> — Aucun email, aucun KYC, aucune donnée collectée. Pseudonyme + mot de passe uniquement.</p></div></div><div class="section" id="w-concept"><div class="section-header"><span class="section-num">02</span><h2>Concept de la Collecte</h2></div><p>La collecte virtuelle de Pulsar repose sur un modèle de <strong>preuve de participation temporelle</strong>.</p><div class="timeline-wp"><div class="timeline-item done"><div class="timeline-label">Étape 1</div><div class="timeline-title">Lancement</div><div class="timeline-desc">Une publicité non-skippable est diffusée (sauf VIP), puis la session démarre pour 12 heures.</div></div><div class="timeline-item done"><div class="timeline-label">Étape 2</div><div class="timeline-title">Collecte active</div><div class="timeline-desc">Accumulation de $PSR au taux effectif. Boost +2% disponible via une publicité récompensée.</div></div><div class="timeline-item done"><div class="timeline-label">Étape 3</div><div class="timeline-title">Crédit</div><div class="timeline-desc">Calcul serveur sécurisé. Les tokens sont crédités instantanément.</div></div></div><div class="info-box">Le calcul du gain est effectué exclusivement côté serveur (Firebase Cloud Functions).</div></div><div class="section" id="w-tokenomics"><div class="section-header"><span class="section-num">03</span><h2>Tokenomics & Distribution</h2></div><div class="grid-2"><div class="card card-signal"><div class="card-title">Token</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">$PSR</p><p>Pulsar Token — Solana SPL</p></div><div class="card card-solar"><div class="card-title">Supply</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">10 000 000</p><p>PSR — 0% pré-mine</p></div></div><div class="card card-signal"><div class="card-title">Distribution 100% équitable</div><p>Chaque token $PSR a été gagné par un utilisateur actif. Aucune réserve cachée.</p></div><h3>Calcul du Gain</h3><div class="card mono">Gain = Taux_Base × (1 + Parrainage + VIP + Boost) × Heures</div><table><tr><th>Bonus</th><th>Valeur</th><th>Condition</th></tr><tr><td>Taux de base</td><td class="ion-text">Variable</td><td>Toujours actif</td></tr><tr><td>Parrainage</td><td class="ion-text">+1% / filleul</td><td>Actif dans les 48h</td></tr><tr><td>VIP</td><td class="ion-text">0% à +15%</td><td>Abonnement actif</td></tr><tr><td>Boost</td><td class="ion-text">+2% / 1h</td><td>Pub regardée (1x/session)</td></tr></table></div><div class="section" id="w-halving"><div class="section-header"><span class="section-num">04</span><h2>Système de Paliers</h2></div><p>Le palier est déclenché par le <strong>nombre d'utilisateurs enregistrés</strong>.</p><table><tr><th>Utilisateurs</th><th>Taux (PSR/H)</th><th>Gain / session</th></tr><tr class="halving-current"><td>&lt; 200</td><td class="ion-text">0.10000</td><td>1.2 PSR</td></tr><tr><td>&lt; 400</td><td>0.05000</td><td>0.6 PSR</td></tr><tr><td>&lt; 1 000</td><td>0.02000</td><td>0.24 PSR</td></tr><tr><td>&lt; 2 000</td><td>0.01000</td><td>0.12 PSR</td></tr><tr><td>&lt; 10 000</td><td>0.00200</td><td>0.024 PSR</td></tr><tr><td>&lt; 100 000</td><td>0.00020</td><td>0.0024 PSR</td></tr><tr><td>&lt; 1 000 000</td><td>0.00002</td><td>0.00024 PSR</td></tr><tr><td>&gt; 2 000 000</td><td>0.000002</td><td>0.000024 PSR</td></tr></table><div class="info-box">Notification push instantanée à chaque changement de palier.</div></div><div class="section" id="w-features"><div class="section-header"><span class="section-num">05</span><h2>Fonctionnalités</h2></div><div class="grid-2"><div class="card"><div class="card-title" style="color:var(--solar)">VIP</div><p>Supprime les publicités et booste le taux de 0% à +15%.</p></div><div class="card"><div class="card-title" style="color:var(--signal)">Parrainage</div><p>Code personnel, suivi des filleuls, bonus automatiques.</p></div><div class="card"><div class="card-title" style="color:var(--ion)">Retrait</div><p>Envoi des $PSR vers wallet Solana dès l'ouverture du mainnet.</p></div><div class="card"><div class="card-title" style="color:var(--signal)">Classement</div><p>Top 50 par balance, parrainage et total gagné.</p></div></div></div><div class="section" id="w-referral"><div class="section-header"><span class="section-num">06</span><h2>Programme de Parrainage</h2></div><div class="grid-2"><div class="card card-signal"><div class="card-title">Bonus Filleul</div><p>Équivalent d'une <strong>session de 12h au taux actuel</strong> crédité à l'inscription.</p></div><div class="card card-ion"><div class="card-title">Bonus Parrain</div><p><strong>+1%</strong> de taux par filleul actif dans les 48h.</p></div></div><div class="card"><p><strong>Device lock</strong> — Un seul compte par appareil physique.</p></div><div class="card"><p><strong>Anti-abus</strong> — Auto-parrainage et parrainage circulaire impossibles.</p></div></div><div class="section" id="w-vip"><div class="section-header"><span class="section-num">07</span><h2>Abonnement VIP</h2></div><table><tr><th>Niveau</th><th>Boost</th><th>1 mois</th><th>3 mois</th><th>12 mois</th></tr><tr><td>Starter</td><td class="solar-text">0%</td><td>2,39 €</td><td>5,99 €</td><td>18,99 €</td></tr><tr><td>Bronze</td><td class="solar-text">+5%</td><td>4,79 €</td><td>11,99 €</td><td>37,99 €</td></tr><tr><td>Silver</td><td class="solar-text">+10%</td><td>8,49 €</td><td>21,99 €</td><td>64,99 €</td></tr><tr><td>Gold</td><td class="solar-text">+15%</td><td>11,99 €</td><td>30,99 €</td><td>94,99 €</td></tr></table></div><div class="section" id="w-withdrawal"><div class="section-header"><span class="section-num">08</span><h2>Système de Retrait</h2></div><div class="grid-2"><div class="card card-ion"><div class="card-title">Sessions requises</div><p style="font-size:28px;font-weight:200;color:#00e5c3;margin-bottom:3px">50</p><p>par retrait</p></div><div class="card"><div class="card-title" style="color:var(--text)">Réseau</div><p style="font-size:18px;font-weight:200;color:#f0eeff;margin-bottom:3px">Solana</p><p>SPL Token</p></div></div><div class="timeline-wp"><div class="timeline-item done"><div class="timeline-label">Sécurité</div><div class="timeline-title">PIN SHA-256</div><div class="timeline-desc">Créé au premier retrait, jamais stocké en clair.</div></div><div class="timeline-item future"><div class="timeline-label">Mainnet</div><div class="timeline-title">Mint automatique via SDK Solana</div></div></div></div><div class="section" id="w-tech"><div class="section-header"><span class="section-num">09</span><h2>Architecture Technique</h2></div><table><tr><th>Couche</th><th>Technologie</th></tr><tr><td>Mobile</td><td>React Native + Expo SDK 54</td></tr><tr><td>Backend</td><td>Firebase Cloud Functions Gen2</td></tr><tr><td>Base de données</td><td>Firebase Firestore</td></tr><tr><td>Publicités</td><td>Google AdMob</td></tr><tr><td>Paiements</td><td>RevenueCat</td></tr><tr><td>Notifications</td><td>FCM v1</td></tr><tr><td>Blockchain</td><td>Solana SPL</td></tr></table></div><div class="section" id="w-roadmap"><div class="section-header"><span class="section-num">10</span><h2>Roadmap</h2></div><div class="timeline-wp"><div class="timeline-item done"><div class="timeline-label">✓ Complété</div><div class="timeline-title">Phase 0 + 1 — Core</div><div class="timeline-desc">Auth pseudonyme, device lock, collecte 12h, paliers, parrainage, Station, onboarding, mini-jeux.</div></div><div class="timeline-item done"><div class="timeline-label">✓ Complété</div><div class="timeline-title">Phase 2 — Monétisation</div><div class="timeline-desc">AdMob, RevenueCat VIP, FCM v1, bêta ouverte Google Play.</div></div><div class="timeline-item next"><div class="timeline-label">En cours</div><div class="timeline-title">Phase 3 — Écosystème</div><div class="timeline-desc">Constellations, réacteur commun, événements aléatoires.</div></div><div class="timeline-item future"><div class="timeline-label" style="color:var(--text-mut)">2027</div><div class="timeline-title" style="color:var(--text-sec)">Phase 4 — Mainnet & Régulation</div><div class="timeline-desc" style="color:var(--text-mut)">Agrément MiCA, mainnet Solana, retraits $PSR, DEX puis CEX.</div></div></div></div><div class="section" id="w-security"><div class="section-header"><span class="section-num">11</span><h2>Sécurité</h2></div><div class="card"><p><strong>Device Lock</strong> — Un seul compte par appareil.</p></div><div class="card"><p><strong>PIN SHA-256</strong> — PIN de retrait jamais stocké en clair.</p></div><div class="card"><p><strong>Calcul serveur</strong> — Balance modifiable uniquement par les Cloud Functions.</p></div><div class="card card-ion"><p>Aucune donnée personnelle collectée. Pseudonyme + mot de passe uniquement.</p></div></div><div class="section" id="w-disclaimer"><div class="section-header"><span class="section-num">12</span><h2>Avertissement</h2></div><div class="card nova-card"><p>Document informatif uniquement. Le token $PSR est un token utilitaire de récompense. Sa valeur peut être nulle.</p></div></div><div class="wp-footer"><p><strong>PULSAR</strong> · $PSR Token · Solana · Version 1.1 · Juillet 2026</p></div>`;
+
+const WP_EN = `<div class="cover"><div class="cover-title">PULSAR</div><div class="cover-subtitle">Mobile virtual collection app for $PSR with a progressive milestone system and fair distribution based on user activity.</div><div class="cover-meta"><span>Version 1.1</span><span>July 2026</span><span>Solana Network</span></div></div><div class="toc"><div class="toc-title">Table of contents</div><ul class="toc-list"><li><span class="toc-num">01</span><a href="#w-intro">Introduction & Vision</a></li><li><span class="toc-num">02</span><a href="#w-concept">Collection Concept</a></li><li><span class="toc-num">03</span><a href="#w-tokenomics">Tokenomics</a></li><li><span class="toc-num">04</span><a href="#w-halving">Milestone System</a></li><li><span class="toc-num">05</span><a href="#w-features">Features</a></li><li><span class="toc-num">06</span><a href="#w-referral">Referral Program</a></li><li><span class="toc-num">07</span><a href="#w-vip">VIP Subscription</a></li><li><span class="toc-num">08</span><a href="#w-withdrawal">Withdrawal System</a></li><li><span class="toc-num">09</span><a href="#w-tech">Technical Architecture</a></li><li><span class="toc-num">10</span><a href="#w-roadmap">Roadmap</a></li><li><span class="toc-num">11</span><a href="#w-security">Security</a></li><li><span class="toc-num">12</span><a href="#w-disclaimer">Disclaimer</a></li></ul></div><div class="section" id="w-intro"><div class="section-header"><span class="section-num">01</span><h2>Introduction & Vision</h2></div><p>Pulsar is a mobile virtual collection app designed to make token accumulation accessible to everyone, with no specialized hardware and no technical barriers.</p><div class="grid-2"><div class="card card-signal"><div class="card-title">Mission</div><p>Democratize access to cryptocurrencies by removing traditional barriers.</p></div><div class="card card-ion"><div class="card-title">Vision</div><p>Build a community of mobile users participating in the fair distribution of the $PSR token.</p></div></div><div class="card"><p><strong>Accessibility</strong> — No hardware required, works on any smartphone.</p></div><div class="card"><p><strong>Fairness</strong> — The milestone system rewards early adopters more generously.</p></div><div class="card card-ion"><p><strong>Privacy</strong> — No email, no KYC, no data collected. Username and password only.</p></div></div><div class="section" id="w-concept"><div class="section-header"><span class="section-num">02</span><h2>Collection Concept</h2></div><p>Pulsar's virtual collection is based on a <strong>temporal proof of participation</strong> model.</p><div class="timeline-wp"><div class="timeline-item done"><div class="timeline-label">Step 1</div><div class="timeline-title">Launch</div><div class="timeline-desc">A non-skippable ad plays (except for VIP), then the 12-hour session starts.</div></div><div class="timeline-item done"><div class="timeline-label">Step 2</div><div class="timeline-title">Active collection</div><div class="timeline-desc">$PSR accumulates at the effective rate. +2% boost available via a rewarded ad.</div></div><div class="timeline-item done"><div class="timeline-label">Step 3</div><div class="timeline-title">Credit</div><div class="timeline-desc">Secure server-side calculation. Tokens are credited instantly.</div></div></div><div class="info-box">Earnings are calculated exclusively server-side (Firebase Cloud Functions).</div></div><div class="section" id="w-tokenomics"><div class="section-header"><span class="section-num">03</span><h2>Tokenomics & Distribution</h2></div><div class="grid-2"><div class="card card-signal"><div class="card-title">Token</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">$PSR</p><p>Pulsar Token — Solana SPL</p></div><div class="card card-solar"><div class="card-title">Supply</div><p style="font-size:20px;font-weight:300;color:#f0eeff;margin-bottom:3px">10,000,000</p><p>PSR — 0% pre-mine</p></div></div><div class="card card-signal"><div class="card-title">100% Fair Distribution</div><p>Every $PSR token has been earned by an active user. No hidden reserve, no pre-allocated funds.</p></div><h3>Earnings Formula</h3><div class="card mono">Earned = Base_Rate × (1 + Referral + VIP + Boost) × Hours</div><table><tr><th>Bonus</th><th>Value</th><th>Condition</th></tr><tr><td>Base rate</td><td class="ion-text">Variable</td><td>Always active</td></tr><tr><td>Referral</td><td class="ion-text">+1% / referral</td><td>Active within 48h</td></tr><tr><td>VIP</td><td class="ion-text">0% to +15%</td><td>Active subscription</td></tr><tr><td>Boost</td><td class="ion-text">+2% / 1h</td><td>Ad watched (1x/session)</td></tr></table></div><div class="section" id="w-halving"><div class="section-header"><span class="section-num">04</span><h2>Milestone System</h2></div><p>Milestones are triggered by the <strong>number of registered users</strong>.</p><table><tr><th>Users</th><th>Rate (PSR/H)</th><th>Gain / session</th></tr><tr class="halving-current"><td>&lt; 200</td><td class="ion-text">0.10000</td><td>1.2 PSR</td></tr><tr><td>&lt; 400</td><td>0.05000</td><td>0.6 PSR</td></tr><tr><td>&lt; 1,000</td><td>0.02000</td><td>0.24 PSR</td></tr><tr><td>&lt; 2,000</td><td>0.01000</td><td>0.12 PSR</td></tr><tr><td>&lt; 10,000</td><td>0.00200</td><td>0.024 PSR</td></tr><tr><td>&lt; 100,000</td><td>0.00020</td><td>0.0024 PSR</td></tr><tr><td>&lt; 1,000,000</td><td>0.00002</td><td>0.00024 PSR</td></tr><tr><td>&gt; 2,000,000</td><td>0.000002</td><td>0.000024 PSR</td></tr></table><div class="info-box">Instant push notification on every milestone change.</div></div><div class="section" id="w-features"><div class="section-header"><span class="section-num">05</span><h2>Features</h2></div><div class="grid-2"><div class="card"><div class="card-title" style="color:var(--solar)">VIP</div><p>Removes ads and boosts collection rate from 0% to +15%.</p></div><div class="card"><div class="card-title" style="color:var(--signal)">Referral</div><p>Personal code, referral tracking, automatic bonuses.</p></div><div class="card"><div class="card-title" style="color:var(--ion)">Withdraw</div><p>Send $PSR to Solana wallet once mainnet opens.</p></div><div class="card"><div class="card-title" style="color:var(--signal)">Leaderboard</div><p>Top 50 by balance, referrals and total earned.</p></div></div></div><div class="section" id="w-referral"><div class="section-header"><span class="section-num">06</span><h2>Referral Program</h2></div><div class="grid-2"><div class="card card-signal"><div class="card-title">Referral Bonus</div><p>Equivalent of a <strong>12h session at the current rate</strong> credited on sign-up.</p></div><div class="card card-ion"><div class="card-title">Referrer Bonus</div><p><strong>+1%</strong> rate per active referral within 48h.</p></div></div><div class="card"><p><strong>Device lock</strong> — One account per physical device.</p></div><div class="card"><p><strong>Anti-abuse</strong> — Self-referral and circular referral are impossible.</p></div></div><div class="section" id="w-vip"><div class="section-header"><span class="section-num">07</span><h2>VIP Subscription</h2></div><table><tr><th>Tier</th><th>Boost</th><th>1 month</th><th>3 months</th><th>12 months</th></tr><tr><td>Starter</td><td class="solar-text">0%</td><td>€2.39</td><td>€5.99</td><td>€18.99</td></tr><tr><td>Bronze</td><td class="solar-text">+5%</td><td>€4.79</td><td>€11.99</td><td>€37.99</td></tr><tr><td>Silver</td><td class="solar-text">+10%</td><td>€8.49</td><td>€21.99</td><td>€64.99</td></tr><tr><td>Gold</td><td class="solar-text">+15%</td><td>€11.99</td><td>€30.99</td><td>€94.99</td></tr></table></div><div class="section" id="w-withdrawal"><div class="section-header"><span class="section-num">08</span><h2>Withdrawal System</h2></div><div class="grid-2"><div class="card card-ion"><div class="card-title">Sessions required</div><p style="font-size:28px;font-weight:200;color:#00e5c3;margin-bottom:3px">50</p><p>per withdrawal</p></div><div class="card"><div class="card-title" style="color:var(--text)">Network</div><p style="font-size:18px;font-weight:200;color:#f0eeff;margin-bottom:3px">Solana</p><p>SPL Token</p></div></div><div class="timeline-wp"><div class="timeline-item done"><div class="timeline-label">Security</div><div class="timeline-title">SHA-256 PIN</div><div class="timeline-desc">Created on first withdrawal, never stored in plain text.</div></div><div class="timeline-item future"><div class="timeline-label">Mainnet</div><div class="timeline-title">Automatic mint via Solana SDK</div></div></div></div><div class="section" id="w-tech"><div class="section-header"><span class="section-num">09</span><h2>Technical Architecture</h2></div><table><tr><th>Layer</th><th>Technology</th></tr><tr><td>Mobile</td><td>React Native + Expo SDK 54</td></tr><tr><td>Backend</td><td>Firebase Cloud Functions Gen2</td></tr><tr><td>Database</td><td>Firebase Firestore</td></tr><tr><td>Ads</td><td>Google AdMob</td></tr><tr><td>Payments</td><td>RevenueCat</td></tr><tr><td>Notifications</td><td>FCM v1</td></tr><tr><td>Blockchain</td><td>Solana SPL</td></tr></table></div><div class="section" id="w-roadmap"><div class="section-header"><span class="section-num">10</span><h2>Roadmap</h2></div><div class="timeline-wp"><div class="timeline-item done"><div class="timeline-label">✓ Completed</div><div class="timeline-title">Phase 0 + 1 — Core</div><div class="timeline-desc">Pseudonym auth, device lock, 12h collection, milestones, referral, full Station, onboarding, mini-games.</div></div><div class="timeline-item done"><div class="timeline-label">✓ Completed</div><div class="timeline-title">Phase 2 — Monetization</div><div class="timeline-desc">AdMob, RevenueCat VIP, FCM v1, Google Play open beta.</div></div><div class="timeline-item next"><div class="timeline-label">In progress</div><div class="timeline-title">Phase 3 — Ecosystem</div><div class="timeline-desc">Collector constellations, shared reactor, random events.</div></div><div class="timeline-item future"><div class="timeline-label" style="color:var(--text-mut)">2027</div><div class="timeline-title" style="color:var(--text-sec)">Phase 4 — Mainnet & Regulation</div><div class="timeline-desc" style="color:var(--text-mut)">MiCA compliance, Solana mainnet, $PSR withdrawals, DEX then CEX listing.</div></div></div></div><div class="section" id="w-security"><div class="section-header"><span class="section-num">11</span><h2>Security</h2></div><div class="card"><p><strong>Device Lock</strong> — One account per device (SecureStore).</p></div><div class="card"><p><strong>SHA-256 PIN</strong> — Withdrawal PIN never stored in plain text.</p></div><div class="card"><p><strong>Server-side calculation</strong> — Balance can only be modified by Cloud Functions.</p></div><div class="card card-ion"><p>No personal data collected. Username and password only.</p></div></div><div class="section" id="w-disclaimer"><div class="section-header"><span class="section-num">12</span><h2>Disclaimer</h2></div><div class="card nova-card"><p>Informational document only, does not constitute financial advice. The $PSR token is a utility reward token. Its value may be zero.</p></div></div><div class="wp-footer"><p><strong>PULSAR</strong> · $PSR Token · Solana · Version 1.1 · July 2026</p></div>`;
+
 document.getElementById('wp-content').innerHTML = FR ? WP_FR : WP_EN;
 
-// ── Whitepaper open/close ──────────────────────────────────────────────────────
-function openWP(){
-  const overlay = document.getElementById('wp-overlay');
-  overlay.classList.add('visible');
-  overlay.scrollTop = 0;
+function openWP() {
+  const o = document.getElementById('wp-overlay');
+  o.classList.add('visible');
+  o.scrollTop = 0;
   document.body.style.overflow = 'hidden';
 }
-function closeWP(){
+function closeWP() {
   document.getElementById('wp-overlay').classList.remove('visible');
   document.body.style.overflow = '';
 }
-// Close on Escape
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeWP(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeWP(); });
 </script>
 </body>
 </html>
