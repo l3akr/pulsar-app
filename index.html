@@ -108,7 +108,7 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0
 /* Roadmap */
 .roadmap{margin-bottom:56px;}
 .timeline{position:relative;padding-left:28px;}
-.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:0.5px;background:linear-gradient(to bottom,var(--signal),transparent);}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--signal),transparent);}
 .tl-item{position:relative;margin-bottom:28px;}
 .tl-item::before{content:'';position:absolute;left:-22px;top:6px;width:9px;height:9px;border-radius:50%;}
 .tl-item.done::before{background:var(--ion);box-shadow:0 0 10px rgba(0,229,195,0.4);}
@@ -266,13 +266,14 @@ footer strong{color:var(--signal);}
 
   <div class="sec-lbl rv" id="ft">Features</div>
   <div class="features rv">
-    <a href="/features/sessions.html" class="frow frow-ion"><div class="frow-left"><div class="frow-title" id="f1t">12h Sessions</div><div class="frow-desc" id="f1d">One tap. 12 hours. Your balance grows automatically.</div></div><span class="frow-arrow">&#8594;</span></a>
-    <a href="/features/vip.html" class="frow frow-solar"><div class="frow-left"><div class="frow-title" id="f4t">VIP</div><div class="frow-desc" id="f4d">No ads. Rate boost from 0% to +15%.</div></div><span class="frow-arrow">&#8594;</span></a>
-    <a href="/features/boost.html" class="frow frow-ion"><div class="frow-left"><div class="frow-title" id="f5t">Boost</div><div class="frow-desc" id="f5d">Watch an ad for +2% / 1h. Free for VIP.</div></div><span class="frow-arrow">&#8594;</span></a>
-    <a href="/features/referral.html" class="frow frow-signal"><div class="frow-left"><div class="frow-title" id="f3t">Referral</div><div class="frow-desc" id="f3d">+1% rate per active friend. No cap, no expiry.</div></div><span class="frow-arrow">&#8594;</span></a>
-    <a href="/mini-games.html" class="frow frow-solar"><div class="frow-left"><div class="frow-title" id="f7t">Mini-Games</div><div class="frow-desc" id="f7d">Play DriftScan and earn bonus PSR tokens.</div></div><span class="frow-arrow">&#8594;</span></a>
-    <a href="/features/privacy.html" class="frow frow-ion"><div class="frow-left"><div class="frow-title" id="f6t">Privacy first</div><div class="frow-desc" id="f6d">No email. No KYC. No data. Ever.</div></div><span class="frow-arrow">&#8594;</span></a>
-    <a href="/faq.html" class="frow frow-signal"><div class="frow-left"><div class="frow-title" id="f8t">FAQ</div><div class="frow-desc" id="f8d">Common questions about Pulsar, PSR and how it works.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/features/sessions.html" class="frow frow-ion"><div class="frow-left"><div class="frow-title" id="f1t">Session</div><div class="frow-desc" id="f1d">One tap. 12 hours later, your balance is up. See how it works.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/features/boost.html" class="frow frow-ion"><div class="frow-left"><div class="frow-title" id="f5t">Boost</div><div class="frow-desc" id="f5d">One ad, +2% for 1h. Free for VIP. Here's how.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/features/referral.html" class="frow frow-signal"><div class="frow-left"><div class="frow-title" id="f3t">Referral</div><div class="frow-desc" id="f3d">+1% rate per active friend. No cap. Grab your code.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/features/vip.html" class="frow frow-solar"><div class="frow-left"><div class="frow-title" id="f4t">VIP</div><div class="frow-desc" id="f4d">No ads, up to +15% rate. Unlock your tier.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/mini-games.html" class="frow frow-solar"><div class="frow-left"><div class="frow-title" id="f7t">Mini-Games</div><div class="frow-desc" id="f7d">Play our mini-games, earn bonus PSR. Check them out.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/features/leaderboard.html" class="frow frow-signal"><div class="frow-left"><div class="frow-title" id="f9t">Leaderboard</div><div class="frow-desc" id="f9d">Top 50 by balance, referrals and total earned. Aim for the podium.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/features/privacy.html" class="frow frow-ion"><div class="frow-left"><div class="frow-title" id="f6t">Privacy first</div><div class="frow-desc" id="f6d">No email, no KYC, no data. Ever. Here's how.</div></div><span class="frow-arrow">&#8594;</span></a>
+    <a href="/faq.html" class="frow frow-signal"><div class="frow-left"><div class="frow-title" id="f8t">FAQ</div><div class="frow-desc" id="f8d">Every question about Pulsar and $PSR, answered.</div></div><span class="frow-arrow">&#8594;</span></a>
   </div>
 
   <div class="roadmap rv">
@@ -346,7 +347,7 @@ var FR=(uLang.toLowerCase().indexOf('fr')===0);
 var T={
   hs1: FR?'Collectez des tokens PSR chaque jour.':'Collect $PSR tokens every day.',
   hs2: FR?'Aucun email · Aucun KYC · Aucune donnée':'No email · No KYC · No data collected',
-  hcta: FR?'► Télécharger sur Google Play':'► Download on Google Play',
+  hcta: FR?'Télécharger sur Google Play':'Download on Google Play',
   hwp:'Whitepaper',
   hexp:'Token Explorer',
   nwp:'Whitepaper',
@@ -355,20 +356,22 @@ var T={
   s2: FR?'Paliers de réduction':'Rate milestones',
   s3: FR?'Supply totale $PSR':'Total $PSR supply',
   ft: FR?'Fonctionnalités':'Features',
-  f1t: FR?'Sessions 12h':'12h Sessions',
-  f1d: FR?'Un tap. 12 heures. Ton solde croît automatiquement.':'One tap. 12 hours. Your balance grows automatically.',
+  f1t: FR?'Collecte':'Session',
+  f1d: FR?'Un tap suffit. 12h plus tard, ton solde a grimpé. Comment ça marche ?':'One tap. 12 hours later, your balance is up. See how it works.',
   f4t:'VIP',
-  f4d: FR?'Sans pub. Boost de taux de 0% à +15%.':'No ads. Rate boost from 0% to +15%.',
+  f4d: FR?'Zéro pub, jusqu\u0027à +15% de taux. Débloque ton niveau.':'No ads, up to +15% rate. Unlock your tier.',
   f5t:'Boost',
-  f5d: FR?'Regarde une pub pour +2% / 1h. Gratuit VIP.':'Watch an ad for +2% / 1h. Free for VIP.',
+  f5d: FR?'Une pub, +2% pendant 1h. Gratuit en VIP. Le mode d\u0027emploi.':'One ad, +2% for 1h. Free for VIP. Here\u0027s how.',
   f3t: FR?'Parrainage':'Referral',
-  f3d: FR?'+1% de taux par ami actif. Sans limite ni expiration.':'+1% rate per active friend. No cap, no expiry.',
+  f3d: FR?'+1% de taux par ami actif. Sans limite. Ton code t\u0027attend.':'+1% rate per active friend. No cap. Grab your code.',
   f7t: FR?'Mini-Jeux':'Mini-Games',
-  f7d: FR?'Joue à DriftScan et gagne des PSR bonus.':'Play DriftScan and earn bonus PSR tokens.',
+  f7d: FR?'Joue à nos mini-jeux, gagne des PSR bonus. Découvre-les.':'Play our mini-games, earn bonus PSR. Check them out.',
+  f9t: FR?'Classement':'Leaderboard',
+  f9d: FR?'Top 50 par solde, parrainages et gains totaux. Vise le podium.':'Top 50 by balance, referrals and total earned. Aim for the podium.',
   f6t: FR?'Confidentialité totale':'Privacy first',
-  f6d: FR?'Aucun email. Aucun KYC. Aucune donnée. Jamais.':'No email. No KYC. No data. Ever.',
+  f6d: FR?'Aucun email. Aucun KYC. Aucune donnée. Jamais. Voici comment.':'No email, no KYC, no data. Ever. Here\u0027s how.',
   f8t:'FAQ',
-  f8d: FR?'Questions fréquentes sur Pulsar, PSR et son fonctionnement.':'Common questions about Pulsar, PSR and how it works.',
+  f8d: FR?'Toutes les questions sur Pulsar et $PSR, répondues.':'Every question about Pulsar and $PSR, answered.',
   rmt:'Roadmap',
   r1l: FR?'✓ Complété':'✓ Completed',
   r1t:'Phase 0 + 1 — Core',
@@ -387,8 +390,8 @@ var T={
   disc: FR?'Les points PSR sont des r\u00e9compenses virtuelles. Cette application est une simulation de divertissement. Le token $PSR est un token utilitaire dont la valeur peut \u00eatre nulle.':'PSR points are virtual rewards. This application is an entertainment simulation. The $PSR token is a utility reward token whose value may be zero.',
 };
 
-var ids=['hs1','hs2','h-cta','h-wp','h-exp','n-wp','wpc-btn','s1','s2','s3','ft','f1t','f1d','f3t','f3d','f4t','f4d','f5t','f5d','f6t','f6d','f7t','f7d','f8t','f8d','rmt','r1l','r1t','r1d','r2l','r2t','r2d','r3l','r3t','r3d','r4l','r4t','r4d','ct','cp','disc'];
-var keys=['hs1','hs2','hcta','hwp','hexp','nwp','wpclose','s1','s2','s3','ft','f1t','f1d','f3t','f3d','f4t','f4d','f5t','f5d','f6t','f6d','f7t','f7d','f8t','f8d','rmt','r1l','r1t','r1d','r2l','r2t','r2d','r3l','r3t','r3d','r4l','r4t','r4d','ct','cp','disc'];
+var ids=['hs1','hs2','h-cta','h-wp','h-exp','n-wp','wpc-btn','s1','s2','s3','ft','f1t','f1d','f3t','f3d','f4t','f4d','f5t','f5d','f6t','f6d','f7t','f7d','f8t','f8d','f9t','f9d','rmt','r1l','r1t','r1d','r2l','r2t','r2d','r3l','r3t','r3d','r4l','r4t','r4d','ct','cp','disc'];
+var keys=['hs1','hs2','hcta','hwp','hexp','nwp','wpclose','s1','s2','s3','ft','f1t','f1d','f3t','f3d','f4t','f4d','f5t','f5d','f6t','f6d','f7t','f7d','f8t','f8d','f9t','f9d','rmt','r1l','r1t','r1d','r2l','r2t','r2d','r3l','r3t','r3d','r4l','r4t','r4d','ct','cp','disc'];
 for(var i=0;i<ids.length;i++){
   var el=document.getElementById(ids[i]);
   if(el&&T[keys[i]])el.textContent=T[keys[i]];
