@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad Boost — +2% PSR Rate for 1 Hour | Pulsar: Space Rewards</title>
+<meta name="description" content="Watch a short rewarded ad in Pulsar: Space Rewards to boost your collection rate by +2% for 1 hour. Repeatable, and free for VIP members.">
+<meta name="keywords" content="Pulsar boost, ad boost, rewarded ad crypto, PSR rate boost, earn more PSR, mobile crypto app, Solana app, pulsar space rewards boost">
+<link rel="canonical" href="https://pulsarminer.space/features/boost">
+<link rel="icon" type="image/png" href="/pulsar-logo.png">
+<meta property="og:title" content="Ad Boost — +2% PSR Rate for 1 Hour | Pulsar: Space Rewards">
+<meta property="og:description" content="Watch one ad, get +2% rate for 1 hour. Stacks with referral and VIP. Free for VIP members.">
+<meta property="og:url" content="https://pulsarminer.space/features/boost">
+<meta property="og:image" content="https://pulsarminer.space/pulsar-logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Ad Boost — Pulsar: Space Rewards",
+  "description": "Watch a rewarded ad to boost your $PSR collection rate by +2% for 1 hour.",
+  "url": "https://pulsarminer.space/features/boost",
+  "isPartOf": { "@type": "WebSite", "url": "https://pulsarminer.space" }
+}
+</script>
+<style>
+  :root {
+    --void:#09090f;--surface:#12121e;--border:#1e1e32;
+    --signal:#9945ff;--ion:#00e5c3;--solar:#F7CF31;--nova:#ff4d6d;
+    --text:#f0eeff;--text-sec:rgba(240,238,255,0.75);--text-mut:rgba(240,238,255,0.42);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--void);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden;}
+  .stars{position:fixed;inset:0;pointer-events:none;z-index:0;}
+  .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite alternate;animation-delay:var(--delay,0s);}
+  @keyframes twinkle{from{opacity:var(--min-op,0.1);}to{opacity:var(--max-op,0.6);}}
+  .container{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 48px 100px;}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
+  .nav-left{display:flex;align-items:center;gap:16px;}
+  .nav-back{font-size:15px;color:var(--text-mut);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
+  .nav-back:hover{color:var(--text-sec);}
+  .nav-logo{font-size:16px;letter-spacing:6px;font-weight:300;color:var(--text-mut);text-decoration:none;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .nav-cta{background:var(--signal);color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-size:16px;letter-spacing:1px;transition:opacity .2s;}
+  .nav-cta:hover{opacity:.85;}
+
+  /* Breadcrumb */
+  .breadcrumb{margin:32px 0 0;font-size:15px;color:var(--text-mut);display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--text-mut);text-decoration:none;transition:color .2s;}
+  .breadcrumb a:hover{color:var(--text-sec);}
+  .breadcrumb span{color:var(--border);}
+
+  /* Hero */
+  .page-hero{padding:48px 0 56px;border-bottom:0.5px solid var(--border);}
+  .hero-tag{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--nova);margin-bottom:16px;}
+  .page-title{font-size:clamp(44px,7vw,72px);font-weight:200;line-height:1.1;margin-bottom:20px;}
+  .page-title span{color:var(--nova);}
+  .page-desc{font-size:20px;color:var(--text-sec);font-weight:300;line-height:1.7;max-width:640px;margin-bottom:32px;}
+  .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
+  .hero-stat{display:flex;flex-direction:column;gap:4px;}
+  .hero-stat-val{font-size:36px;font-weight:200;color:var(--nova);}
+  .hero-stat-lbl{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);}
+
+  /* Section */
+  section{padding:56px 0 0;}
+  .section-label{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--text-mut);margin-bottom:20px;}
+  h2{font-size:clamp(28px,4vw,42px);font-weight:300;margin-bottom:16px;}
+  p{font-size:17px;color:var(--text-sec);line-height:1.8;margin-bottom:14px;}
+  strong{color:var(--text);font-weight:500;}
+
+  /* Boost hero card */
+  .game-card{background:var(--surface);border:0.5px solid var(--border);border-radius:20px;overflow:hidden;margin-bottom:56px;}
+  .game-card-header{background:linear-gradient(135deg,rgba(255,77,109,0.08),rgba(153,69,255,0.06));border-bottom:0.5px solid var(--border);padding:28px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .game-title{font-size:clamp(28px,6vw,48px);font-weight:200;letter-spacing:2px;color:var(--nova);}
+  .game-subtitle{font-size:17px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-top:4px;}
+  .game-badge{background:rgba(255,77,109,0.1);border:0.5px solid rgba(255,77,109,0.3);border-radius:20px;padding:8px 18px;font-size:15px;color:var(--nova);letter-spacing:1px;}
+  .game-logo{width:80px;height:80px;border-radius:18px;background:rgba(255,77,109,0.08);border:0.5px solid rgba(255,77,109,0.25);display:flex;align-items:center;justify-content:center;font-size:34px;flex-shrink:0;}
+  .game-card-body{padding:40px 48px;}
+
+  /* Mechanic steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px 0;}
+  .step{background:rgba(255,255,255,0.02);border:0.5px solid var(--border);border-radius:14px;padding:24px;position:relative;}
+  .step-num{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--nova);margin-bottom:10px;}
+  .step-title{font-size:20px;font-weight:400;margin-bottom:8px;}
+  .step-desc{font-size:16px;color:var(--text-sec);line-height:1.6;}
+
+  /* Elements grid */
+  .elements{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0;}
+  .element{border:0.5px solid var(--border);border-radius:14px;padding:20px;display:flex;gap:16px;align-items:flex-start;}
+  .element-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .element-title{font-size:18px;font-weight:500;margin-bottom:4px;}
+  .element-desc{font-size:16px;color:var(--text-sec);line-height:1.6;}
+
+  /* Reward box */
+  .reward-box{background:rgba(255,77,109,0.05);border:0.5px solid rgba(255,77,109,0.25);border-radius:14px;padding:28px;margin:32px 0;display:flex;gap:32px;align-items:center;flex-wrap:wrap;}
+  .reward-val{font-size:32px;font-weight:200;color:var(--nova);line-height:1;font-family:monospace;}
+  .reward-info h3{font-size:20px;font-weight:400;margin-bottom:8px;}
+  .reward-info p{font-size:16px;color:var(--text-sec);line-height:1.6;margin:0;}
+
+  /* Tips */
+  .tips{background:rgba(153,69,255,0.04);border:0.5px solid rgba(153,69,255,0.2);border-radius:14px;padding:28px;margin:32px 0;}
+  .tips h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--signal);margin-bottom:16px;}
+  .tip-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .tip-list li{font-size:17px;color:var(--text-sec);padding-left:20px;position:relative;line-height:1.6;}
+  .tip-list li::before{content:'→';position:absolute;left:0;color:var(--signal);}
+
+  /* Formula table */
+  .formula-box{background:rgba(0,229,195,0.04);border:0.5px solid rgba(0,229,195,0.2);border-radius:14px;padding:28px;margin:32px 0;overflow-x:auto;}
+  .formula-box h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--ion);margin-bottom:16px;}
+  table{width:100%;border-collapse:collapse;font-size:16px;}
+  th{text-align:left;color:var(--text-mut);font-weight:400;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:8px 12px;border-bottom:0.5px solid var(--border);}
+  td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text-sec);}
+  tr.current td{color:var(--text);font-weight:500;}
+  tr.current{background:rgba(255,77,109,0.06);}
+
+  /* Internal links */
+  .internal-links{border-top:0.5px solid var(--border);margin-top:72px;padding-top:48px;}
+  .internal-links h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-bottom:24px;}
+  .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .link-card{background:var(--surface);border:0.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:border-color .2s,transform .2s;display:block;}
+  .link-card:hover{border-color:rgba(153,69,255,0.3);transform:translateY(-2px);}
+  .link-card-label{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-bottom:6px;}
+  .link-card-title{font-size:18px;color:var(--text);}
+  .link-card-desc{font-size:15px;color:var(--text-mut);margin-top:4px;}
+
+  /* CTA bottom */
+  .bottom-cta{text-align:center;padding:72px 0 0;}
+  .bottom-cta h2{font-size:42px;font-weight:200;margin-bottom:12px;}
+  .bottom-cta p{font-size:17px;color:var(--text-sec);margin-bottom:32px;}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--signal);color:#fff;text-decoration:none;padding:16px 40px;border-radius:14px;font-size:16px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:opacity .2s,transform .2s;}
+  .cta-btn:hover{opacity:.88;transform:translateY(-1px);}
+
+  .fade-in{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;}
+  .fade-in.visible{opacity:1;transform:none;}
+
+  @media(max-width:768px){
+    .container{padding:0 20px 60px;}
+    .steps{grid-template-columns:1fr;}
+    .elements{grid-template-columns:1fr;}
+    .link-grid{grid-template-columns:1fr;}
+    .game-card-header,.game-card-body{padding:24px;}
+    .reward-box{flex-direction:column;}
+    .formula-box{padding:20px;}
+    table{font-size:14px;}
+  }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="container">
+
+  <nav>
+    <div class="nav-left">
+      <a href="/" class="nav-back">← Back</a>
+      <a href="/" class="nav-logo">PULSAR</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="nav-cta" target="_blank" rel="noopener">Download</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <span>Boost</span>
+  </div>
+
+  <div class="page-hero fade-in">
+    <div class="hero-tag" id="hero-tag">Ad Boost</div>
+    <h1 class="page-title" id="page-title">One ad.<br><span>+2% for the next hour.</span></h1>
+    <p class="page-desc" id="page-desc">Watch a short rewarded ad inside Pulsar and your collection rate jumps by +2% for a full hour — stacking on top of your base rate, VIP boost and referral bonus.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">+2%</div>
+        <div class="hero-stat-lbl">Rate increase</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">1H</div>
+        <div class="hero-stat-lbl">Boost duration</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">Free</div>
+        <div class="hero-stat-lbl">For VIP members</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boost -->
+  <section class="fade-in">
+    <div class="section-label" id="sect-label">Core mechanic</div>
+    <div class="game-card">
+      <div class="game-card-header">
+        <div style="display:flex;align-items:center;gap:24px;">
+          <div class="game-logo">⚡</div>
+          <div>
+            <div class="game-title" id="g-title">BOOST</div>
+            <div class="game-subtitle" id="g-sub">Rewarded ad · +2% rate</div>
+          </div>
+        </div>
+        <div class="game-badge" id="g-badge">ACTIVE ON ANDROID</div>
+      </div>
+      <div class="game-card-body">
+        <p id="gp1">Boost is a rewarded-ad mechanic built into every active collection session. Watch a short video ad and your $PSR rate increases by +2% for the next hour — no purchase required.</p>
+        <p id="gp2">The bonus applies instantly and stacks with your base rate, referral bonus and VIP tier. VIP members get the same +2% with a single tap — no ad required, but still one activation per hour.</p>
+
+        <h2 style="margin-top:32px;" id="how-title">How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">Step 01</div>
+            <div class="step-title">Open a session</div>
+            <div class="step-desc">Boost is available as soon as you have an active 12h collection session running.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">Step 02</div>
+            <div class="step-title">Watch the ad</div>
+            <div class="step-desc">Tap Boost and watch a short rewarded video to the end. Full ad, full reward.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">Step 03</div>
+            <div class="step-title">Enjoy +2% for 1h</div>
+            <div class="step-desc">Your rate increases immediately. It fades automatically after 60 minutes — watch another ad to renew it.</div>
+          </div>
+        </div>
+
+        <h2 id="elem-title">Boost mechanics</h2>
+        <div class="elements">
+          <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
+            <div class="element-icon" style="background:rgba(255,77,109,0.1);">⚡</div>
+            <div>
+              <div class="element-title" style="color:var(--nova);">+2% rate</div>
+              <div class="element-desc">Applied directly on top of your current effective rate for a full hour.</div>
+            </div>
+          </div>
+          <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
+            <div class="element-icon" style="background:rgba(0,229,195,0.08);">⏱</div>
+            <div>
+              <div class="element-title" style="color:var(--ion);">1-hour timer</div>
+              <div class="element-desc">Counts down in real time. Once it hits zero, your rate returns to normal until you boost again.</div>
+            </div>
+          </div>
+          <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
+            <div class="element-icon" style="background:rgba(153,69,255,0.08);">∞</div>
+            <div>
+              <div class="element-title" style="color:var(--signal);">Unlimited replays</div>
+              <div class="element-desc">No daily cap — watch as many boost ads as you want, back-to-back, as long as a session is active.</div>
+            </div>
+          </div>
+          <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
+            <div class="element-icon" style="background:rgba(247,207,49,0.1);">♦</div>
+            <div>
+              <div class="element-title" style="color:var(--solar);">Free for VIP</div>
+              <div class="element-desc">VIP subscribers get the +2% with just a tap, no ad — but still need to activate it once every hour.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reward -->
+        <div class="reward-box">
+          <div class="reward-val">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
+          <div class="reward-info">
+            <h3 id="reward-title">Boost stacks with everything</h3>
+            <p id="reward-desc">The +2% adds directly into your rate multiplier alongside your referral and VIP bonuses — every source of PSR compounds together.</p>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="tips">
+          <h3 id="tips-title">Tips to maximize your boost</h3>
+          <ul class="tip-list">
+            <li id="tip1">Chain boost ads back-to-back to stay at +2% for your entire 12h session.</li>
+            <li id="tip2">Combine with an active referral bonus and VIP tier to maximize your rate multiplier.</li>
+            <li id="tip4">VIP members still need to tap Boost every hour — it's just free of ads.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formula -->
+  <section class="fade-in">
+    <div class="section-label" id="rm-label">Rate formula</div>
+    <h2 id="more-title">How Boost fits into your rate</h2>
+    <p id="rm-desc">Every session's rate combines four components. Boost is the only one you control instantly, whenever you want.</p>
+    <div class="formula-box">
+      <h3 id="tbl-title">Rate components</h3>
+      <table>
+        <tr><th id="th-bonus">Bonus</th><th id="th-value">Value</th><th id="th-condition">Condition</th></tr>
+        <tr><td id="row1-a">Base rate</td><td id="row1-b">Variable</td><td id="row1-c">Always active</td></tr>
+        <tr><td id="row2-a">Referral</td><td id="row2-b">+1% / referral</td><td id="row2-c">Active within 48h</td></tr>
+        <tr><td id="row3-a">VIP</td><td id="row3-b">0% to +15%</td><td id="row3-c">Active subscription</td></tr>
+        <tr class="current"><td id="row4-a">Boost</td><td id="row4-b">+2% / 1h</td><td id="row4-c">Ad watched (repeatable)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Internal links -->
+  <div class="internal-links fade-in">
+    <h3 id="internal-title">Explore Pulsar</h3>
+    <div class="link-grid">
+      <a href="/features/sessions.html" class="link-card">
+        <div class="link-card-label" id="link1-label">Feature</div>
+        <div class="link-card-title" id="link1-title">Session</div>
+        <div class="link-card-desc" id="link1-desc">One tap. 12 hours later, your balance is up.</div>
+      </a>
+      <a href="/features/vip.html" class="link-card">
+        <div class="link-card-label" id="link2-label">Feature</div>
+        <div class="link-card-title" id="link2-title">VIP subscriptions</div>
+        <div class="link-card-desc" id="link2-desc">No ads · Rate boost up to +15%</div>
+      </a>
+      <a href="/features/referral.html" class="link-card">
+        <div class="link-card-label" id="link3-label">Feature</div>
+        <div class="link-card-title" id="link3-title">Referral program</div>
+        <div class="link-card-desc" id="link3-desc">+1% rate per active friend</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bottom-cta fade-in">
+    <h2 id="cta-title">Start boosting today.</h2>
+    <p id="cta-desc">Download Pulsar: Space Rewards for free on Android. No email, no KYC.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="cta-btn" target="_blank" rel="noopener">
+      <span id="cta-btn-txt">Download on Google Play</span>
+    </a>
+  </div>
+
+</div>
+
+<script>
+const c = document.getElementById('stars');
+for(let i=0;i<80;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  const sz=0.8+Math.random()*2;
+  s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--min-op:${0.05+Math.random()*0.15};--max-op:${0.3+Math.random()*0.5};--d:${2+Math.random()*4}s;--delay:${Math.random()*5}s;`;
+  c.appendChild(s);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+const uLang = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en');
+const FR = uLang.toLowerCase().indexOf('fr') === 0;
+
+const T = {
+  heroTag: FR ? "Boost publicitaire" : "Ad Boost",
+  pageTitle: FR ? "Une pub.<br><span>+2% pendant 1 heure.</span>" : "One ad.<br><span>+2% for the next hour.</span>",
+  pageDesc: FR ? "Regarde une courte pub r\u00e9compens\u00e9e dans Pulsar et ton taux de collecte grimpe de +2% pendant une heure enti\u00e8re \u2014 cumul\u00e9 avec ton taux de base, ton boost VIP et ton bonus de parrainage." : "Watch a short rewarded ad inside Pulsar and your collection rate jumps by +2% for a full hour \u2014 stacking on top of your base rate, VIP boost and referral bonus.",
+  stat1Lbl: FR ? "Augmentation de taux" : "Rate increase",
+  stat2Lbl: FR ? "Dur\u00e9e du boost" : "Boost duration",
+  stat3Lbl: FR ? "Pour les VIP" : "For VIP members",
+  sectionLabel: FR ? "M\u00e9canique principale" : "Core mechanic",
+  gSub: FR ? "Pub r\u00e9compens\u00e9e \u00b7 +2% de taux" : "Rewarded ad · +2% rate",
+  gBadge: FR ? "ACTIF SUR ANDROID" : "ACTIVE ON ANDROID",
+  gp1: FR ? "Le Boost est un m\u00e9canisme de pub r\u00e9compens\u00e9e int\u00e9gr\u00e9 \u00e0 chaque collecte active. Regarde une courte vid\u00e9o et ton taux $PSR augmente de +2% pendant l\u0027heure suivante \u2014 sans aucun achat." : "Boost is a rewarded-ad mechanic built into every active collection session. Watch a short video ad and your $PSR rate increases by +2% for the next hour \u2014 no purchase required.",
+  gp2: FR ? "Le bonus s\u0027applique instantan\u00e9ment et se cumule avec ton taux de base, ton bonus de parrainage et ton niveau VIP. Les membres VIP obtiennent le m\u00eame +2% d\u0027un simple tap \u2014 sans pub, mais toujours une activation par heure." : "The bonus applies instantly and stacks with your base rate, referral bonus and VIP tier. VIP members get the same +2% with a single tap \u2014 no ad required, but still one activation per hour.",
+  howTitle: FR ? "Comment \u00e7a marche" : "How it works",
+  step1Num: FR ? "\u00c9tape 01" : "Step 01",
+  step1Title: FR ? "Ouvre une collecte" : "Open a session",
+  step1Desc: FR ? "Le Boost est disponible d\u00e8s que tu as une collecte de 12h active en cours." : "Boost is available as soon as you have an active 12h collection session running.",
+  step2Num: FR ? "\u00c9tape 02" : "Step 02",
+  step2Title: FR ? "Regarde la pub" : "Watch the ad",
+  step2Desc: FR ? "Appuie sur Boost et regarde une courte vid\u00e9o r\u00e9compens\u00e9e jusqu\u0027au bout. Pub compl\u00e8te, r\u00e9compense compl\u00e8te." : "Tap Boost and watch a short rewarded video to the end. Full ad, full reward.",
+  step3Num: FR ? "\u00c9tape 03" : "Step 03",
+  step3Title: FR ? "Profite du +2% pendant 1h" : "Enjoy +2% for 1h",
+  step3Desc: FR ? "Ton taux augmente imm\u00e9diatement. Il retombe automatiquement apr\u00e8s 60 minutes \u2014 regarde une autre pub pour le renouveler." : "Your rate increases immediately. It fades automatically after 60 minutes \u2014 watch another ad to renew it.",
+  elemTitle: FR ? "M\u00e9canique du Boost" : "Boost mechanics",
+  el1Title: FR ? "+2% de taux" : "+2% rate",
+  el1Desc: FR ? "Appliqu\u00e9 directement sur ton taux effectif actuel pendant une heure enti\u00e8re." : "Applied directly on top of your current effective rate for a full hour.",
+  el2Title: FR ? "Minuteur d\u00271 heure" : "1-hour timer",
+  el2Desc: FR ? "D\u00e9compte en temps r\u00e9el. Une fois \u00e0 z\u00e9ro, ton taux revient \u00e0 la normale jusqu\u0027au prochain boost." : "Counts down in real time. Once it hits zero, your rate returns to normal until you boost again.",
+  el3Title: FR ? "Rejouable \u00e0 volont\u00e9" : "Unlimited replays",
+  el3Desc: FR ? "Aucune limite quotidienne \u2014 regarde autant de pubs boost que tu veux, \u00e0 la suite, tant qu\u0027une collecte est active." : "No daily cap \u2014 watch as many boost ads as you want, back-to-back, as long as a session is active.",
+  el4Title: FR ? "Gratuit pour les VIP" : "Free for VIP",
+  el4Desc: FR ? "Les abonn\u00e9s VIP obtiennent le +2% d\u0027un simple tap, sans pub \u2014 mais doivent toujours l\u0027activer une fois par heure." : "VIP subscribers get the +2% with just a tap, no ad \u2014 but still need to activate it once every hour.",
+  rewardTitle: FR ? "Le Boost se cumule avec tout" : "Boost stacks with everything",
+  rewardDesc: FR ? "Le +2% s\u0027ajoute directement \u00e0 ton multiplicateur de taux, avec tes bonus de parrainage et VIP \u2014 chaque source de PSR se cumule." : "The +2% adds directly into your rate multiplier alongside your referral and VIP bonuses \u2014 every source of PSR compounds together.",
+  tipsTitle: FR ? "Astuces pour maximiser ton Boost" : "Tips to maximize your boost",
+  tip1: FR ? "Encha\u00eene les pubs boost \u00e0 la suite pour rester \u00e0 +2% pendant toute ta collecte de 12h." : "Chain boost ads back-to-back to stay at +2% for your entire 12h session.",
+  tip2: FR ? "Combine avec un bonus de parrainage actif et ton niveau VIP pour maximiser ton multiplicateur." : "Combine with an active referral bonus and VIP tier to maximize your rate multiplier.",
+  tip4: FR ? "Les membres VIP doivent quand m\u00eame taper sur Boost chaque heure \u2014 c\u0027est juste gratuit, sans pub." : "VIP members still need to tap Boost every hour \u2014 it's just free of ads.",
+  rmLabel: FR ? "Formule de taux" : "Rate formula",
+  moreTitle: FR ? "Comment le Boost s\u0027int\u00e8gre \u00e0 ton taux" : "How Boost fits into your rate",
+  rmDesc: FR ? "Le taux de chaque collecte combine quatre composantes. Le Boost est la seule que tu contr\u00f4les instantan\u00e9ment, quand tu veux." : "Every session's rate combines four components. Boost is the only one you control instantly, whenever you want.",
+  tblTitle: FR ? "Composantes du taux" : "Rate components",
+  thBonus: FR ? "Bonus" : "Bonus",
+  thValue: FR ? "Valeur" : "Value",
+  thCondition: FR ? "Condition" : "Condition",
+  row1a: FR ? "Taux de base" : "Base rate",
+  row1b: FR ? "Variable" : "Variable",
+  row1c: FR ? "Toujours actif" : "Always active",
+  row2a: FR ? "Parrainage" : "Referral",
+  row2b: FR ? "+1% / filleul" : "+1% / referral",
+  row2c: FR ? "Actif dans les 48h" : "Active within 48h",
+  row3a: "VIP",
+  row3b: FR ? "0% \u00e0 +15%" : "0% to +15%",
+  row3c: FR ? "Abonnement actif" : "Active subscription",
+  row4a: "Boost",
+  row4b: FR ? "+2% / 1h" : "+2% / 1h",
+  row4c: FR ? "Pub regard\u00e9e (r\u00e9p\u00e9table)" : "Ad watched (repeatable)",
+  internalTitle: FR ? "Explorer Pulsar" : "Explore Pulsar",
+  link1Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link1Title: FR ? "Collecte" : "Session",
+  link1Desc: FR ? "Un tap suffit. 12h plus tard, ton solde a grimp\u00e9." : "One tap. 12 hours later, your balance is up.",
+  link2Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link2Title: FR ? "Abonnements VIP" : "VIP subscriptions",
+  link2Desc: FR ? "Sans pub \u00b7 Boost jusqu\u0027\u00e0 +15%" : "No ads · Rate boost up to +15%",
+  link3Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link3Title: FR ? "Programme de parrainage" : "Referral program",
+  link3Desc: FR ? "+1% de taux par ami actif" : "+1% rate per active friend",
+  ctaTitle: FR ? "Commence \u00e0 booster aujourd\u0027hui." : "Start boosting today.",
+  ctaDesc: FR ? "T\u00e9l\u00e9charge Pulsar: Space Rewards gratuitement sur Android. Sans email, sans KYC." : "Download Pulsar: Space Rewards for free on Android. No email, no KYC.",
+  ctaBtn: FR ? "T\u00e9l\u00e9charger sur Google Play" : "Download on Google Play",
+  navBack: FR ? "\u2190 Retour" : "\u2190 Back",
+  navCta: FR ? "T\u00e9l\u00e9charger" : "Download",
+  breadcrumb: FR ? "Boost" : "Boost",
+};
+
+if (FR) {
+  document.querySelector('.hero-tag').textContent = T.heroTag;
+  document.querySelector('.page-title').innerHTML = T.pageTitle;
+  document.querySelector('.page-desc').textContent = T.pageDesc;
+  const statLbls = document.querySelectorAll('.hero-stat-lbl');
+  statLbls[0].textContent = T.stat1Lbl;
+  statLbls[1].textContent = T.stat2Lbl;
+  statLbls[2].textContent = T.stat3Lbl;
+  document.getElementById('sect-label').textContent = T.sectionLabel;
+  document.getElementById('g-sub').textContent = T.gSub;
+  document.getElementById('g-badge').textContent = T.gBadge;
+  document.getElementById('gp1').textContent = T.gp1;
+  document.getElementById('gp2').textContent = T.gp2;
+  document.getElementById('how-title').textContent = T.howTitle;
+  const stepNums = document.querySelectorAll('.step-num');
+  stepNums[0].textContent = T.step1Num; stepNums[1].textContent = T.step2Num; stepNums[2].textContent = T.step3Num;
+  const stepTitles = document.querySelectorAll('.step-title');
+  stepTitles[0].textContent = T.step1Title; stepTitles[1].textContent = T.step2Title; stepTitles[2].textContent = T.step3Title;
+  const stepDescs = document.querySelectorAll('.step-desc');
+  stepDescs[0].textContent = T.step1Desc; stepDescs[1].textContent = T.step2Desc; stepDescs[2].textContent = T.step3Desc;
+  document.getElementById('elem-title').textContent = T.elemTitle;
+  const elTitles = document.querySelectorAll('.element-title');
+  elTitles[0].textContent = T.el1Title; elTitles[1].textContent = T.el2Title; elTitles[2].textContent = T.el3Title; elTitles[3].textContent = T.el4Title;
+  const elDescs = document.querySelectorAll('.element-desc');
+  elDescs[0].textContent = T.el1Desc; elDescs[1].textContent = T.el2Desc; elDescs[2].textContent = T.el3Desc; elDescs[3].textContent = T.el4Desc;
+  document.getElementById('reward-title').textContent = T.rewardTitle;
+  document.getElementById('reward-desc').textContent = T.rewardDesc;
+  document.getElementById('tips-title').textContent = T.tipsTitle;
+  document.getElementById('tip1').textContent = T.tip1;
+  document.getElementById('tip2').textContent = T.tip2;
+  document.getElementById('tip4').textContent = T.tip4;
+  document.getElementById('rm-label').textContent = T.rmLabel;
+  document.getElementById('more-title').textContent = T.moreTitle;
+  document.getElementById('rm-desc').textContent = T.rmDesc;
+  document.getElementById('tbl-title').textContent = T.tblTitle;
+  document.getElementById('th-bonus').textContent = T.thBonus;
+  document.getElementById('th-value').textContent = T.thValue;
+  document.getElementById('th-condition').textContent = T.thCondition;
+  document.getElementById('row1-a').textContent = T.row1a;
+  document.getElementById('row1-b').textContent = T.row1b;
+  document.getElementById('row1-c').textContent = T.row1c;
+  document.getElementById('row2-a').textContent = T.row2a;
+  document.getElementById('row2-b').textContent = T.row2b;
+  document.getElementById('row2-c').textContent = T.row2c;
+  document.getElementById('row3-a').textContent = T.row3a;
+  document.getElementById('row3-b').textContent = T.row3b;
+  document.getElementById('row3-c').textContent = T.row3c;
+  document.getElementById('row4-a').textContent = T.row4a;
+  document.getElementById('row4-b').textContent = T.row4b;
+  document.getElementById('row4-c').textContent = T.row4c;
+  document.getElementById('internal-title').textContent = T.internalTitle;
+  document.getElementById('link1-label').textContent = T.link1Label;
+  document.getElementById('link1-title').textContent = T.link1Title;
+  document.getElementById('link1-desc').textContent = T.link1Desc;
+  document.getElementById('link2-label').textContent = T.link2Label;
+  document.getElementById('link2-title').textContent = T.link2Title;
+  document.getElementById('link2-desc').textContent = T.link2Desc;
+  document.getElementById('link3-label').textContent = T.link3Label;
+  document.getElementById('link3-title').textContent = T.link3Title;
+  document.getElementById('link3-desc').textContent = T.link3Desc;
+  document.getElementById('cta-title').textContent = T.ctaTitle;
+  document.getElementById('cta-desc').textContent = T.ctaDesc;
+  document.getElementById('cta-btn-txt').textContent = T.ctaBtn;
+  document.querySelector('.nav-back').textContent = T.navBack;
+  document.querySelector('.nav-cta').textContent = T.navCta;
+  const breadcrumbs = document.querySelectorAll('.breadcrumb span');
+  breadcrumbs[breadcrumbs.length-1].textContent = T.breadcrumb;
+}
+</script>
+
+</body>
+</html>
