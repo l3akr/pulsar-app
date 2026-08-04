@@ -33,7 +33,7 @@
   .stars{position:fixed;inset:0;pointer-events:none;z-index:0;}
   .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite alternate;animation-delay:var(--delay,0s);}
   @keyframes twinkle{from{opacity:var(--min-op,0.1);}to{opacity:var(--max-op,0.6);}}
-  .container{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 48px 100px;}
+  .container{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 64px 100px;}
 
   nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
   .nav-left{display:flex;align-items:center;gap:16px;}
@@ -92,10 +92,23 @@
   .element-desc{font-size:16px;color:var(--text-sec);line-height:1.6;}
 
   /* Reward box */
-  .reward-box{background:rgba(153,69,255,0.05);border:0.5px solid rgba(153,69,255,0.25);border-radius:14px;padding:28px;margin:32px 0;display:flex;gap:32px;align-items:center;flex-wrap:wrap;}
-  .reward-val{font-size:32px;font-weight:200;color:var(--signal);line-height:1;font-family:monospace;}
+  .reward-box{background:rgba(153,69,255,0.05);border:0.5px solid rgba(153,69,255,0.25);border-radius:14px;padding:24px;margin:32px 0;}
+  .reward-formula{font-family:monospace;font-size:13px;color:var(--text-sec);background:rgba(255,255,255,0.04);border:0.5px solid var(--border);border-radius:8px;padding:8px 12px;display:inline-block;margin-top:14px;letter-spacing:0.2px;word-break:break-word;}
   .reward-info h3{font-size:20px;font-weight:400;margin-bottom:8px;}
   .reward-info p{font-size:16px;color:var(--text-sec);line-height:1.6;margin:0;}
+
+  /* Accordion */
+  .accordion{display:flex;flex-direction:column;gap:12px;margin:32px 0;}
+  .acc-item{background:rgba(255,255,255,0.02);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;}
+  .acc-item summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:19px;font-weight:500;color:var(--text);transition:background .2s;}
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item summary:hover{background:rgba(255,255,255,0.02);}
+  .acc-icon{font-size:14px;color:var(--text-mut);transition:transform .25s ease;flex-shrink:0;}
+  .acc-item[open] .acc-icon{transform:rotate(180deg);}
+  .acc-item[open] summary{border-bottom:0.5px solid var(--border);}
+  .acc-body{padding:28px 24px;}
+  .acc-body .steps,.acc-body .elements{margin-top:0;}
+  .acc-body .reward-box:last-child,.acc-body .tip-list:last-child{margin-bottom:0;}
 
   /* Tips */
   .tips{background:rgba(0,229,195,0.04);border:0.5px solid rgba(0,229,195,0.2);border-radius:14px;padding:28px;margin:32px 0;}
@@ -139,9 +152,10 @@
     .elements{grid-template-columns:1fr;}
     .link-grid{grid-template-columns:1fr;}
     .game-card-header,.game-card-body{padding:24px;}
-    .reward-box{flex-direction:column;}
     .program-box{padding:20px;}
     table{font-size:14px;}
+    .acc-item summary{padding:18px 20px;font-size:17px;}
+    .acc-body{padding:20px;}
   }
 </style>
 </head>
@@ -203,75 +217,86 @@
         <p id="gp1">Every Pulsar account gets a personal referral code. Share it with friends — when they sign up and become active, you both get rewarded.</p>
         <p id="gp2">Your friend gets a welcome bonus equivalent to a full 12h session at the current rate, credited instantly at sign-up. You get +1% added to your rate for every friend who stays active.</p>
 
-        <h2 style="margin-top:32px;" id="how-title">How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">Step 01</div>
-            <div class="step-title">Share your code</div>
-            <div class="step-desc">Find your personal referral code in the Station menu and share it with friends.</div>
-          </div>
-          <div class="step">
-            <div class="step-num">Step 02</div>
-            <div class="step-title">They sign up & get active</div>
-            <div class="step-desc">Your friend creates an account with your code and completes their first collection within 48 hours.</div>
-          </div>
-          <div class="step">
-            <div class="step-num">Step 03</div>
-            <div class="step-title">Both of you get rewarded</div>
-            <div class="step-desc">They receive a free 12h session's worth of PSR instantly. You get +1%, for as long as they keep collecting within 48h.</div>
-          </div>
-        </div>
+        <div class="accordion">
+          <details class="acc-item" open>
+            <summary class="acc-summary"><span id="how-title">How it works</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="steps">
+                <div class="step">
+                  <div class="step-num">Step 01</div>
+                  <div class="step-title">Share your code</div>
+                  <div class="step-desc">Find your personal referral code in the Station menu and share it with friends.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 02</div>
+                  <div class="step-title">They sign up & get active</div>
+                  <div class="step-desc">Your friend creates an account with your code and completes their first collection within 48 hours.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 03</div>
+                  <div class="step-title">Both of you get rewarded</div>
+                  <div class="step-desc">They receive a free 12h session's worth of PSR instantly. You get +1%, for as long as they keep collecting within 48h.</div>
+                </div>
+              </div>
+            </div>
+          </details>
 
-        <h2 id="elem-title">Program details</h2>
-        <div class="elements">
-          <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
-            <div class="element-icon" style="background:rgba(153,69,255,0.08);">✦</div>
-            <div>
-              <div class="element-title" style="color:var(--signal);">Referral bonus</div>
-              <div class="element-desc">A free 12h session's worth of PSR, credited the moment your friend signs up with your code.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
-            <div class="element-icon" style="background:rgba(0,229,195,0.08);">◈</div>
-            <div>
-              <div class="element-title" style="color:var(--ion);">Referrer bonus</div>
-              <div class="element-desc">+1% rate for every friend, as long as they collect at least once every 48 hours. Stops if they go inactive, resumes if they come back.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
-            <div class="element-icon" style="background:rgba(247,207,49,0.1);">▲</div>
-            <div>
-              <div class="element-title" style="color:var(--solar);">Device lock</div>
-              <div class="element-desc">One account per physical device — protects the fairness of the referral system.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
-            <div class="element-icon" style="background:rgba(255,77,109,0.1);">◆</div>
-            <div>
-              <div class="element-title" style="color:var(--nova);">Anti-abuse</div>
-              <div class="element-desc">Self-referral and circular referral chains are automatically detected and blocked.</div>
-            </div>
-          </div>
-        </div>
+          <details class="acc-item">
+            <summary class="acc-summary"><span id="elem-title">Program details</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="elements">
+                <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
+                  <div class="element-icon" style="background:rgba(153,69,255,0.08);">✦</div>
+                  <div>
+                    <div class="element-title" style="color:var(--signal);">Referral bonus</div>
+                    <div class="element-desc">A free 12h session's worth of PSR, credited the moment your friend signs up with your code.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
+                  <div class="element-icon" style="background:rgba(0,229,195,0.08);">◈</div>
+                  <div>
+                    <div class="element-title" style="color:var(--ion);">Referrer bonus</div>
+                    <div class="element-desc">+1% rate for every friend, as long as they collect at least once every 48 hours. Stops if they go inactive, resumes if they come back.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
+                  <div class="element-icon" style="background:rgba(247,207,49,0.1);">▲</div>
+                  <div>
+                    <div class="element-title" style="color:var(--solar);">Device lock</div>
+                    <div class="element-desc">One account per physical device — protects the fairness of the referral system.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
+                  <div class="element-icon" style="background:rgba(255,77,109,0.1);">◆</div>
+                  <div>
+                    <div class="element-title" style="color:var(--nova);">Anti-abuse</div>
+                    <div class="element-desc">Self-referral and circular referral chains are automatically detected and blocked.</div>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Reward -->
-        <div class="reward-box">
-          <div class="reward-val">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
-          <div class="reward-info">
-            <h3 id="reward-title">Tied to their activity</h3>
-            <p id="reward-desc">Your +1% keeps flowing only while your friend keeps collecting at least once every 48h — no activity, no bonus.</p>
-          </div>
-        </div>
+              <!-- Reward -->
+              <div class="reward-box">
+                <div class="reward-info">
+                  <h3 id="reward-title">Tied to their activity</h3>
+                  <p id="reward-desc">Your +1% keeps flowing only while your friend keeps collecting at least once every 48h — no activity, no bonus.</p>
+                  <div class="reward-formula">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
+                </div>
+              </div>
+            </div>
+          </details>
 
-        <!-- Tips -->
-        <div class="tips">
-          <h3 id="tips-title">Tips to grow your rate</h3>
-          <ul class="tip-list">
-            <li id="tip1">Check the Referral tab in your Station to see at a glance which friends are currently active.</li>
-            <li id="tip2">Nudge inactive friends — your +1% pauses the moment they go 48h without a collection.</li>
-            <li id="tip3">Combine with VIP and Boost for the highest possible rate multiplier.</li>
-            <li id="tip4">Your total referral bonus updates in real time — it drops if a friend goes quiet, and climbs when they're back.</li>
-          </ul>
+          <details class="acc-item">
+            <summary class="acc-summary"><span id="tips-title">Tips to grow your rate</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <ul class="tip-list">
+                <li id="tip1">Check the Referral tab in your Station to see at a glance which friends are currently active.</li>
+                <li id="tip2">Nudge inactive friends — your +1% pauses the moment they go 48h without a collection.</li>
+                <li id="tip3">Combine with VIP and Boost for the highest possible rate multiplier.</li>
+                <li id="tip4">Your total referral bonus updates in real time — it drops if a friend goes quiet, and climbs when they're back.</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
     </div>

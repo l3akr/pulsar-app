@@ -33,7 +33,7 @@
   .stars{position:fixed;inset:0;pointer-events:none;z-index:0;}
   .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite alternate;animation-delay:var(--delay,0s);}
   @keyframes twinkle{from{opacity:var(--min-op,0.1);}to{opacity:var(--max-op,0.6);}}
-  .container{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 48px 100px;}
+  .container{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 64px 100px;}
 
   nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
   .nav-left{display:flex;align-items:center;gap:16px;}
@@ -92,10 +92,23 @@
   .element-desc{font-size:16px;color:var(--text-sec);line-height:1.6;}
 
   /* Reward box */
-  .reward-box{background:rgba(0,229,195,0.05);border:0.5px solid rgba(0,229,195,0.25);border-radius:14px;padding:28px;margin:32px 0;display:flex;gap:32px;align-items:center;flex-wrap:wrap;}
-  .reward-val{font-size:38px;font-weight:200;color:var(--ion);line-height:1;font-family:monospace;}
+  .reward-box{background:rgba(0,229,195,0.05);border:0.5px solid rgba(0,229,195,0.25);border-radius:14px;padding:24px;margin:32px 0;}
+  .reward-formula{font-family:monospace;font-size:13px;color:var(--text-sec);background:rgba(255,255,255,0.04);border:0.5px solid var(--border);border-radius:8px;padding:8px 12px;display:inline-block;margin-top:14px;letter-spacing:0.2px;word-break:break-word;}
   .reward-info h3{font-size:20px;font-weight:400;margin-bottom:8px;}
   .reward-info p{font-size:16px;color:var(--text-sec);line-height:1.6;margin:0;}
+
+  /* Accordion */
+  .accordion{display:flex;flex-direction:column;gap:12px;margin:32px 0;}
+  .acc-item{background:rgba(255,255,255,0.02);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;}
+  .acc-item summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:19px;font-weight:500;color:var(--text);transition:background .2s;}
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item summary:hover{background:rgba(255,255,255,0.02);}
+  .acc-icon{font-size:14px;color:var(--text-mut);transition:transform .25s ease;flex-shrink:0;}
+  .acc-item[open] .acc-icon{transform:rotate(180deg);}
+  .acc-item[open] summary{border-bottom:0.5px solid var(--border);}
+  .acc-body{padding:28px 24px;}
+  .acc-body .steps,.acc-body .elements{margin-top:0;}
+  .acc-body .reward-box:last-child,.acc-body .tip-list:last-child{margin-bottom:0;}
 
   /* Tips */
   .tips{background:rgba(153,69,255,0.04);border:0.5px solid rgba(153,69,255,0.2);border-radius:14px;padding:28px;margin:32px 0;}
@@ -140,9 +153,10 @@
     .elements{grid-template-columns:1fr;}
     .link-grid{grid-template-columns:1fr;}
     .game-card-header,.game-card-body{padding:24px;}
-    .reward-box{flex-direction:column;}
     .milestones{padding:20px;}
     table{font-size:14px;}
+    .acc-item summary{padding:18px 20px;font-size:17px;}
+    .acc-body{padding:20px;}
   }
 </style>
 </head>
@@ -204,75 +218,86 @@
         <p id="gp1">A session is Pulsar's core collection mechanic. Once launched, it runs for 12 hours in the background, crediting $PSR to your balance at your effective hourly rate — no need to keep the app open.</p>
         <p id="gp2">When the timer ends, your earnings are calculated securely on the server and credited instantly. You can then start a brand new session right away.</p>
 
-        <h2 style="margin-top:32px;" id="how-title">How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">Step 01</div>
-            <div class="step-title">Start a session</div>
-            <div class="step-desc">Watch a short non-skippable ad (skipped automatically for VIP), then your 12-hour session begins.</div>
-          </div>
-          <div class="step">
-            <div class="step-num">Step 02</div>
-            <div class="step-title">Let it run</div>
-            <div class="step-desc">Your $PSR balance grows automatically at your effective rate. Close the app — the session keeps running.</div>
-          </div>
-          <div class="step">
-            <div class="step-num">Step 03</div>
-            <div class="step-title">Collect & restart</div>
-            <div class="step-desc">Tokens are credited instantly once the session ends. Start a new one immediately to keep growing.</div>
-          </div>
-        </div>
+        <div class="accordion">
+          <details class="acc-item" open>
+            <summary class="acc-summary"><span id="how-title">How it works</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="steps">
+                <div class="step">
+                  <div class="step-num">Step 01</div>
+                  <div class="step-title">Start a session</div>
+                  <div class="step-desc">Watch a short non-skippable ad (skipped automatically for VIP), then your 12-hour session begins.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 02</div>
+                  <div class="step-title">Let it run</div>
+                  <div class="step-desc">Your $PSR balance grows automatically at your effective rate. Close the app — the session keeps running.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 03</div>
+                  <div class="step-title">Collect & restart</div>
+                  <div class="step-desc">Tokens are credited instantly once the session ends. Start a new one immediately to keep growing.</div>
+                </div>
+              </div>
+            </div>
+          </details>
 
-        <h2 id="elem-title">Rate components</h2>
-        <div class="elements">
-          <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
-            <div class="element-icon" style="background:rgba(0,229,195,0.08);">◈</div>
-            <div>
-              <div class="element-title" style="color:var(--ion);">Base rate</div>
-              <div class="element-desc">Set by the current milestone tier. It drops as more users join Pulsar globally, so early adopters earn more.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
-            <div class="element-icon" style="background:rgba(153,69,255,0.08);">✦</div>
-            <div>
-              <div class="element-title" style="color:var(--signal);">Referral bonus</div>
-              <div class="element-desc">+1% rate for every friend who becomes active within 48h of signing up with your code. No cap, no expiry.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
-            <div class="element-icon" style="background:rgba(247,207,49,0.1);">♦</div>
-            <div>
-              <div class="element-title" style="color:var(--solar);">VIP boost</div>
-              <div class="element-desc">0% to +15% depending on your subscription tier. VIP also removes all ads, including the session-launch ad.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
-            <div class="element-icon" style="background:rgba(255,77,109,0.1);">▲</div>
-            <div>
-              <div class="element-title" style="color:var(--nova);">Ad boost</div>
-              <div class="element-desc">+2% rate for 1 hour after watching a rewarded ad, once per session. Free for VIP members.</div>
-            </div>
-          </div>
-        </div>
+          <details class="acc-item">
+            <summary class="acc-summary"><span id="elem-title">Rate components</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="elements">
+                <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
+                  <div class="element-icon" style="background:rgba(0,229,195,0.08);">◈</div>
+                  <div>
+                    <div class="element-title" style="color:var(--ion);">Base rate</div>
+                    <div class="element-desc">Set by the current milestone tier. It drops as more users join Pulsar globally, so early adopters earn more.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
+                  <div class="element-icon" style="background:rgba(153,69,255,0.08);">✦</div>
+                  <div>
+                    <div class="element-title" style="color:var(--signal);">Referral bonus</div>
+                    <div class="element-desc">+1% rate for every friend who becomes active within 48h of signing up with your code. No cap, no expiry.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
+                  <div class="element-icon" style="background:rgba(247,207,49,0.1);">♦</div>
+                  <div>
+                    <div class="element-title" style="color:var(--solar);">VIP boost</div>
+                    <div class="element-desc">0% to +15% depending on your subscription tier. VIP also removes all ads, including the session-launch ad.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
+                  <div class="element-icon" style="background:rgba(255,77,109,0.1);">▲</div>
+                  <div>
+                    <div class="element-title" style="color:var(--nova);">Ad boost</div>
+                    <div class="element-desc">+2% rate for 1 hour after watching a rewarded ad, once per session. Free for VIP members.</div>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Reward -->
-        <div class="reward-box">
-          <div class="reward-val">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
-          <div class="reward-info">
-            <h3>Calculated server-side, credited automatically</h3>
-            <p>Your session's earnings are computed exclusively by Firebase Cloud Functions and added to your balance the moment the 12 hours are up — nothing to claim manually.</p>
-          </div>
-        </div>
+              <!-- Reward -->
+              <div class="reward-box">
+                <div class="reward-info">
+                  <h3>Calculated server-side, credited automatically</h3>
+                  <p>Your session's earnings are computed exclusively by Firebase Cloud Functions and added to your balance the moment the 12 hours are up — nothing to claim manually.</p>
+                  <div class="reward-formula">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
+                </div>
+              </div>
+            </div>
+          </details>
 
-        <!-- Tips -->
-        <div class="tips">
-          <h3>Tips to maximize your rate</h3>
-          <ul class="tip-list">
-            <li>Start a new session as soon as the previous one ends to avoid downtime between collections.</li>
-            <li>Refer active friends before launching a session to lock in the +1% bonus for the full 12 hours.</li>
-            <li>Watch the boost ad right after starting — it stacks on top of your referral and VIP bonuses.</li>
-            <li>Check the milestone table below — the earlier you join, the higher your base rate.</li>
-          </ul>
+          <details class="acc-item">
+            <summary class="acc-summary"><span id="tips-title">Tips to maximize your rate</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <ul class="tip-list">
+                <li>Start a new session as soon as the previous one ends to avoid downtime between collections.</li>
+                <li>Refer active friends before launching a session to lock in the +1% bonus for the full 12 hours.</li>
+                <li>Watch the boost ad right after starting — it stacks on top of your referral and VIP bonuses.</li>
+                <li>Check the milestone table below — the earlier you join, the higher your base rate.</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -458,7 +483,7 @@ if (FR) {
   elDescs[0].textContent = T.el1Desc; elDescs[1].textContent = T.el2Desc; elDescs[2].textContent = T.el3Desc; elDescs[3].textContent = T.el4Desc;
   document.querySelector('.reward-info h3').textContent = T.rewardTitle;
   document.querySelector('.reward-info p').textContent = T.rewardDesc;
-  document.querySelector('.tips h3').textContent = T.tipsTitle;
+  document.getElementById('tips-title').textContent = T.tipsTitle;
   const tips = document.querySelectorAll('.tip-list li');
   tips[0].textContent = T.tip1; tips[1].textContent = T.tip2; tips[2].textContent = T.tip3; tips[3].textContent = T.tip4;
   document.getElementById('rm-label').textContent = T.rmLabel;
