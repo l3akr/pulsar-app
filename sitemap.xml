@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pulsarminer.space/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://pulsarminer.space/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pulsarminer.space/"/>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/features/sessions.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/features/boost.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/features/referral.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/features/vip.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/features/leaderboard.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/features/privacy.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/mini-games.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pulsarminer.space/faq.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
