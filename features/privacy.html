@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy First — No Email, No Data Collected | Pulsar: Space Rewards</title>
+<meta name="description" content="Pulsar: Space Rewards never asks for your email, phone number, or personal data. Just a username and password, with a persistent session and one account per device.">
+<meta name="keywords" content="Pulsar privacy, no email sign up, no KYC crypto app, anonymous crypto app, mobile crypto app, Solana app, pulsar space rewards privacy">
+<link rel="canonical" href="https://pulsarminer.space/features/privacy">
+<link rel="icon" type="image/png" href="/pulsar-logo.png">
+<meta property="og:title" content="Privacy First — No Email, No Data Collected | Pulsar: Space Rewards">
+<meta property="og:description" content="No email, no phone, no personal data. Just a username and password. That's Pulsar.">
+<meta property="og:url" content="https://pulsarminer.space/features/privacy">
+<meta property="og:image" content="https://pulsarminer.space/pulsar-logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy First — Pulsar: Space Rewards",
+  "description": "Pulsar never collects email, phone number, or personal data. Sign up with just a username and password.",
+  "url": "https://pulsarminer.space/features/privacy",
+  "isPartOf": { "@type": "WebSite", "url": "https://pulsarminer.space" }
+}
+</script>
+<style>
+  :root {
+    --void:#09090f;--surface:#12121e;--border:#1e1e32;
+    --signal:#9945ff;--ion:#00e5c3;--solar:#F7CF31;--nova:#ff4d6d;
+    --text:#f0eeff;--text-sec:rgba(240,238,255,0.75);--text-mut:rgba(240,238,255,0.42);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--void);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden;}
+  .stars{position:fixed;inset:0;pointer-events:none;z-index:0;}
+  .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite alternate;animation-delay:var(--delay,0s);}
+  @keyframes twinkle{from{opacity:var(--min-op,0.1);}to{opacity:var(--max-op,0.6);}}
+  .container{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 64px 100px;}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
+  .nav-left{display:flex;align-items:center;gap:16px;}
+  .nav-back{font-size:15px;color:var(--text-mut);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
+  .nav-back:hover{color:var(--text-sec);}
+  .nav-logo{font-size:16px;letter-spacing:6px;font-weight:300;color:var(--text-mut);text-decoration:none;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .nav-cta{background:var(--signal);color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-size:16px;letter-spacing:1px;transition:opacity .2s;}
+  .nav-cta:hover{opacity:.85;}
+
+  /* Breadcrumb */
+  .breadcrumb{margin:32px 0 0;font-size:15px;color:var(--text-mut);display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--text-mut);text-decoration:none;transition:color .2s;}
+  .breadcrumb a:hover{color:var(--text-sec);}
+  .breadcrumb span{color:var(--border);}
+
+  /* Hero */
+  .page-hero{padding:48px 0 56px;border-bottom:0.5px solid var(--border);}
+  .hero-tag{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--ion);margin-bottom:16px;}
+  .page-title{font-size:clamp(44px,7vw,72px);font-weight:200;line-height:1.1;margin-bottom:20px;}
+  .page-title span{color:var(--ion);}
+  .page-desc{font-size:20px;color:var(--text-sec);font-weight:300;line-height:1.7;max-width:640px;margin-bottom:32px;}
+  .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
+  .hero-stat{display:flex;flex-direction:column;gap:4px;}
+  .hero-stat-val{font-size:36px;font-weight:200;color:var(--ion);}
+  .hero-stat-lbl{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);}
+
+  /* Section */
+  section{padding:56px 0 0;}
+  .section-label{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--text-mut);margin-bottom:20px;}
+  h2{font-size:clamp(28px,4vw,42px);font-weight:300;margin-bottom:16px;}
+  p{font-size:17px;color:var(--text-sec);line-height:1.8;margin-bottom:14px;}
+  strong{color:var(--text);font-weight:500;}
+
+  /* Privacy hero card */
+  .game-card{background:var(--surface);border:0.5px solid var(--border);border-radius:20px;overflow:hidden;margin-bottom:56px;}
+  .game-card-header{background:linear-gradient(135deg,rgba(0,229,195,0.08),rgba(153,69,255,0.06));border-bottom:0.5px solid var(--border);padding:28px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .game-title{font-size:clamp(28px,6vw,48px);font-weight:200;letter-spacing:2px;color:var(--ion);}
+  .game-subtitle{font-size:17px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-top:4px;}
+  .game-badge{background:rgba(0,229,195,0.1);border:0.5px solid rgba(0,229,195,0.3);border-radius:20px;padding:8px 18px;font-size:15px;color:var(--ion);letter-spacing:1px;}
+  .game-logo{width:80px;height:80px;border-radius:18px;background:rgba(0,229,195,0.08);border:0.5px solid rgba(0,229,195,0.25);display:flex;align-items:center;justify-content:center;font-size:34px;flex-shrink:0;}
+  .game-card-body{padding:40px 48px;}
+
+  /* Accordion */
+  .accordion{display:flex;flex-direction:column;gap:12px;margin:32px 0;}
+  .acc-item{background:rgba(255,255,255,0.02);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;}
+  .acc-item summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:19px;font-weight:500;color:var(--text);transition:background .2s;}
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item summary:hover{background:rgba(255,255,255,0.02);}
+  .acc-icon{font-size:14px;color:var(--text-mut);transition:transform .25s ease;flex-shrink:0;}
+  .acc-item[open] .acc-icon{transform:rotate(180deg);}
+  .acc-item[open] summary{border-bottom:0.5px solid var(--border);}
+  .acc-body{padding:28px 24px;}
+  .acc-body .steps,.acc-body .elements{margin-top:0;}
+  .acc-body .reward-box:last-child,.acc-body .tip-list:last-child{margin-bottom:0;}
+
+  /* Mechanic steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px 0;}
+  .step{background:rgba(255,255,255,0.02);border:0.5px solid var(--border);border-radius:14px;padding:24px;position:relative;}
+  .step-num{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ion);margin-bottom:10px;}
+  .step-title{font-size:20px;font-weight:400;margin-bottom:8px;}
+  .step-desc{font-size:16px;color:var(--text-sec);line-height:1.6;}
+
+  /* Elements grid */
+  .elements{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0;}
+  .element{border:0.5px solid var(--border);border-radius:14px;padding:20px;display:flex;gap:16px;align-items:flex-start;}
+  .element-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .element-title{font-size:18px;font-weight:500;margin-bottom:4px;}
+  .element-desc{font-size:16px;color:var(--text-sec);line-height:1.6;}
+
+  /* Reward box */
+  .reward-box{background:rgba(247,207,49,0.05);border:0.5px solid rgba(247,207,49,0.25);border-radius:14px;padding:24px;margin:32px 0;}
+  .reward-info h3{font-size:20px;font-weight:400;margin-bottom:8px;}
+  .reward-info p{font-size:16px;color:var(--text-sec);line-height:1.6;margin:0;}
+
+  /* Tips */
+  .tip-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .tip-list li{font-size:17px;color:var(--text-sec);padding-left:20px;position:relative;line-height:1.6;}
+  .tip-list li::before{content:'→';position:absolute;left:0;color:var(--signal);}
+
+  /* Data table */
+  .data-box{background:rgba(153,69,255,0.04);border:0.5px solid rgba(153,69,255,0.2);border-radius:14px;padding:28px;margin:32px 0;overflow-x:auto;}
+  .data-box h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--signal);margin-bottom:16px;}
+  table{width:100%;border-collapse:collapse;font-size:16px;}
+  th{text-align:left;color:var(--text-mut);font-weight:400;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:8px 12px;border-bottom:0.5px solid var(--border);}
+  td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text-sec);}
+  tr.current td{color:var(--text);font-weight:500;}
+  tr.current{background:rgba(0,229,195,0.06);}
+
+  /* Internal links */
+  .internal-links{border-top:0.5px solid var(--border);margin-top:72px;padding-top:48px;}
+  .internal-links h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-bottom:24px;}
+  .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .link-card{background:var(--surface);border:0.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:border-color .2s,transform .2s;display:block;}
+  .link-card:hover{border-color:rgba(153,69,255,0.3);transform:translateY(-2px);}
+  .link-card-label{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-bottom:6px;}
+  .link-card-title{font-size:18px;color:var(--text);}
+  .link-card-desc{font-size:15px;color:var(--text-mut);margin-top:4px;}
+
+  /* CTA bottom */
+  .bottom-cta{text-align:center;padding:72px 0 0;}
+  .bottom-cta h2{font-size:42px;font-weight:200;margin-bottom:12px;}
+  .bottom-cta p{font-size:17px;color:var(--text-sec);margin-bottom:32px;}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--signal);color:#fff;text-decoration:none;padding:16px 40px;border-radius:14px;font-size:16px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:opacity .2s,transform .2s;}
+  .cta-btn:hover{opacity:.88;transform:translateY(-1px);}
+
+  .fade-in{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;}
+  .fade-in.visible{opacity:1;transform:none;}
+
+  @media(max-width:768px){
+    .container{padding:0 20px 60px;}
+    .steps{grid-template-columns:1fr;}
+    .elements{grid-template-columns:1fr;}
+    .link-grid{grid-template-columns:1fr;}
+    .game-card-header,.game-card-body{padding:24px;}
+    .data-box{padding:20px;}
+    table{font-size:14px;}
+    .acc-item summary{padding:18px 20px;font-size:17px;}
+    .acc-body{padding:20px;}
+  }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="container">
+
+  <nav>
+    <div class="nav-left">
+      <a href="/" class="nav-back">← Back</a>
+      <a href="/" class="nav-logo">PULSAR</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="nav-cta" target="_blank" rel="noopener">Download</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <span>Privacy</span>
+  </div>
+
+  <div class="page-hero fade-in">
+    <div class="hero-tag" id="hero-tag">Privacy First</div>
+    <h1 class="page-title" id="page-title">No email.<br><span>No data collected.</span></h1>
+    <p class="page-desc" id="page-desc">Pulsar never asks for your email, phone number, or any personal data. Just pick a username and password — your session stays open, and that's it.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">0</div>
+        <div class="hero-stat-lbl">Personal data collected</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">2</div>
+        <div class="hero-stat-lbl">Fields to sign up</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">1</div>
+        <div class="hero-stat-lbl">Account per device</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy -->
+  <section class="fade-in">
+    <div class="section-label" id="sect-label">Core mechanic</div>
+    <div class="game-card">
+      <div class="game-card-header">
+        <div style="display:flex;align-items:center;gap:24px;">
+          <div class="game-logo">🔒</div>
+          <div>
+            <div class="game-title" id="g-title">PRIVACY</div>
+            <div class="game-subtitle" id="g-sub">No email · No phone · No data</div>
+          </div>
+        </div>
+        <div class="game-badge" id="g-badge">ACTIVE ON ANDROID</div>
+      </div>
+      <div class="game-card-body">
+        <p id="gp1">Creating a Pulsar account takes two fields: a username and a password. No email, no phone number, no personal information of any kind is ever requested.</p>
+        <p id="gp2">Your session stays persistent — once you're logged in, you stay logged in. There's nothing to re-enter, no verification codes, and nothing collected in the background.</p>
+
+        <div class="accordion">
+          <details class="acc-item" open>
+            <summary class="acc-summary"><span id="how-title">How it works</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="steps">
+                <div class="step">
+                  <div class="step-num">Step 01</div>
+                  <div class="step-title">Pick a username & password</div>
+                  <div class="step-desc">That's the entire sign-up. No email, no phone number, no verification step.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 02</div>
+                  <div class="step-title">Stay logged in</div>
+                  <div class="step-desc">Your session persists on your device — no need to log back in every time you open the app.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 03</div>
+                  <div class="step-title">One account, one device</div>
+                  <div class="step-desc">Each device can only ever have one account on it — but that account can log in on any device that's never had one before.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc-item">
+            <summary class="acc-summary"><span id="elem-title">What we don't collect</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="elements">
+                <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
+                  <div class="element-icon" style="background:rgba(0,229,195,0.08);">✕</div>
+                  <div>
+                    <div class="element-title" style="color:var(--ion);">No email</div>
+                    <div class="element-desc">Never requested, never stored. There's nothing to leak, nothing to spam.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
+                  <div class="element-icon" style="background:rgba(153,69,255,0.08);">✕</div>
+                  <div>
+                    <div class="element-title" style="color:var(--signal);">No phone number</div>
+                    <div class="element-desc">No SMS verification, no phone number tied to your account, ever.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
+                  <div class="element-icon" style="background:rgba(247,207,49,0.1);">✕</div>
+                  <div>
+                    <div class="element-title" style="color:var(--solar);">No personal data</div>
+                    <div class="element-desc">No name, no address, no ID, no KYC of any kind.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
+                  <div class="element-icon" style="background:rgba(255,77,109,0.1);">⏻</div>
+                  <div>
+                    <div class="element-title" style="color:var(--nova);">Persistent session</div>
+                    <div class="element-desc">You stay logged in on your device — nothing to remember, nothing re-transmitted.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Info -->
+              <div class="reward-box">
+                <div class="reward-info">
+                  <h3>Password recovery is coming</h3>
+                  <p>Right now, a lost password can't be recovered — write it down somewhere safe. A future update will let you set a unique recovery phrase so you can reset your password yourself.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="acc-item">
+            <summary class="acc-summary"><span id="tips-title">Tips to stay safe</span><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <ul class="tip-list">
+                <li id="tip1">Write down your password somewhere safe — there is currently no way to recover it if lost.</li>
+                <li id="tip2">You can log into your account on a new device — as long as that device has never had another Pulsar account on it.</li>
+                <li id="tip3">Keep an eye out for the recovery phrase feature — once live, you'll be able to reset your password yourself.</li>
+                <li id="tip4">Since nothing personal is stored, there's nothing tying your identity to your Pulsar account.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data table -->
+  <section class="fade-in">
+    <div class="section-label" id="rm-label">At a glance</div>
+    <h2 id="more-title">What's stored, what isn't</h2>
+    <p id="rm-desc">A short list, because there isn't much to collect.</p>
+    <div class="data-box">
+      <h3 id="tbl-title">Data collected</h3>
+      <table>
+        <tr><th id="th-data">Data type</th><th id="th-collected">Collected?</th></tr>
+        <tr><td id="row1-a">Email</td><td id="row1-b">Never</td></tr>
+        <tr><td id="row2-a">Phone number</td><td id="row2-b">Never</td></tr>
+        <tr><td id="row3-a">Name, address, ID</td><td id="row3-b">Never</td></tr>
+        <tr class="current"><td id="row4-a">Username & password</td><td id="row4-b">Yes — to log you in</td></tr>
+        <tr><td id="row5-a">Device identifier</td><td id="row5-b">Yes — one account per device</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Internal links -->
+  <div class="internal-links fade-in">
+    <h3 id="internal-title">Explore Pulsar</h3>
+    <div class="link-grid">
+      <a href="/features/sessions.html" class="link-card">
+        <div class="link-card-label" id="link1-label">Feature</div>
+        <div class="link-card-title" id="link1-title">Session</div>
+        <div class="link-card-desc" id="link1-desc">One tap. 12 hours later, your balance is up.</div>
+      </a>
+      <a href="/features/referral.html" class="link-card">
+        <div class="link-card-label" id="link2-label">Feature</div>
+        <div class="link-card-title" id="link2-title">Referral program</div>
+        <div class="link-card-desc" id="link2-desc">+1% rate per active friend</div>
+      </a>
+      <a href="/features/leaderboard.html" class="link-card">
+        <div class="link-card-label" id="link3-label">Feature</div>
+        <div class="link-card-title" id="link3-title">Leaderboard</div>
+        <div class="link-card-desc" id="link3-desc">Top 50 by balance, referrals and total earned.</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bottom-cta fade-in">
+    <h2 id="cta-title">Join without giving anything up.</h2>
+    <p id="cta-desc">Download Pulsar: Space Rewards for free on Android. No email, no KYC.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="cta-btn" target="_blank" rel="noopener">
+      <span id="cta-btn-txt">Download on Google Play</span>
+    </a>
+  </div>
+
+</div>
+
+<script>
+const c = document.getElementById('stars');
+for(let i=0;i<80;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  const sz=0.8+Math.random()*2;
+  s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--min-op:${0.05+Math.random()*0.15};--max-op:${0.3+Math.random()*0.5};--d:${2+Math.random()*4}s;--delay:${Math.random()*5}s;`;
+  c.appendChild(s);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+const uLang = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en');
+const FR = uLang.toLowerCase().indexOf('fr') === 0;
+
+const T = {
+  heroTag: FR ? "Confidentialit\u00e9 totale" : "Privacy First",
+  pageTitle: FR ? "Pas d\u0027email.<br><span>Aucune donn\u00e9e collect\u00e9e.</span>" : "No email.<br><span>No data collected.</span>",
+  pageDesc: FR ? "Pulsar ne demande jamais ton email, ton num\u00e9ro de t\u00e9l\u00e9phone ou la moindre donn\u00e9e personnelle. Choisis juste un pseudo et un mot de passe \u2014 ta session reste ouverte, et c\u0027est tout." : "Pulsar never asks for your email, phone number, or any personal data. Just pick a username and password \u2014 your session stays open, and that's it.",
+  stat1Lbl: FR ? "Donn\u00e9es personnelles collect\u00e9es" : "Personal data collected",
+  stat2Lbl: FR ? "Champs \u00e0 l\u0027inscription" : "Fields to sign up",
+  stat3Lbl: FR ? "Compte par appareil" : "Account per device",
+  sectionLabel: FR ? "M\u00e9canique principale" : "Core mechanic",
+  gSub: FR ? "Pas d\u0027email \u00b7 Pas de t\u00e9l\u00e9phone \u00b7 Pas de donn\u00e9es" : "No email · No phone · No data",
+  gBadge: FR ? "ACTIF SUR ANDROID" : "ACTIVE ON ANDROID",
+  gp1: FR ? "Cr\u00e9er un compte Pulsar prend deux champs : un pseudo et un mot de passe. Aucun email, aucun num\u00e9ro de t\u00e9l\u00e9phone, aucune information personnelle n\u0027est jamais demand\u00e9e." : "Creating a Pulsar account takes two fields: a username and a password. No email, no phone number, no personal information of any kind is ever requested.",
+  gp2: FR ? "Ta session reste persistante \u2014 une fois connect\u00e9, tu restes connect\u00e9. Rien \u00e0 ressaisir, aucun code de v\u00e9rification, rien collect\u00e9 en arri\u00e8re-plan." : "Your session stays persistent \u2014 once you're logged in, you stay logged in. There's nothing to re-enter, no verification codes, and nothing collected in the background.",
+  howTitle: FR ? "Comment \u00e7a marche" : "How it works",
+  step1Num: FR ? "\u00c9tape 01" : "Step 01",
+  step1Title: FR ? "Choisis un pseudo et un mot de passe" : "Pick a username & password",
+  step1Desc: FR ? "C\u0027est toute l\u0027inscription. Pas d\u0027email, pas de t\u00e9l\u00e9phone, pas d\u0027\u00e9tape de v\u00e9rification." : "That's the entire sign-up. No email, no phone number, no verification step.",
+  step2Num: FR ? "\u00c9tape 02" : "Step 02",
+  step2Title: FR ? "Reste connect\u00e9" : "Stay logged in",
+  step2Desc: FR ? "Ta session persiste sur ton appareil \u2014 pas besoin de te reconnecter \u00e0 chaque ouverture de l\u0027appli." : "Your session persists on your device \u2014 no need to log back in every time you open the app.",
+  step3Num: FR ? "\u00c9tape 03" : "Step 03",
+  step3Title: FR ? "Un compte, un appareil" : "One account, one device",
+  step3Desc: FR ? "Chaque appareil ne peut avoir qu\u0027un seul compte \u2014 mais ce compte peut se connecter sur n\u0027importe quel appareil qui n\u0027en a jamais eu." : "Each device can only ever have one account on it \u2014 but that account can log in on any device that's never had one before.",
+  elemTitle: FR ? "Ce qu\u0027on ne collecte pas" : "What we don't collect",
+  el1Title: FR ? "Pas d\u0027email" : "No email",
+  el1Desc: FR ? "Jamais demand\u00e9, jamais stock\u00e9. Rien \u00e0 faire fuiter, rien pour te spammer." : "Never requested, never stored. There's nothing to leak, nothing to spam.",
+  el2Title: FR ? "Pas de num\u00e9ro de t\u00e9l\u00e9phone" : "No phone number",
+  el2Desc: FR ? "Pas de v\u00e9rification par SMS, pas de num\u00e9ro li\u00e9 \u00e0 ton compte, jamais." : "No SMS verification, no phone number tied to your account, ever.",
+  el3Title: FR ? "Pas de donn\u00e9es personnelles" : "No personal data",
+  el3Desc: FR ? "Pas de nom, pas d\u0027adresse, pas de pi\u00e8ce d\u0027identit\u00e9, pas de KYC d\u0027aucune sorte." : "No name, no address, no ID, no KYC of any kind.",
+  el4Title: FR ? "Session persistante" : "Persistent session",
+  el4Desc: FR ? "Tu restes connect\u00e9 sur ton appareil \u2014 rien \u00e0 retenir, rien retransmis." : "You stay logged in on your device \u2014 nothing to remember, nothing re-transmitted.",
+  rewardTitle: FR ? "La r\u00e9cup\u00e9ration de mot de passe arrive" : "Password recovery is coming",
+  rewardDesc: FR ? "Pour l\u0027instant, un mot de passe perdu ne peut pas \u00eatre r\u00e9cup\u00e9r\u00e9 \u2014 note-le quelque part en s\u00e9curit\u00e9. Une future mise \u00e0 jour te permettra de d\u00e9finir une phrase de r\u00e9cup\u00e9ration unique pour le r\u00e9initialiser toi-m\u00eame." : "Right now, a lost password can't be recovered \u2014 write it down somewhere safe. A future update will let you set a unique recovery phrase so you can reset your password yourself.",
+  tipsTitle: FR ? "Astuces pour rester en s\u00e9curit\u00e9" : "Tips to stay safe",
+  tip1: FR ? "Note ton mot de passe quelque part en s\u00e9curit\u00e9 \u2014 il n\u0027y a actuellement aucun moyen de le r\u00e9cup\u00e9rer si tu le perds." : "Write down your password somewhere safe \u2014 there is currently no way to recover it if lost.",
+  tip2: FR ? "Tu peux te connecter \u00e0 ton compte sur un nouvel appareil \u2014 tant que cet appareil n\u0027a jamais eu d\u0027autre compte Pulsar dessus." : "You can log into your account on a new device \u2014 as long as that device has never had another Pulsar account on it.",
+  tip3: FR ? "Garde un \u0153il sur la fonctionnalit\u00e9 de phrase de r\u00e9cup\u00e9ration \u2014 une fois disponible, tu pourras r\u00e9initialiser ton mot de passe toi-m\u00eame." : "Keep an eye out for the recovery phrase feature \u2014 once live, you'll be able to reset your password yourself.",
+  tip4: FR ? "Comme rien de personnel n\u0027est stock\u00e9, rien ne relie ton identit\u00e9 \u00e0 ton compte Pulsar." : "Since nothing personal is stored, there's nothing tying your identity to your Pulsar account.",
+  rmLabel: FR ? "En un coup d\u0027\u0153il" : "At a glance",
+  moreTitle: FR ? "Ce qui est stock\u00e9, ce qui ne l\u0027est pas" : "What's stored, what isn't",
+  rmDesc: FR ? "Une liste courte, parce qu\u0027il n\u0027y a pas grand-chose \u00e0 collecter." : "A short list, because there isn't much to collect.",
+  tblTitle: FR ? "Donn\u00e9es collect\u00e9es" : "Data collected",
+  thData: FR ? "Type de donn\u00e9e" : "Data type",
+  thCollected: FR ? "Collect\u00e9e ?" : "Collected?",
+  row1a: FR ? "Email" : "Email",
+  row1b: FR ? "Jamais" : "Never",
+  row2a: FR ? "Num\u00e9ro de t\u00e9l\u00e9phone" : "Phone number",
+  row2b: FR ? "Jamais" : "Never",
+  row3a: FR ? "Nom, adresse, pi\u00e8ce d\u0027identit\u00e9" : "Name, address, ID",
+  row3b: FR ? "Jamais" : "Never",
+  row4a: FR ? "Pseudo et mot de passe" : "Username & password",
+  row4b: FR ? "Oui \u2014 pour te connecter" : "Yes \u2014 to log you in",
+  row5a: FR ? "Identifiant d\u0027appareil" : "Device identifier",
+  row5b: FR ? "Oui \u2014 un compte par appareil" : "Yes \u2014 one account per device",
+  internalTitle: FR ? "Explorer Pulsar" : "Explore Pulsar",
+  link1Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link1Title: FR ? "Collecte" : "Session",
+  link1Desc: FR ? "Un tap suffit. 12h plus tard, ton solde a grimp\u00e9." : "One tap. 12 hours later, your balance is up.",
+  link2Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link2Title: FR ? "Programme de parrainage" : "Referral program",
+  link2Desc: FR ? "+1% de taux par ami actif" : "+1% rate per active friend",
+  link3Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link3Title: FR ? "Classement" : "Leaderboard",
+  link3Desc: FR ? "Top 50 par solde, parrainages et gains totaux." : "Top 50 by balance, referrals and total earned.",
+  ctaTitle: FR ? "Inscris-toi sans rien donner." : "Join without giving anything up.",
+  ctaDesc: FR ? "T\u00e9l\u00e9charge Pulsar: Space Rewards gratuitement sur Android. Sans email, sans KYC." : "Download Pulsar: Space Rewards for free on Android. No email, no KYC.",
+  ctaBtn: FR ? "T\u00e9l\u00e9charger sur Google Play" : "Download on Google Play",
+  navBack: FR ? "\u2190 Retour" : "\u2190 Back",
+  navCta: FR ? "T\u00e9l\u00e9charger" : "Download",
+  breadcrumb: FR ? "Confidentialit\u00e9" : "Privacy",
+};
+
+if (FR) {
+  document.querySelector('.hero-tag').textContent = T.heroTag;
+  document.querySelector('.page-title').innerHTML = T.pageTitle;
+  document.querySelector('.page-desc').textContent = T.pageDesc;
+  const statLbls = document.querySelectorAll('.hero-stat-lbl');
+  statLbls[0].textContent = T.stat1Lbl;
+  statLbls[1].textContent = T.stat2Lbl;
+  statLbls[2].textContent = T.stat3Lbl;
+  document.getElementById('sect-label').textContent = T.sectionLabel;
+  document.getElementById('g-sub').textContent = T.gSub;
+  document.getElementById('g-badge').textContent = T.gBadge;
+  document.getElementById('gp1').textContent = T.gp1;
+  document.getElementById('gp2').textContent = T.gp2;
+  document.getElementById('how-title').textContent = T.howTitle;
+  const stepNums = document.querySelectorAll('.step-num');
+  stepNums[0].textContent = T.step1Num; stepNums[1].textContent = T.step2Num; stepNums[2].textContent = T.step3Num;
+  const stepTitles = document.querySelectorAll('.step-title');
+  stepTitles[0].textContent = T.step1Title; stepTitles[1].textContent = T.step2Title; stepTitles[2].textContent = T.step3Title;
+  const stepDescs = document.querySelectorAll('.step-desc');
+  stepDescs[0].textContent = T.step1Desc; stepDescs[1].textContent = T.step2Desc; stepDescs[2].textContent = T.step3Desc;
+  document.getElementById('elem-title').textContent = T.elemTitle;
+  const elTitles = document.querySelectorAll('.element-title');
+  elTitles[0].textContent = T.el1Title; elTitles[1].textContent = T.el2Title; elTitles[2].textContent = T.el3Title; elTitles[3].textContent = T.el4Title;
+  const elDescs = document.querySelectorAll('.element-desc');
+  elDescs[0].textContent = T.el1Desc; elDescs[1].textContent = T.el2Desc; elDescs[2].textContent = T.el3Desc; elDescs[3].textContent = T.el4Desc;
+  document.querySelector('.reward-info h3').textContent = T.rewardTitle;
+  document.querySelector('.reward-info p').textContent = T.rewardDesc;
+  document.getElementById('tips-title').textContent = T.tipsTitle;
+  document.getElementById('tip1').textContent = T.tip1;
+  document.getElementById('tip2').textContent = T.tip2;
+  document.getElementById('tip3').textContent = T.tip3;
+  document.getElementById('tip4').textContent = T.tip4;
+  document.getElementById('rm-label').textContent = T.rmLabel;
+  document.getElementById('more-title').textContent = T.moreTitle;
+  document.getElementById('rm-desc').textContent = T.rmDesc;
+  document.getElementById('tbl-title').textContent = T.tblTitle;
+  document.getElementById('th-data').textContent = T.thData;
+  document.getElementById('th-collected').textContent = T.thCollected;
+  document.getElementById('row1-a').textContent = T.row1a;
+  document.getElementById('row1-b').textContent = T.row1b;
+  document.getElementById('row2-a').textContent = T.row2a;
+  document.getElementById('row2-b').textContent = T.row2b;
+  document.getElementById('row3-a').textContent = T.row3a;
+  document.getElementById('row3-b').textContent = T.row3b;
+  document.getElementById('row4-a').textContent = T.row4a;
+  document.getElementById('row4-b').textContent = T.row4b;
+  document.getElementById('row5-a').textContent = T.row5a;
+  document.getElementById('row5-b').textContent = T.row5b;
+  document.getElementById('internal-title').textContent = T.internalTitle;
+  document.getElementById('link1-label').textContent = T.link1Label;
+  document.getElementById('link1-title').textContent = T.link1Title;
+  document.getElementById('link1-desc').textContent = T.link1Desc;
+  document.getElementById('link2-label').textContent = T.link2Label;
+  document.getElementById('link2-title').textContent = T.link2Title;
+  document.getElementById('link2-desc').textContent = T.link2Desc;
+  document.getElementById('link3-label').textContent = T.link3Label;
+  document.getElementById('link3-title').textContent = T.link3Title;
+  document.getElementById('link3-desc').textContent = T.link3Desc;
+  document.getElementById('cta-title').textContent = T.ctaTitle;
+  document.getElementById('cta-desc').textContent = T.ctaDesc;
+  document.getElementById('cta-btn-txt').textContent = T.ctaBtn;
+  document.querySelector('.nav-back').textContent = T.navBack;
+  document.querySelector('.nav-cta').textContent = T.navCta;
+  const breadcrumbs = document.querySelectorAll('.breadcrumb span');
+  breadcrumbs[breadcrumbs.length-1].textContent = T.breadcrumb;
+}
+</script>
+
+</body>
+</html>
