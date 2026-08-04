@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mini-Games — Earn Bonus PSR | Pulsar: Space Rewards</title>
-<meta name="description" content="Earn bonus PSR tokens by playing DriftScan, the space shooter built into Pulsar: Space Rewards. Dodge asteroids, capture pulsars, stack your daily rewards.">
+<meta name="description" content="Earn bonus PSR tokens by playing DriftScan, the arcade dodging game built into Pulsar: Space Rewards. Dodge asteroids, capture pulsars against the clock, stack your daily rewards.">
 <meta name="keywords" content="Pulsar mini-games, DriftScan, earn crypto playing, PSR bonus, mobile crypto game, Solana game, pulsar space rewards game">
 <link rel="canonical" href="https://pulsarminer.space/mini-games">
 <link rel="icon" type="image/png" href="pulsar-logo.png">
@@ -33,7 +33,7 @@
   .stars{position:fixed;inset:0;pointer-events:none;z-index:0;}
   .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite alternate;animation-delay:var(--delay,0s);}
   @keyframes twinkle{from{opacity:var(--min-op,0.1);}to{opacity:var(--max-op,0.6);}}
-  .container{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 48px 100px;}
+  .container{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 64px 100px;}
 
   nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
   .nav-left{display:flex;align-items:center;gap:16px;}
@@ -97,6 +97,20 @@
   .reward-info h3{font-size:20px;font-weight:400;margin-bottom:8px;}
   .reward-info p{font-size:16px;color:var(--text-sec);line-height:1.6;margin:0;}
 
+  /* Accordion */
+  .accordion{display:flex;flex-direction:column;gap:12px;margin:32px 0;}
+  .acc-item{background:rgba(255,255,255,0.02);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;}
+  .acc-item summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .2s;}
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item summary:hover{background:rgba(255,255,255,0.02);}
+  .acc-summary h2,.acc-summary h3{font-size:19px;font-weight:500;margin:0;color:var(--text);letter-spacing:0;text-transform:none;}
+  .acc-icon{font-size:14px;color:var(--text-mut);transition:transform .25s ease;flex-shrink:0;}
+  .acc-item[open] .acc-icon{transform:rotate(180deg);}
+  .acc-item[open] summary{border-bottom:0.5px solid var(--border);}
+  .acc-body{padding:28px 24px;}
+  .acc-body .steps,.acc-body .elements{margin-top:0;}
+  .acc-body .reward-box:last-child,.acc-body .tip-list:last-child{margin-bottom:0;}
+
   /* Tips */
   .tips{background:rgba(0,229,195,0.04);border:0.5px solid rgba(0,229,195,0.2);border-radius:14px;padding:28px;margin:32px 0;}
   .tips h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--ion);margin-bottom:16px;}
@@ -138,6 +152,9 @@
     .link-grid{grid-template-columns:1fr;}
     .game-card-header,.game-card-body{padding:24px;}
     .reward-box{flex-direction:column;}
+    .acc-item summary{padding:18px 20px;}
+    .acc-summary h2,.acc-summary h3{font-size:17px;}
+    .acc-body{padding:20px;}
   }
 </style>
 </head>
@@ -171,8 +188,8 @@
         <div class="hero-stat-lbl">Bonus per session</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-val">Free</div>
-        <div class="hero-stat-lbl">No entry cost</div>
+        <div class="hero-stat-val">1 MIN</div>
+        <div class="hero-stat-lbl">Run duration</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val">3</div>
@@ -196,78 +213,103 @@
         <div class="game-badge" id="g-badge">LIVE IN BETA</div>
       </div>
       <div class="game-card-body">
-        <p id="gp1">DriftScan is a space shooter integrated directly into the Pulsar app. You pilot a spacecraft through deep space, dodge incoming asteroids and obstacles, and capture pulsars to accumulate bonus PSR tokens.</p>
-        <p id="gp2">Every successful pulsar capture adds to your estimated reward. The game ends when you lose all 3 lives — your bonus is then added on top of your active collection session earnings.</p>
+        <p id="gp1">DriftScan is an arcade dodging game built directly into the Pulsar app. You pilot a spacecraft through deep space, dodge incoming asteroids, and capture pulsars to accumulate bonus PSR tokens.</p>
+        <p id="gp2">Every run is capped at 1 minute by a draining fuel gauge. Asteroid hits cost you a life — lose all 3 and the run ends early. Either way, your bonus is added on top of your active collection session earnings.</p>
 
-        <h2 style="margin-top:32px;" id="how-title">How it works</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">Step 01</div>
-            <div class="step-title">Launch the game</div>
-            <div class="step-desc">Access DriftScan from the Station menu. No energy cost, no entry fee. Just open and play.</div>
-          </div>
-          <div class="step">
-            <div class="step-num">Step 02</div>
-            <div class="step-title">Pilot your ship</div>
-            <div class="step-desc">Steer your spacecraft by tilting or tapping. Dodge asteroids — each hit costs you one of your 3 lives.</div>
-          </div>
-          <div class="step">
-            <div class="step-num">Step 03</div>
-            <div class="step-title">Capture pulsars</div>
-            <div class="step-desc">Fly through glowing pulsar circles to collect them. Each capture increases your PSR estimation counter.</div>
-          </div>
-        </div>
+        <div class="accordion">
+          <details class="acc-item" open>
+            <summary class="acc-summary"><h2 id="how-title">How it works</h2><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="steps">
+                <div class="step">
+                  <div class="step-num">Step 01</div>
+                  <div class="step-title">Launch the game</div>
+                  <div class="step-desc">Access DriftScan from the Station menu. No energy cost, no entry fee. Just open and play.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 02</div>
+                  <div class="step-title">Pilot your ship</div>
+                  <div class="step-desc">Steer your spacecraft by tilting or tapping while your fuel gauge ticks down. Dodge asteroids — each hit costs a life.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">Step 03</div>
+                  <div class="step-title">Capture pulsars</div>
+                  <div class="step-desc">Fly through glowing pulsar circles before your fuel runs out or your 3 lives are gone — whichever comes first.</div>
+                </div>
+              </div>
+            </div>
+          </details>
 
-        <h2 id="elem-title">Game elements</h2>
-        <div class="elements">
-          <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
-            <div class="element-icon" style="background:rgba(247,207,49,0.1);">✦</div>
-            <div>
-              <div class="element-title" style="color:var(--solar);">Pulsars</div>
-              <div class="element-desc">Glowing circular objects floating through space. Fly through them to earn PSR. The longer you survive, the more you can collect.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
-            <div class="element-icon" style="background:rgba(255,77,109,0.1);">◈</div>
-            <div>
-              <div class="element-title" style="color:var(--nova);">Asteroids</div>
-              <div class="element-desc">Obstacles drifting across your path. Each collision removes one life. Lose all 3 and the game ends.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
-            <div class="element-icon" style="background:rgba(0,229,195,0.08);">▲</div>
-            <div>
-              <div class="element-title" style="color:var(--ion);">Your ship</div>
-              <div class="element-desc">A sleek spacecraft with engine trails. The ship accelerates as you progress — reflexes get tested further into the run.</div>
-            </div>
-          </div>
-          <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
-            <div class="element-icon" style="background:rgba(153,69,255,0.08);">♥</div>
-            <div>
-              <div class="element-title" style="color:var(--signal);">Lives system</div>
-              <div class="element-desc">You start each game with 3 lives. Each asteroid hit removes one. When all 3 are gone, your earned bonus is locked in and credited.</div>
-            </div>
-          </div>
-        </div>
+          <details class="acc-item">
+            <summary class="acc-summary"><h2 id="elem-title">Game elements</h2><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <div class="elements">
+                <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
+                  <div class="element-icon" style="background:rgba(247,207,49,0.1);">✦</div>
+                  <div>
+                    <div class="element-title" style="color:var(--solar);">Pulsars</div>
+                    <div class="element-desc">Glowing circular objects floating through space. Fly through them to earn PSR. The longer you survive, the more you can collect.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
+                  <div class="element-icon" style="background:rgba(255,77,109,0.1);">◈</div>
+                  <div>
+                    <div class="element-title" style="color:var(--nova);">Asteroids</div>
+                    <div class="element-desc">Obstacles drifting across your path. Each collision removes one life. Lose all 3 and the run ends early.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
+                  <div class="element-icon" style="background:rgba(0,229,195,0.08);">▲</div>
+                  <div>
+                    <div class="element-title" style="color:var(--ion);">Your ship</div>
+                    <div class="element-desc">A sleek spacecraft with engine trails. The ship accelerates as you progress — reflexes get tested further into the run.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
+                  <div class="element-icon" style="background:rgba(153,69,255,0.08);">♥</div>
+                  <div>
+                    <div class="element-title" style="color:var(--signal);">Lives system</div>
+                    <div class="element-desc">You start each run with 3 lives. Each asteroid hit removes one — lose all 3 and the run ends early, before your minute is up.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
+                  <div class="element-icon" style="background:rgba(247,207,49,0.1);">⛽</div>
+                  <div>
+                    <div class="element-title" style="color:var(--solar);">Fuel timer</div>
+                    <div class="element-desc">A draining gauge caps every run at 1 minute. When it hits empty, the run ends and your bonus is locked in.</div>
+                  </div>
+                </div>
+                <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
+                  <div class="element-icon" style="background:rgba(0,229,195,0.08);">⏳</div>
+                  <div>
+                    <div class="element-title" style="color:var(--ion);">Plays & cooldown</div>
+                    <div class="element-desc">Each mini-game has a limited number of runs per 12h session. Wait 5 minutes between runs, or watch an ad to jump back in immediately — VIP members wait just 1 minute, no ad needed.</div>
+                  </div>
+                </div>
+              </div>
 
-        <!-- Reward -->
-        <div class="reward-box">
-          <div class="reward-val">+PSR</div>
-          <div class="reward-info">
-            <h3>Bonus credited automatically</h3>
-            <p>Your DriftScan earnings are added directly to your balance at the end of the game. They stack with your active 12h collection session and your referral bonuses — every source of PSR compounds.</p>
-          </div>
-        </div>
+              <!-- Reward -->
+              <div class="reward-box">
+                <div class="reward-val">+PSR</div>
+                <div class="reward-info">
+                  <h3>Bonus credited automatically</h3>
+                  <p>Your DriftScan earnings are added directly to your balance at the end of the game. They stack with your active 12h collection session and your referral bonuses — every source of PSR compounds.</p>
+                </div>
+              </div>
+            </div>
+          </details>
 
-        <!-- Tips -->
-        <div class="tips">
-          <h3>Tips to maximize your bonus</h3>
-          <ul class="tip-list">
-            <li>Prioritize pulsar capture over asteroid avoidance when they overlap — a life costs less than missing a pulsar cluster.</li>
-            <li>Stay near the center of the screen — most pulsars spawn toward the middle and asteroids tend to come from the edges.</li>
-            <li>Play multiple sessions per day — there is no cooldown on mini-game entries.</li>
-            <li>Combine with an active boost (+2%) to maximize your total hourly rate while playing.</li>
-          </ul>
+          <details class="acc-item">
+            <summary class="acc-summary"><h3 id="tips-title">Tips to maximize your bonus</h3><span class="acc-icon">⌄</span></summary>
+            <div class="acc-body">
+              <ul class="tip-list">
+                <li>Prioritize pulsar capture over asteroid avoidance when they overlap — a life costs less than missing a pulsar cluster.</li>
+                <li>Watch your fuel gauge — plan your last pulsar grab before it hits empty.</li>
+                <li>You get a limited number of runs per 12h session, with a 5-minute cooldown between them — watch an ad to jump back in immediately, or just 1 minute if you're VIP.</li>
+                <li>Combine with an active boost (+2%) to maximize your total hourly rate while playing.</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
     </div>
@@ -349,33 +391,37 @@ const T = {
   sectionLabel: FR ? "Disponible maintenant" : "Available now",
   gameSubtitle: FR ? "Arcade \u00b7 Gagne des PSR" : "Arcade \u00b7 Earn PSR",
   gameBadge: FR ? "LIVE EN B\u00caTA" : "LIVE IN BETA",
-  gameDesc1: FR ? "DriftScan est un shooter spatial int\u00e9gr\u00e9 dans l\u0027appli Pulsar. Tu pilotes un vaisseau \u00e0 travers l\u0027espace, \u00e9vites les ast\u00e9ro\u00efdes et captures des pulsars pour accumuler des PSR bonus." : "DriftScan is a space shooter integrated directly into the Pulsar app. You pilot a spacecraft through deep space, dodge incoming asteroids and obstacles, and capture pulsars to accumulate bonus PSR tokens.",
-  gameDesc2: FR ? "Chaque pulsar captur\u00e9 ajoute \u00e0 ton estimation de r\u00e9compense. La partie se termine quand tu perds tes 3 vies \u2014 ton bonus est alors ajout\u00e9 \u00e0 tes gains de session." : "Every successful pulsar capture adds to your estimated reward. The game ends when you lose all 3 lives \u2014 your bonus is then added on top of your active collection session earnings.",
+  gameDesc1: FR ? "DriftScan est un jeu d\u0027esquive arcade int\u00e9gr\u00e9 dans l\u0027appli Pulsar. Tu pilotes un vaisseau \u00e0 travers l\u0027espace, \u00e9vites les ast\u00e9ro\u00efdes et captures des pulsars pour accumuler des PSR bonus." : "DriftScan is an arcade dodging game built directly into the Pulsar app. You pilot a spacecraft through deep space, dodge incoming asteroids, and capture pulsars to accumulate bonus PSR tokens.",
+  gameDesc2: FR ? "Chaque partie dure au maximum 1 minute, limit\u00e9e par une jauge de carburant qui se vide. Les ast\u00e9ro\u00efdes te co\u00fbtent une vie \u2014 en perdre 3 termine la partie plus t\u00f4t. Dans tous les cas, ton bonus s\u0027ajoute \u00e0 tes gains de collecte." : "Every run is capped at 1 minute by a draining fuel gauge. Asteroid hits cost you a life \u2014 lose all 3 and the run ends early. Either way, your bonus is added on top of your active collection session earnings.",
   howTitle: FR ? "Comment \u00e7a marche" : "How it works",
   step1Num: FR ? "\u00c9tape 01" : "Step 01",
   step1Title: FR ? "Lance la partie" : "Launch the game",
   step1Desc: FR ? "Acc\u00e8de \u00e0 DriftScan depuis le menu Station. Sans frais. Ouvre et joue." : "Access DriftScan from the Station menu. No energy cost, no entry fee. Just open and play.",
   step2Num: FR ? "\u00c9tape 02" : "Step 02",
   step2Title: FR ? "Pilote ton vaisseau" : "Pilot your ship",
-  step2Desc: FR ? "Dirige ton vaisseau en tapant l\u0027\u00e9cran. \u00c9vite les ast\u00e9ro\u00efdes \u2014 chaque collision te co\u00fbte une vie." : "Steer your spacecraft by tilting or tapping. Dodge asteroids \u2014 each hit costs you one of your 3 lives.",
+  step2Desc: FR ? "Dirige ton vaisseau en tapant l\u0027\u00e9cran pendant que ta jauge de carburant se vide. \u00c9vite les ast\u00e9ro\u00efdes \u2014 chaque collision te co\u00fbte une vie." : "Steer your spacecraft by tilting or tapping while your fuel gauge ticks down. Dodge asteroids \u2014 each hit costs a life.",
   step3Num: FR ? "\u00c9tape 03" : "Step 03",
   step3Title: FR ? "Capture les pulsars" : "Capture pulsars",
-  step3Desc: FR ? "Vole \u00e0 travers les cercles lumineux pour les collecter. Chaque capture augmente ton compteur PSR." : "Fly through glowing pulsar circles to collect them. Each capture increases your PSR estimation counter.",
+  step3Desc: FR ? "Vole \u00e0 travers les cercles lumineux avant que ton carburant ne s\u0027\u00e9puise ou que tes 3 vies ne soient perdues \u2014 selon ce qui arrive en premier." : "Fly through glowing pulsar circles before your fuel runs out or your 3 lives are gone \u2014 whichever comes first.",
   elemTitle: FR ? "\u00c9l\u00e9ments de jeu" : "Game elements",
   el1Title: "Pulsars",
   el1Desc: FR ? "Objets lumineux flottant dans l\u0027espace. Vole \u00e0 travers eux pour gagner des PSR. Plus tu survis, plus tu peux en collecter." : "Glowing circular objects floating through space. Fly through them to earn PSR. The longer you survive, the more you can collect.",
   el2Title: FR ? "Ast\u00e9ro\u00efdes" : "Asteroids",
-  el2Desc: FR ? "Obstacles sur ton chemin. Chaque collision enl\u00e8ve une vie. Perds les 3 et la partie se termine." : "Obstacles drifting across your path. Each collision removes one life. Lose all 3 and the game ends.",
+  el2Desc: FR ? "Obstacles sur ton chemin. Chaque collision enl\u00e8ve une vie. Perds les 3 et la partie se termine plus t\u00f4t." : "Obstacles drifting across your path. Each collision removes one life. Lose all 3 and the run ends early.",
   el3Title: FR ? "Ton vaisseau" : "Your ship",
   el3Desc: FR ? "Un vaisseau \u00e9l\u00e9gant avec des tra\u00een\u00e9es de propulsion. Il acc\u00e9l\u00e8re au fil de la progression." : "A sleek spacecraft with engine trails. The ship accelerates as you progress.",
   el4Title: FR ? "Syst\u00e8me de vies" : "Lives system",
-  el4Desc: FR ? "Tu commences avec 3 vies. Chaque ast\u00e9ro\u00efde en enl\u00e8ve une. Quand les 3 sont \u00e9puis\u00e9es, ton bonus est cr\u00e9dit\u00e9." : "You start each game with 3 lives. Each asteroid hit removes one. When all 3 are gone, your earned bonus is locked in and credited.",
+  el4Desc: FR ? "Tu commences chaque partie avec 3 vies. Chaque ast\u00e9ro\u00efde en enl\u00e8ve une \u2014 les perdre toutes termine la partie plus t\u00f4t, avant la fin de ta minute." : "You start each run with 3 lives. Each asteroid hit removes one \u2014 lose all 3 and the run ends early, before your minute is up.",
+  el5Title: FR ? "Jauge de carburant" : "Fuel timer",
+  el5Desc: FR ? "Une jauge qui se vide limite chaque partie \u00e0 1 minute. Quand elle est \u00e0 z\u00e9ro, la partie se termine et ton bonus est verrouill\u00e9." : "A draining gauge caps every run at 1 minute. When it hits empty, the run ends and your bonus is locked in.",
+  el6Title: FR ? "Parties & cooldown" : "Plays & cooldown",
+  el6Desc: FR ? "Chaque mini-jeu a un nombre limit\u00e9 de parties par collecte de 12h. Attends 5 minutes entre deux parties, ou regarde une pub pour rejouer imm\u00e9diatement \u2014 les VIP n\u0027attendent qu\u0027une minute, sans pub." : "Each mini-game has a limited number of runs per 12h session. Wait 5 minutes between runs, or watch an ad to jump back in immediately \u2014 VIP members wait just 1 minute, no ad needed.",
   rewardTitle: FR ? "Bonus cr\u00e9dit\u00e9 automatiquement" : "Bonus credited automatically",
   rewardDesc: FR ? "Tes gains DriftScan s\u0027ajoutent \u00e0 ton solde en fin de partie. Ils s\u0027accumulent avec ta session 12h et tes bonus de parrainage." : "Your DriftScan earnings are added directly to your balance at the end of the game. They stack with your active 12h collection session and your referral bonuses.",
   tipsTitle: FR ? "Astuces pour maximiser ton bonus" : "Tips to maximize your bonus",
   tip1: FR ? "Priorise la capture des pulsars plut\u00f4t que l\u0027\u00e9vitement quand ils se superposent \u2014 une vie vaut moins que rater un cluster." : "Prioritize pulsar capture over asteroid avoidance when they overlap \u2014 a life costs less than missing a pulsar cluster.",
-  tip2: FR ? "Reste pr\u00e8s du centre de l\u0027\u00e9cran \u2014 la plupart des pulsars apparaissent au milieu." : "Stay near the center of the screen \u2014 most pulsars spawn toward the middle and asteroids tend to come from the edges.",
-  tip3: FR ? "Joue plusieurs fois par jour \u2014 il n\u0027y a pas de cooldown sur les parties." : "Play multiple sessions per day \u2014 there is no cooldown on mini-game entries.",
+  tip2: FR ? "Surveille ta jauge de carburant \u2014 pr\u00e9vois ta derni\u00e8re capture avant qu\u0027elle ne soit \u00e0 z\u00e9ro." : "Watch your fuel gauge \u2014 plan your last pulsar grab before it hits empty.",
+  tip3: FR ? "Tu as un nombre limit\u00e9 de parties par collecte de 12h, avec 5 minutes de cooldown entre deux \u2014 regarde une pub pour rejouer imm\u00e9diatement, ou 1 minute seulement si tu es VIP." : "You get a limited number of runs per 12h session, with a 5-minute cooldown between them \u2014 watch an ad to jump back in immediately, or just 1 minute if you're VIP.",
   tip4: FR ? "Combine avec un boost actif (+2%) pour maximiser ton taux total." : "Combine with an active boost (+2%) to maximize your total hourly rate while playing.",
   roadmapLabel: FR ? "Bient\u00f4t" : "Coming soon",
   roadmapTitle: FR ? "D\u0027autres jeux \u00e0 venir" : "More games coming",
@@ -398,7 +444,7 @@ const T = {
   navBack: FR ? "\u2190 Retour" : "\u2190 Back",
   breadcrumb: FR ? "Mini-Jeux" : "Mini-Games",
   stat1Lbl: FR ? "Bonus par session" : "Bonus per session",
-  stat2Lbl: FR ? "Sans frais" : "No entry cost",
+  stat2Lbl: FR ? "Dur\u00e9e de la partie" : "Run duration",
   stat3Lbl: FR ? "Vies par partie" : "Lives per game",
 };
 
@@ -425,12 +471,12 @@ if (FR) {
   stepDescs[0].textContent = T.step1Desc; stepDescs[1].textContent = T.step2Desc; stepDescs[2].textContent = T.step3Desc;
   document.querySelectorAll('.game-card-body h2')[1].textContent = T.elemTitle;
   const elTitles = document.querySelectorAll('.element-title');
-  elTitles[0].textContent = T.el1Title; elTitles[1].textContent = T.el2Title; elTitles[2].textContent = T.el3Title; elTitles[3].textContent = T.el4Title;
+  elTitles[0].textContent = T.el1Title; elTitles[1].textContent = T.el2Title; elTitles[2].textContent = T.el3Title; elTitles[3].textContent = T.el4Title; elTitles[4].textContent = T.el5Title; elTitles[5].textContent = T.el6Title;
   const elDescs = document.querySelectorAll('.element-desc');
-  elDescs[0].textContent = T.el1Desc; elDescs[1].textContent = T.el2Desc; elDescs[2].textContent = T.el3Desc; elDescs[3].textContent = T.el4Desc;
+  elDescs[0].textContent = T.el1Desc; elDescs[1].textContent = T.el2Desc; elDescs[2].textContent = T.el3Desc; elDescs[3].textContent = T.el4Desc; elDescs[4].textContent = T.el5Desc; elDescs[5].textContent = T.el6Desc;
   document.querySelector('.reward-info h3').textContent = T.rewardTitle;
   document.querySelector('.reward-info p').textContent = T.rewardDesc;
-  document.querySelector('.tips h3').textContent = T.tipsTitle;
+  document.getElementById('tips-title').textContent = T.tipsTitle;
   const tips = document.querySelectorAll('.tip-list li');
   tips[0].textContent = T.tip1; tips[1].textContent = T.tip2; tips[2].textContent = T.tip3; tips[3].textContent = T.tip4;
   const rmLbl = document.getElementById('rm-label');
