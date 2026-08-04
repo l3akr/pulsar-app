@@ -287,17 +287,17 @@
         <div class="game-pill dim">To be announced</div>
       </div>
     </div>
-    <p style="font-size:14px;color:var(--text-mut);">New mini-games will be announced via <a href="https://t.me/pulsarminer" style="color:var(--signal);text-decoration:none;">Telegram</a> and <a href="https://x.com/pulsarminer" style="color:var(--signal);text-decoration:none;">X (@pulsarminer)</a> before each update.</p>
+    <p id="announce-p" style="font-size:14px;color:var(--text-mut);">New mini-games will be announced via <a href="https://t.me/pulsarminer" style="color:var(--signal);text-decoration:none;">Telegram</a> and <a href="https://x.com/pulsarminer" style="color:var(--signal);text-decoration:none;">X (@pulsarminer)</a> before each update.</p>
   </section>
 
   <!-- Internal links -->
   <div class="internal-links fade-in">
     <h3>Explore Pulsar</h3>
     <div class="link-grid">
-      <a href="/" class="link-card">
-        <div class="link-card-label">Home</div>
-        <div class="link-card-title">How collection works</div>
-        <div class="link-card-desc">12h sessions, halvings, referrals</div>
+      <a href="/features/sessions.html" class="link-card">
+        <div class="link-card-label">Feature</div>
+        <div class="link-card-title">Session</div>
+        <div class="link-card-desc">One tap. 12 hours later, your balance is up. See how it works.</div>
       </a>
       <a href="/#w-referral" class="link-card" onclick="document.getElementById('wp-overlay') && openWP()">
         <div class="link-card-label">Feature</div>
@@ -317,7 +317,7 @@
     <h2 id="cta-title">Start playing today.</h2>
     <p>Download Pulsar: Space Rewards for free on Android. No email, no KYC.</p>
     <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="cta-btn" target="_blank" rel="noopener">
-      ▶ Download on Google Play
+      <span id="cta-btn-txt">Download on Google Play</span>
     </a>
   </div>
 
@@ -381,10 +381,11 @@ const T = {
   roadmapTitle: FR ? "D\u0027autres jeux \u00e0 venir" : "More games coming",
   roadmapDesc: FR ? "DriftScan est le premier mini-jeu de Pulsar. D\u0027autres arrivent bient\u00f4t." : "DriftScan is the first mini-game in Pulsar. More coming soon.",
   comingSoonTitle: FR ? "Prochains mini-jeux" : "Upcoming mini-games",
+  announceHtml: FR ? "Les nouveaux mini-jeux seront annonc\u00e9s sur <a href=\"https://t.me/pulsarminer\" style=\"color:var(--signal);text-decoration:none;\">Telegram</a> et <a href=\"https://x.com/pulsarminer\" style=\"color:var(--signal);text-decoration:none;\">X (@pulsarminer)</a> avant chaque mise \u00e0 jour." : "New mini-games will be announced via <a href=\"https://t.me/pulsarminer\" style=\"color:var(--signal);text-decoration:none;\">Telegram</a> and <a href=\"https://x.com/pulsarminer\" style=\"color:var(--signal);text-decoration:none;\">X (@pulsarminer)</a> before each update.",
   internalTitle: FR ? "Explorer Pulsar" : "Explore Pulsar",
-  link1Label: FR ? "Accueil" : "Home",
-  link1Title: FR ? "Comment fonctionne la collecte" : "How collection works",
-  link1Desc: FR ? "Sessions 12h, halvings, parrainage" : "12h sessions, halvings, referrals",
+  link1Label: FR ? "Fonctionnalit\u00e9" : "Feature",
+  link1Title: FR ? "Collecte" : "Session",
+  link1Desc: FR ? "Un tap suffit. 12h plus tard, ton solde a grimp\u00e9. Comment \u00e7a marche ?" : "One tap. 12 hours later, your balance is up. See how it works.",
   link2Label: FR ? "Fonctionnalit\u00e9" : "Feature",
   link2Title: FR ? "Programme de parrainage" : "Referral program",
   link2Desc: FR ? "+1% de taux par ami actif" : "+1% rate per active friend",
@@ -393,7 +394,7 @@ const T = {
   link3Desc: FR ? "Sans pub \u00b7 Boost jusqu\u0027\u00e0 +15%" : "No ads \u00b7 Rate boost up to +15%",
   ctaTitle: FR ? "Commence \u00e0 jouer aujourd\u0027hui." : "Start playing today.",
   ctaDesc: FR ? "T\u00e9l\u00e9charge Pulsar: Space Rewards gratuitement sur Android. Sans email, sans KYC." : "Download Pulsar: Space Rewards for free on Android. No email, no KYC.",
-  ctaBtn: FR ? "\u25ba T\u00e9l\u00e9charger sur Google Play" : "\u25ba Download on Google Play",
+  ctaBtn: FR ? "T\u00e9l\u00e9charger sur Google Play" : "Download on Google Play",
   navBack: FR ? "\u2190 Retour" : "\u2190 Back",
   breadcrumb: FR ? "Mini-Jeux" : "Mini-Games",
   stat1Lbl: FR ? "Bonus par session" : "Bonus per session",
@@ -439,6 +440,8 @@ if (FR) {
   const rmDesc = document.querySelector('#rm-label ~ h2 + p');
   if(rmDesc) rmDesc.textContent = T.roadmapDesc;
   document.querySelector('.coming-soon h3').textContent = T.comingSoonTitle;
+  const announceP = document.getElementById('announce-p');
+  if(announceP) announceP.innerHTML = T.announceHtml;
   document.querySelector('.internal-links h3').textContent = T.internalTitle;
   const linkLabels = document.querySelectorAll('.link-card-label');
   linkLabels[0].textContent = T.link1Label; linkLabels[1].textContent = T.link2Label; linkLabels[2].textContent = T.link3Label;
@@ -448,7 +451,7 @@ if (FR) {
   linkDescs[0].textContent = T.link1Desc; linkDescs[1].textContent = T.link2Desc; linkDescs[2].textContent = T.link3Desc;
   document.querySelector('.bottom-cta h2').textContent = T.ctaTitle;
   document.querySelector('.bottom-cta p').textContent = T.ctaDesc;
-  document.querySelector('.cta-btn').textContent = T.ctaBtn;
+  document.getElementById('cta-btn-txt').textContent = T.ctaBtn;
   document.querySelector('.nav-back').textContent = T.navBack;
   document.querySelector('.nav-cta').textContent = FR ? 'Télécharger' : 'Download';
   const breadcrumbs = document.querySelectorAll('.breadcrumb span');
