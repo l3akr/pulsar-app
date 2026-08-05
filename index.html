@@ -398,8 +398,8 @@ setTimeout(reveal,200);
 setTimeout(reveal,600);
 
 // ── i18n ──────────────────────────────────────────────
-var uLang=(navigator.languages&&navigator.languages.length?navigator.languages[0]:navigator.language||'en');
-var FR=(uLang.toLowerCase().indexOf('fr')===0);
+var langs=(navigator.languages||[navigator.language||'en']);
+var FR=langs.some(function(l){return l.toLowerCase().indexOf('fr')===0;});
 
 var T={
   hs1: FR?'Collectez des tokens PSR chaque jour.':'Collect $PSR tokens every day.',
