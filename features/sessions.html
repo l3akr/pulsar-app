@@ -374,7 +374,8 @@
 
 <script>
 const c = document.getElementById('stars');
-for(let i=0;i<80;i++){
+const starCount=window.innerWidth<768?40:80;
+for(let i=0;i<starCount;i++){
   const s=document.createElement('div');
   s.className='star';
   const sz=0.8+Math.random()*2;
@@ -388,8 +389,8 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 </script>
 
 <script>
-const uLang = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en');
-const FR = uLang.toLowerCase().indexOf('fr') === 0;
+var langs=(navigator.languages||[navigator.language||'en']);
+const FR=langs.some(function(l){return l.toLowerCase().indexOf('fr')===0;});
 
 const T = {
   heroTag: FR ? "Syst\u00e8me de collecte" : "Session System",
