@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog — Pulsar: Space Rewards</title>
+<meta name="description" content="All updates, fixes and new features for Pulsar: Space Rewards. Follow the development of the app.">
+<meta name="keywords" content="Pulsar changelog, Pulsar updates, Pulsar Space Rewards update, PSR app version">
+<link rel="canonical" href="https://pulsarminer.space/changelog">
+<link rel="icon" type="image/png" href="pulsar-logo.png">
+<meta property="og:title" content="Changelog — Pulsar: Space Rewards">
+<meta property="og:description" content="All updates and new features for Pulsar: Space Rewards.">
+<meta property="og:url" content="https://pulsarminer.space/changelog">
+<meta property="og:image" content="https://pulsarminer.space/pulsar-logo.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Changelog — Pulsar: Space Rewards","url":"https://pulsarminer.space/changelog","isPartOf":{"@type":"WebSite","url":"https://pulsarminer.space"}}</script>
+<style>
+:root{--void:#09090f;--surface:#12121e;--s2:#181828;--border:#1e1e32;--signal:#9945ff;--ion:#00e5c3;--solar:#F7CF31;--nova:#ff4d6d;--text:#f0eeff;--tsec:rgba(240,238,255,.72);--tmut:rgba(240,238,255,.38);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--void);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;overflow-x:hidden;}
+canvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
+.w{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 48px 100px;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
+.nav-back{font-size:15px;color:var(--tmut);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
+.nav-back:hover{color:var(--tsec);}
+.nav-logo{font-size:16px;letter-spacing:6px;font-weight:300;color:var(--tmut);text-decoration:none;}
+.nav-cta{background:var(--signal);color:#fff;text-decoration:none;padding:8px 18px;border-radius:10px;font-size:14px;letter-spacing:1px;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;}
+.breadcrumb{margin:28px 0 0;font-size:14px;color:var(--tmut);display:flex;align-items:center;gap:8px;}
+.breadcrumb a{color:var(--tmut);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--tsec);}
+.breadcrumb span{color:var(--border);}
+
+/* Page hero */
+.page-hero{padding:48px 0 40px;border-bottom:.5px solid var(--border);margin-bottom:48px;}
+.hero-tag{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--ion);margin-bottom:14px;}
+.page-title{font-size:clamp(36px,6vw,60px);font-weight:200;line-height:1.1;margin-bottom:12px;}
+.page-desc{font-size:17px;color:var(--tsec);font-weight:300;line-height:1.7;max-width:580px;}
+
+/* Loading state */
+.loading{text-align:center;padding:60px 0;color:var(--tmut);font-size:15px;letter-spacing:1px;}
+
+/* Error state */
+.error-box{background:rgba(255,77,109,.05);border:.5px solid rgba(255,77,109,.2);border-radius:12px;padding:24px;text-align:center;color:rgba(255,77,109,.8);font-size:15px;line-height:1.7;}
+.error-box a{color:var(--ion);text-decoration:none;}
+
+/* Changelog list */
+.cl-list{display:flex;flex-direction:column;gap:12px;}
+
+.cl-card{background:var(--surface);border:.5px solid var(--border);border-radius:14px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;transition:background .2s,border-color .2s,transform .2s;position:relative;overflow:hidden;}
+.cl-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;transform:scaleY(0);transition:transform .2s;transform-origin:center;}
+.cl-card:hover{background:var(--s2);transform:translateX(4px);}
+.cl-card:hover::before{transform:scaleY(1);}
+.cl-card.minor::before{background:var(--ion);}
+.cl-card.major::before{background:var(--solar);}
+.cl-card:hover{border-color:rgba(153,69,255,.2);}
+
+.cl-left{display:flex;flex-direction:column;gap:6px;}
+.cl-version{font-size:22px;font-weight:300;color:var(--text);}
+.cl-card.major .cl-version{color:var(--solar);}
+.cl-card.minor .cl-version{color:var(--ion);}
+.cl-meta{display:flex;align-items:center;gap:12px;}
+.cl-badge{font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:20px;}
+.cl-card.major .cl-badge{background:rgba(247,207,49,.1);border:.5px solid rgba(247,207,49,.3);color:var(--solar);}
+.cl-card.minor .cl-badge{background:rgba(0,229,195,.08);border:.5px solid rgba(0,229,195,.25);color:var(--ion);}
+.cl-preview{font-size:14px;color:var(--tmut);line-height:1.5;max-width:500px;}
+.cl-arrow{font-size:18px;color:var(--tmut);transition:transform .2s,color .2s;flex-shrink:0;}
+.cl-card:hover .cl-arrow{transform:translateX(4px);color:var(--tsec);}
+
+/* Footer */
+.cl-footer{margin-top:56px;border-top:.5px solid var(--border);padding-top:32px;text-align:center;font-size:13px;color:var(--tmut);}
+.cl-footer strong{color:var(--signal);}
+.cl-footer p{margin-top:8px;font-size:13px;color:var(--tmut);}
+
+@media(max-width:600px){.w{padding:0 20px 60px;}.cl-card{flex-wrap:wrap;}.cl-preview{display:none;}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="w">
+  <nav>
+    <a href="/" class="nav-back" id="nav-back">← Back</a>
+    <a href="/" class="nav-logo">PULSAR</a>
+    <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" target="_blank" rel="noopener" class="nav-cta" id="nav-cta">Download</a>
+  </nav>
+  <div class="breadcrumb">
+    <a href="/" id="bc-home">Home</a>
+    <span>/</span>
+    <span id="bc-cl">Changelog</span>
+  </div>
+
+  <div class="page-hero">
+    <div class="hero-tag" id="hero-tag">Updates</div>
+    <h1 class="page-title" id="page-title">Changelog</h1>
+    <p class="page-desc" id="page-desc">Every update to Pulsar: Space Rewards — new features, fixes and improvements, sorted by version.</p>
+  </div>
+
+  <div id="cl-container"><div class="loading" id="loading-txt">Loading...</div></div>
+
+  <div class="cl-footer">
+    <p><strong>PULSAR</strong> &middot; Space Rewards &middot; &copy; 2026</p>
+    <p id="footer-note">Updates are published with each new release.</p>
+  </div>
+</div>
+
+<script>
+// Stars
+(function(){
+  var canvas=document.getElementById('c');
+  var ctx=canvas.getContext('2d');
+  var stars=[];
+  function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  var isMobile=window.innerWidth<768;
+  var count=isMobile?40:100;
+  for(var i=0;i<count;i++){
+    stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:.4+Math.random()*1.4,a:.08+Math.random()*0.2,speed:.003+Math.random()*0.006,phase:Math.random()*Math.PI*2});
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    var t=Date.now()*.001;
+    for(var i=0;i<stars.length;i++){
+      var s=stars[i];
+      var alpha=s.a*(0.5+0.5*Math.sin(t*s.speed*100+s.phase));
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,'+alpha+')';ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// i18n
+var langs=(navigator.languages||[navigator.language||'en']);
+var FR=langs.some(function(l){return l.toLowerCase().indexOf('fr')===0;});
+
+var i18n={
+  navBack: FR?'← Retour':'← Back',
+  navCta: FR?'Télécharger':'Download',
+  bcHome: FR?'Accueil':'Home',
+  bcCl: 'Changelog',
+  heroTag: FR?'Mises à jour':'Updates',
+  pageTitle: 'Changelog',
+  pageDesc: FR?'Toutes les mises à jour de Pulsar: Space Rewards — nouvelles fonctionnalités, corrections et améliorations, triées par version.':'Every update to Pulsar: Space Rewards — new features, fixes and improvements, sorted by version.',
+  loadingTxt: FR?'Chargement...':'Loading...',
+  majorLabel: FR?'Majeur':'Major',
+  minorLabel: FR?'Mineur':'Minor',
+  readMore: FR?'Lire →':'Read →',
+  footerNote: FR?'Les mises à jour sont publiées à chaque nouvelle version.':'Updates are published with each new release.',
+  errorMsg: FR?'Impossible de charger les changelogs. Vérifiez que des fichiers .txt ou .md sont présents dans le dossier /changelog/.':'Could not load changelogs. Make sure .txt or .md files are present in the /changelog/ folder.',
+  emptyMsg: FR?'Aucune mise à jour disponible pour l\'instant.':'No updates available yet.',
+};
+
+// Apply i18n
+Object.keys(i18n).forEach(function(k){
+  var map={'navBack':'nav-back','navCta':'nav-cta','bcHome':'bc-home','bcCl':'bc-cl','heroTag':'hero-tag','pageTitle':'page-title','pageDesc':'page-desc','loadingTxt':'loading-txt','footerNote':'footer-note'};
+  if(map[k]){var el=document.getElementById(map[k]);if(el)el.textContent=i18n[k];}
+});
+
+// Parse version string into comparable array
+function parseVersion(v){
+  // Strip leading 'v' or 'V'
+  var clean=v.replace(/^[vV\.]+/,'');
+  var parts=clean.split('.').map(function(p){return parseInt(p,10)||0;});
+  while(parts.length<3)parts.push(0);
+  return parts;
+}
+
+// Compare two version arrays — returns negative if a < b
+function compareVersions(a,b){
+  for(var i=0;i<3;i++){if(a[i]!==b[i])return b[i]-a[i];}
+  return 0;
+}
+
+// Is this a major bump? (second segment changed vs previous)
+function isMajorBump(curr,prev){
+  if(!prev)return false;
+  return curr[1]>prev[1]||curr[0]>prev[0];
+}
+
+// Extract first meaningful line as preview
+function getPreview(text,maxLen){
+  maxLen=maxLen||120;
+  var lines=text.split('\n');
+  for(var i=0;i<lines.length;i++){
+    var l=lines[i].replace(/^#+\s*/,'').replace(/\*\*/g,'').trim();
+    if(l&&l.length>4){return l.length>maxLen?l.slice(0,maxLen)+'…':l;}
+  }
+  return '';
+}
+
+// List of changelog files — ADD YOUR FILES HERE
+// Format: 'v1.0.0' (filename without extension, must match /changelog/v1.0.0.txt or .md)
+var CHANGELOG_FILES = [
+  // Example — add your versions here:
+  // 'v1.2.0',
+  // 'v1.1.0',
+  // 'v1.0.0',
+];
+
+// Fetch and render changelogs
+async function loadChangelogs(){
+  var container=document.getElementById('cl-container');
+
+  if(CHANGELOG_FILES.length===0){
+    container.innerHTML='<div class="error-box">'+i18n.emptyMsg+'<br><br>'+
+      (FR?'Ajoutez vos fichiers dans <code>CHANGELOG_FILES</code> dans changelog.html et placez les fichiers .txt/.md dans <code>/changelog/</code>.':
+          'Add your files to <code>CHANGELOG_FILES</code> in changelog.html and place .txt/.md files in <code>/changelog/</code>.')+'</div>';
+    return;
+  }
+
+  // Parse and sort versions
+  var versions=CHANGELOG_FILES.map(function(f){
+    return{file:f,parsed:parseVersion(f)};
+  }).sort(function(a,b){return compareVersions(a.parsed,b.parsed);});
+
+  // Fetch all files
+  var results=[];
+  for(var i=0;i<versions.length;i++){
+    var v=versions[i];
+    var url='/changelog/'+v.file+'.txt';
+    try{
+      var res=await fetch(url);
+      if(!res.ok){url='/changelog/'+v.file+'.md';res=await fetch(url);}
+      var text=res.ok?await res.text():'';
+      results.push({file:v.file,parsed:v.parsed,text:text});
+    }catch(e){
+      results.push({file:v.file,parsed:v.parsed,text:''});
+    }
+  }
+
+  // Render
+  var html='<div class="cl-list">';
+  for(var i=0;i<results.length;i++){
+    var r=results[i];
+    var prev=i>0?results[i-1].parsed:null;
+    var major=isMajorBump(r.parsed,prev);
+    var cls=major?'major':'minor';
+    var badge=major?i18n.majorLabel:i18n.minorLabel;
+    var preview=getPreview(r.text);
+    var slug=r.file.replace(/^[vV\.]+/,'').replace(/\./g,'-');
+    html+='<a href="/changelog/'+r.file+'.html" class="cl-card '+cls+'" data-file="'+r.file+'" data-text="'+encodeURIComponent(r.text)+'">';
+    html+='<div class="cl-left">';
+    html+='<div class="cl-version">'+r.file+'</div>';
+    html+='<div class="cl-meta"><span class="cl-badge">'+badge+'</span></div>';
+    if(preview)html+='<div class="cl-preview">'+preview+'</div>';
+    html+='</div>';
+    html+='<span class="cl-arrow">→</span>';
+    html+='</a>';
+  }
+  html+='</div>';
+  container.innerHTML=html;
+
+  // Intercept clicks to render inline detail page
+  document.querySelectorAll('.cl-card').forEach(function(card){
+    card.addEventListener('click',function(e){
+      e.preventDefault();
+      var file=card.getAttribute('data-file');
+      var text=decodeURIComponent(card.getAttribute('data-text'));
+      openDetail(file,text);
+    });
+  });
+}
+
+// Render a detail page inline
+function openDetail(file,text){
+  var container=document.getElementById('cl-container');
+  var html='<div style="margin-bottom:24px;">';
+  html+='<a href="/changelog.html" style="font-size:14px;color:var(--tmut);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;" onmouseover="this.style.color=\'var(--tsec)\'" onmouseout="this.style.color=\'var(--tmut)\'">';
+  html+=FR?'← Tous les changelogs':'← All changelogs';
+  html+='</a></div>';
+
+  // Parse markdown-ish content
+  html+='<div style="background:var(--surface);border:.5px solid var(--border);border-radius:16px;padding:36px 40px;">';
+  html+='<div style="font-size:clamp(28px,5vw,44px);font-weight:200;color:var(--solar);margin-bottom:8px;">'+file+'</div>';
+  html+='<div style="height:.5px;background:var(--border);margin:20px 0 28px;"></div>';
+  html+=parseMarkdown(text);
+  html+='</div>';
+  container.innerHTML=html;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Simple markdown parser
+function parseMarkdown(text){
+  var lines=text.split('\n');
+  var out='';
+  var inList=false;
+  for(var i=0;i<lines.length;i++){
+    var l=lines[i];
+    // H1
+    if(/^#\s/.test(l)){
+      if(inList){out+='</ul>';inList=false;}
+      out+='<h2 style="font-size:22px;font-weight:300;color:var(--text);margin:28px 0 12px;letter-spacing:1px;">'+l.replace(/^#\s/,'')+'</h2>';
+    }
+    // H2
+    else if(/^##\s/.test(l)){
+      if(inList){out+='</ul>';inList=false;}
+      out+='<h3 style="font-size:16px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--ion);margin:24px 0 10px;">'+l.replace(/^##\s/,'')+'</h3>';
+    }
+    // H3
+    else if(/^###\s/.test(l)){
+      if(inList){out+='</ul>';inList=false;}
+      out+='<h4 style="font-size:15px;font-weight:500;color:var(--signal);margin:18px 0 8px;">'+l.replace(/^###\s/,'')+'</h4>';
+    }
+    // List item
+    else if(/^[-*]\s/.test(l)){
+      if(!inList){out+='<ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin:0 0 16px 0;">';inList=true;}
+      var item=l.replace(/^[-*]\s/,'');
+      item=applyInline(item);
+      out+='<li style="font-size:15px;color:var(--tsec);line-height:1.6;padding-left:18px;position:relative;"><span style="position:absolute;left:0;color:var(--ion);">→</span>'+item+'</li>';
+    }
+    // Empty line
+    else if(l.trim()===''){
+      if(inList){out+='</ul>';inList=false;}
+      out+='<div style="height:8px;"></div>';
+    }
+    // Regular paragraph
+    else{
+      if(inList){out+='</ul>';inList=false;}
+      out+='<p style="font-size:15px;color:var(--tsec);line-height:1.7;margin-bottom:12px;">'+applyInline(l)+'</p>';
+    }
+  }
+  if(inList)out+='</ul>';
+  return out;
+}
+
+function applyInline(text){
+  // Bold
+  text=text.replace(/\*\*(.+?)\*\*/g,'<strong style="color:var(--text);font-weight:500;">$1</strong>');
+  // Italic
+  text=text.replace(/\*(.+?)\*/g,'<em style="color:var(--tsec);">$1</em>');
+  // Code
+  text=text.replace(/`(.+?)`/g,'<code style="font-family:monospace;font-size:13px;color:var(--ion);background:rgba(0,229,195,.08);padding:2px 6px;border-radius:4px;">$1</code>');
+  return text;
+}
+
+loadChangelogs();
+</script>
+</body>
+</html>
