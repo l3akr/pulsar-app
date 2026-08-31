@@ -446,10 +446,10 @@ var T={
   f7d: FR?'Joue à nos mini-jeux, gagne des PSR bonus. Découvre-les.':'Play our mini-games, earn bonus PSR. Check them out.',
   f9t: FR?'Classement':'Leaderboard',
   f9d: FR?'Top 50 par solde, parrainages et gains totaux. Vise le podium.':'Top 50 by balance, referrals and total earned. Aim for the podium.',
+  f10t: 'Changelog',
+  f10d: FR?'Dernières mises à jour, corrections et nouvelles fonctionnalités.':'Latest updates, fixes and new features.',
   f6t: FR?'Confidentialité totale':'Privacy first',
   f6d: FR?'Aucun email. Aucun KYC. Aucune donnée. Jamais. Voici comment.':'No email, no KYC, no data. Ever. Here\u0027s how.',
-  f9t:'Changelog',
-  f9d: FR?'Dernières mises à jour, corrections et nouvelles fonctionnalités.':'Latest updates, fixes and new features.',
   f8t:'FAQ',
   f8d: FR?'Toutes les questions sur Pulsar et $PSR, répondues.':'Every question about Pulsar and $PSR, answered.',
   rmt:'Roadmap',
@@ -503,6 +503,7 @@ function wikiScroll(dir){
     referral:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.9-5.8 6.5-5.8s6.5 2.5 6.5 5.8"/><path d="M17.5 8.2h4M19.5 6.2v4"/></svg>',
     vip:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9 8 4h8l4 5-9 11z"/><path d="M4 9h16M9 9l3 11 3-11M8 4l1 5M16 4l-1 5"/></svg>',
     games:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="9" rx="4.5"/><path d="M7 10.6v3.8M5.1 12.5h3.8"/><circle cx="16" cy="11" r=".9" fill="currentColor" stroke="none"/><circle cx="18.4" cy="13.4" r=".9" fill="currentColor" stroke="none"/></svg>',
+    changelog:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>',
     leaderboard:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 4M17 5h3a3 3 0 0 1-3 4M9 19h6M12 14v5"/></svg>',
     privacy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>'
   };
@@ -513,7 +514,8 @@ function wikiScroll(dir){
     {href:'/features/boost.html',icon:'boost',cls:'wiki-nova',t:T.f5t,d:T.f5d},
     {href:'/features/privacy.html',icon:'privacy',cls:'wiki-ion',t:T.f6t,d:T.f6d},
     {href:'/features/leaderboard.html',icon:'leaderboard',cls:'wiki-signal',t:T.f9t,d:T.f9d},
-    {href:'/mini-games.html',icon:'games',cls:'wiki-solar',t:T.f7t,d:T.f7d}
+    {href:'/mini-games.html',icon:'games',cls:'wiki-solar',t:T.f7t,d:T.f7d},
+    {href:'/changelog.html',icon:'changelog',cls:'wiki-nova',t:T.f10t,d:T.f10d}
   ];
   function cardHTML(c){
     return '<a href="'+c.href+'" class="wiki-card '+c.cls+'"><div class="wiki-card-icon">'+ICONS[c.icon]+'</div><div class="wiki-card-title">'+c.t+'</div><div class="wiki-card-desc">'+c.d+'</div><span class="wiki-card-arrow">&#8594;</span></a>';
