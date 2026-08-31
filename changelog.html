@@ -22,6 +22,8 @@ body{background:var(--void);color:var(--text);font-family:-apple-system,BlinkMac
 canvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
 .w{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 64px 100px;}
 nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
+.nav-left{display:flex;align-items:center;gap:16px;}
+.nav-right{display:flex;align-items:center;gap:12px;}
 .nav-back{font-size:15px;color:var(--tmut);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
 .nav-back:hover{color:var(--tsec);}
 .nav-logo{font-size:16px;letter-spacing:6px;font-weight:300;color:var(--tmut);text-decoration:none;}
@@ -68,9 +70,13 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0
 <canvas id="c"></canvas>
 <div class="w">
   <nav>
-    <a href="/" class="nav-back" id="nav-back">← Back</a>
-    <a href="/" class="nav-logo">PULSAR</a>
-    <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" target="_blank" rel="noopener" class="nav-cta" id="nav-cta">Download</a>
+    <div class="nav-left">
+      <a href="/" class="nav-back" id="nav-back">← Back</a>
+      <a href="/" class="nav-logo">PULSAR</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" target="_blank" rel="noopener" class="nav-cta" id="nav-cta">Download</a>
+    </div>
   </nav>
   <div class="breadcrumb">
     <a href="/" id="bc-home">Home</a>
@@ -127,7 +133,7 @@ var FR=langs.some(function(l){return l.toLowerCase().indexOf('fr')===0;});
 var i18n={
   navBack: FR?'← Retour':'← Back',
   navCta: FR?'Télécharger':'Download',
-  bcHome: FR?'Accueil':'Home',
+  bcHome: 'Home',
   bcCl: 'Changelog',
   heroTag: FR?'Mises à jour':'Updates',
   pageTitle: 'Changelog',
