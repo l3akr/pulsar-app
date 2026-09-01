@@ -176,7 +176,7 @@
   <div class="breadcrumb">
     <a href="/">Home</a>
     <span>/</span>
-    <span>Referral</span>
+    <span id="bc-page">Referral</span>
   </div>
 
   <div class="page-hero fade-in">
@@ -460,6 +460,8 @@ const T = {
 };
 
 if (FR) {
+  var bcPage=document.getElementById('bc-page');
+  if(bcPage)bcPage.textContent='Parrainage';
   document.querySelector('.hero-tag').textContent = T.heroTag;
   document.querySelector('.page-title').innerHTML = T.pageTitle;
   document.querySelector('.page-desc').textContent = T.pageDesc;
@@ -468,6 +470,7 @@ if (FR) {
   statLbls[1].textContent = T.stat2Lbl;
   statLbls[2].textContent = T.stat3Lbl;
   document.getElementById('sect-label').textContent = T.sectionLabel;
+  var gt=document.getElementById('g-title');if(gt)gt.textContent='PARRAINAGE';
   document.getElementById('g-sub').textContent = T.gSub;
   document.getElementById('g-badge').textContent = T.gBadge;
   document.getElementById('gp1').textContent = T.gp1;
