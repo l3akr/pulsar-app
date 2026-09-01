@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/pulsar-logo.png">
-<link rel="apple-touch-icon" href="/pulsar-logo.png">
+<link rel="icon" type="image/png" href="https://pulsarminer.space/pulsar-logo.png">
+<link rel="apple-touch-icon" href="https://pulsarminer.space/pulsar-logo.png">
 <title>Changelog — Pulsar: Space Rewards</title>
 <meta name="description" content="All updates, fixes and new features for Pulsar: Space Rewards. Follow the development of the app.">
 <meta name="keywords" content="Pulsar changelog, Pulsar updates, Pulsar Space Rewards update, PSR app version">
@@ -194,6 +194,15 @@ var CHANGELOG_FILES = [
 ];
 
 // Fetch and render changelogs
+function formatDate(d){
+  if(!d) return '';
+  var parts=d.split('-');
+  if(parts.length<3) return d;
+  var months=FR?['janv.','évr.','mars','avr.','mai','juin','juil.','àt','sept.','oct.','nov.','éc.']:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var m=parseInt(parts[1],10)-1;
+  return parts[2]+' '+months[m]+' '+parts[0];
+}
+
 async function loadChangelogs(){
   var container=document.getElementById('cl-container');
 
@@ -231,16 +240,6 @@ async function loadChangelogs(){
       }
     }catch(e){}
     results.push({file:v.file,parsed:v.parsed,text:text,date:''});
-  }
-
-  // Format date helper
-  function formatDate(d){
-    if(!d) return '';
-    var parts=d.split('-');
-    if(parts.length<3) return d;
-    var months=FR?['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.']:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var m=parseInt(parts[1],10)-1;
-    return parts[2]+' '+months[m]+' '+parts[0];
   }
 
   // Render
