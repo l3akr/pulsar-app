@@ -220,6 +220,9 @@ async function loadChangelogs(){
       if(res.ok){
         var data=await res.json();
         text=FR?(data.fr||data.en||''):(data.en||data.fr||'');
+        var date=data.date||'';
+        results.push({file:v.file,parsed:v.parsed,text:text,date:date});
+        continue;
       } else {
         // Fallback to .txt then .md
         res=await fetch('/changelog/'+v.file+'.txt');
@@ -227,8 +230,7 @@ async function loadChangelogs(){
         text=res.ok?await res.text():'';
       }
     }catch(e){}
-    var date=data&&data.date?data.date:'';
-    results.push({file:v.file,parsed:v.parsed,text:text,date:date});
+    results.push({file:v.file,parsed:v.parsed,text:text,date:''});
   }
 
   // Format date helper
