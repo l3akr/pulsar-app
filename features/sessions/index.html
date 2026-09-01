@@ -363,8 +363,8 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 </script>
 
 <script>
-const uLang = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en');
-const FR = uLang.toLowerCase().indexOf('fr') === 0;
+var langs=(navigator.languages||[navigator.language||'en']);
+const FR=langs.some(function(l){return l.toLowerCase().indexOf('fr')===0;});
 
 const T = {
   heroTag: FR ? "Syst\u00e8me de session" : "Session System",
