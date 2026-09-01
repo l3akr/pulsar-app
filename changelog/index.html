@@ -188,10 +188,7 @@ function getPreview(text,maxLen){
 // List of changelog files — ADD YOUR FILES HERE
 // Format: 'v1.0.0' (filename without extension, must match /changelog/v1.0.0.txt or .md)
 var CHANGELOG_FILES = [
-  // Example — add your versions here:
-  // 'v1.2.0',
-  // 'v1.1.0',
-  // 'v1.0.0',
+  'v1.1.9',
 ];
 
 // Fetch and render changelogs
@@ -210,19 +207,25 @@ async function loadChangelogs(){
     return{file:f,parsed:parseVersion(f)};
   }).sort(function(a,b){return compareVersions(a.parsed,b.parsed);});
 
-  // Fetch all files
+  // Fetch all files — supports .json (bilingual) and .txt/.md (single lang)
   var results=[];
   for(var i=0;i<versions.length;i++){
     var v=versions[i];
-    var url='/changelog/'+v.file+'.txt';
+    var text='';
     try{
-      var res=await fetch(url);
-      if(!res.ok){url='/changelog/'+v.file+'.md';res=await fetch(url);}
-      var text=res.ok?await res.text():'';
-      results.push({file:v.file,parsed:v.parsed,text:text});
-    }catch(e){
-      results.push({file:v.file,parsed:v.parsed,text:''});
-    }
+      // Try JSON first (bilingual)
+      var res=await fetch('/changelog/'+v.file+'.json');
+      if(res.ok){
+        var data=await res.json();
+        text=FR?(data.fr||data.en||''):(data.en||data.fr||'');
+      } else {
+        // Fallback to .txt then .md
+        res=await fetch('/changelog/'+v.file+'.txt');
+        if(!res.ok) res=await fetch('/changelog/'+v.file+'.md');
+        text=res.ok?await res.text():'';
+      }
+    }catch(e){}
+    results.push({file:v.file,parsed:v.parsed,text:text});
   }
 
   // Render
