@@ -225,7 +225,18 @@ async function loadChangelogs(){
         text=res.ok?await res.text():'';
       }
     }catch(e){}
-    results.push({file:v.file,parsed:v.parsed,text:text});
+    var date=data&&data.date?data.date:'';
+    results.push({file:v.file,parsed:v.parsed,text:text,date:date});
+  }
+
+  // Format date helper
+  function formatDate(d){
+    if(!d) return '';
+    var parts=d.split('-');
+    if(parts.length<3) return d;
+    var months=FR?['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.']:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var m=parseInt(parts[1],10)-1;
+    return parts[2]+' '+months[m]+' '+parts[0];
   }
 
   // Render
@@ -238,10 +249,11 @@ async function loadChangelogs(){
     var badge=major?i18n.majorLabel:i18n.minorLabel;
     var preview=getPreview(r.text);
     var slug=r.file.replace(/^[vV\.]+/,'').replace(/\./g,'-');
-    html+='<a href="/changelog/'+r.file+'/" class="cl-card '+cls+'" data-file="'+r.file+'" data-text="'+encodeURIComponent(r.text)+'">';
+    html+='<a href="/changelog/'+r.file+'/" class="cl-card '+cls+'" data-file="'+r.file+'" data-text="'+encodeURIComponent(r.text)+'" data-date="'+(r.date||'')+'">';
     html+='<div class="cl-left">';
     html+='<div class="cl-version">'+r.file+'</div>';
-    html+='<div class="cl-meta"><span class="cl-badge">'+badge+'</span></div>';
+    var fDate=formatDate(r.date);
+    html+='<div class="cl-meta"><span class="cl-badge">'+badge+'</span>'+(fDate?'<span style="font-size:13px;color:var(--tmut);margin-left:8px;">'+fDate+'</span>':'')+'</div>';
     if(preview)html+='<div class="cl-preview">'+preview+'</div>';
     html+='</div>';
     html+='<span class="cl-arrow">→</span>';
@@ -256,13 +268,15 @@ async function loadChangelogs(){
       e.preventDefault();
       var file=card.getAttribute('data-file');
       var text=decodeURIComponent(card.getAttribute('data-text'));
-      openDetail(file,text);
+      var date=card.getAttribute('data-date')||'';
+      openDetail(file,text,date);
     });
   });
 }
 
 // Render a detail page inline
-function openDetail(file,text){
+function openDetail(file,text,date){
+  var r={date:date};
   var container=document.getElementById('cl-container');
   var html='<div style="margin-bottom:24px;">';
   html+='<a href="/changelog/" style="font-size:14px;color:var(--tmut);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;" onmouseover="this.style.color=\'var(--tsec)\'" onmouseout="this.style.color=\'var(--tmut)\'">';
@@ -271,7 +285,9 @@ function openDetail(file,text){
 
   // Parse markdown-ish content
   html+='<div style="background:var(--surface);border:.5px solid var(--border);border-radius:18px;padding:48px 56px;">';
-  html+='<div style="font-size:clamp(36px,6vw,56px);font-weight:200;color:var(--solar);margin-bottom:10px;">'+file+'</div>';
+  var dDate=r&&r.date?formatDate(r.date):'';
+  html+='<div style="font-size:clamp(36px,6vw,56px);font-weight:200;color:var(--solar);margin-bottom:6px;">'+file+'</div>';
+  if(dDate) html+='<div style="font-size:15px;color:var(--tmut);margin-bottom:10px;">'+dDate+'</div>';
   html+='<div style="height:.5px;background:var(--border);margin:20px 0 28px;"></div>';
   html+=parseMarkdown(text);
   html+='</div>';
