@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Pulsar: Space Rewards</title>
+<meta name="description" content="Answers to common questions about Pulsar: Space Rewards — collecting $PSR, Boost, referrals, VIP, mini-games, the leaderboard and privacy.">
+<meta name="keywords" content="Pulsar FAQ, PSR questions, Pulsar Space Rewards help, how does Pulsar work, mobile crypto app, Solana app">
+<link rel="canonical" href="https://pulsarminer.space/faq/">
+<link rel="icon" type="image/png" href="/pulsar-logo.png">
+<meta property="og:title" content="FAQ — Pulsar: Space Rewards">
+<meta property="og:description" content="Quick answers about collecting $PSR, Boost, referrals, VIP, mini-games, the leaderboard and privacy.">
+<meta property="og:url" content="https://pulsarminer.space/faq/">
+<meta property="og:image" content="https://pulsarminer.space/pulsar-logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is Pulsar free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Downloading and using Pulsar costs nothing. VIP subscriptions are optional."}},
+    {"@type":"Question","name":"Do I need an email to sign up?","acceptedAnswer":{"@type":"Answer","text":"No. Just pick a username and password — no email, no phone number."}},
+    {"@type":"Question","name":"How does collecting work?","acceptedAnswer":{"@type":"Answer","text":"Start a 12h session with one tap. Your $PSR balance grows automatically at your rate until it ends."}}
+  ]
+}
+</script>
+<style>
+  :root {
+    --void:#09090f;--surface:#12121e;--border:#1e1e32;
+    --signal:#9945ff;--ion:#00e5c3;--solar:#F7CF31;--nova:#ff4d6d;
+    --text:#f0eeff;--text-sec:rgba(240,238,255,0.75);--text-mut:rgba(240,238,255,0.42);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--void);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;overflow-x:hidden;}
+  .stars{position:fixed;inset:0;pointer-events:none;z-index:0;}
+  .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite alternate;animation-delay:var(--delay,0s);}
+  @keyframes twinkle{from{opacity:var(--min-op,0.1);}to{opacity:var(--max-op,0.6);}}
+  .container{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 64px 100px;}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;}
+  .nav-left{display:flex;align-items:center;gap:16px;}
+  .nav-back{font-size:15px;color:var(--text-mut);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s;}
+  .nav-back:hover{color:var(--text-sec);}
+  .nav-logo{font-size:16px;letter-spacing:6px;font-weight:300;color:var(--text-mut);text-decoration:none;}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .nav-cta{background:var(--signal);color:#fff;text-decoration:none;padding:10px 22px;border-radius:10px;font-size:16px;letter-spacing:1px;transition:opacity .2s;}
+  .nav-cta:hover{opacity:.85;}
+
+  /* Hero */
+  .page-hero{padding:48px 0 32px;text-align:center;}
+  .hero-tag{font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--signal);margin-bottom:16px;}
+  .page-title{font-size:clamp(56px,9vw,88px);font-weight:200;line-height:1.05;margin-bottom:16px;color:var(--signal);}
+  .page-desc{font-size:18px;color:var(--text-sec);font-weight:300;line-height:1.6;max-width:560px;margin:0 auto;}
+
+  .faq-wrap{max-width:760px;margin:0 auto;}
+
+  /* Category filters */
+  .faq-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:36px 0 8px;}
+  .faq-filter-btn{background:var(--surface);border:0.5px solid var(--border);color:var(--text-sec);font-size:14px;letter-spacing:0.5px;padding:9px 18px;border-radius:20px;cursor:pointer;transition:background .2s,border-color .2s,color .2s;font-family:inherit;}
+  .faq-filter-btn:hover{border-color:rgba(153,69,255,0.4);color:var(--text);}
+  .faq-filter-btn.active{background:rgba(153,69,255,0.12);border-color:rgba(153,69,255,0.5);color:var(--text);}
+
+  /* Category */
+  .faq-category{margin-top:48px;}
+  .faq-category-label{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--text-mut);margin-bottom:14px;padding-left:2px;}
+
+  /* Accordion */
+  .accordion{display:flex;flex-direction:column;gap:10px;}
+  .acc-item{background:var(--surface);border:0.5px solid var(--border);border-radius:12px;overflow:hidden;}
+  .acc-item summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:17px;font-weight:500;color:var(--text);transition:background .2s;}
+  .acc-item summary::-webkit-details-marker{display:none;}
+  .acc-item summary:hover{background:rgba(255,255,255,0.02);}
+  .acc-icon{font-size:14px;color:var(--text-mut);transition:transform .25s ease;flex-shrink:0;}
+  .acc-item[open] .acc-icon{transform:rotate(180deg);}
+  .acc-item[open] summary{border-bottom:0.5px solid var(--border);}
+  .acc-body{padding:18px 20px;}
+  .acc-body p{font-size:16px;color:var(--text-sec);line-height:1.7;margin:0;}
+
+  /* CTA bottom */
+  .bottom-cta{text-align:center;padding:80px 0 0;}
+  .bottom-cta h2{font-size:36px;font-weight:200;margin-bottom:12px;}
+  .bottom-cta p{font-size:17px;color:var(--text-sec);margin-bottom:32px;}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--signal);color:#fff;text-decoration:none;padding:16px 40px;border-radius:14px;font-size:16px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:opacity .2s,transform .2s;}
+  .cta-btn:hover{opacity:.88;transform:translateY(-1px);}
+
+  .fade-in{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;}
+  .fade-in.visible{opacity:1;transform:none;}
+
+  @media(max-width:768px){
+    .container{padding:0 20px 60px;}
+    .acc-item summary{padding:16px 18px;font-size:16px;}
+    .acc-body{padding:16px 18px;}
+  }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="container">
+
+  <nav>
+    <div class="nav-left">
+      <a href="/" class="nav-back">← Back</a>
+      <a href="/" class="nav-logo">PULSAR</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="nav-cta" target="_blank" rel="noopener">Download</a>
+    </div>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <h1 class="page-title" id="page-title">FAQ</h1>
+    <p class="page-desc" id="page-desc">Quick answers to everything about Pulsar. Tap a question to expand it, or filter by topic below.</p>
+  </div>
+
+  <div class="faq-wrap">
+  <div class="faq-filters fade-in" id="faq-filters">
+    <button class="faq-filter-btn active" data-cat="all">All</button>
+    <button class="faq-filter-btn" data-cat="general">General</button>
+    <button class="faq-filter-btn" data-cat="session">Collecting</button>
+    <button class="faq-filter-btn" data-cat="boost">Boost</button>
+    <button class="faq-filter-btn" data-cat="referral">Referral</button>
+    <button class="faq-filter-btn" data-cat="vip">VIP</button>
+    <button class="faq-filter-btn" data-cat="games">Mini-games</button>
+    <button class="faq-filter-btn" data-cat="leaderboard">Leaderboard</button>
+    <button class="faq-filter-btn" data-cat="privacy">Privacy</button>
+  </div>
+
+  <!-- General -->
+  <div class="faq-category fade-in" data-cat="general">
+    <div class="faq-category-label" id="cat-general">General</div>
+    <div class="accordion">
+      <details class="acc-item" open>
+        <summary><span id="q1">Is Pulsar free?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a1">Yes. Downloading and using Pulsar costs nothing. VIP subscriptions are optional.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q2">Do I need an email to sign up?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a2">No. Just pick a username and password — no email, no phone number, ever.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q3">What is $PSR?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a3">$PSR is the token you earn by collecting inside Pulsar — through sessions, referrals, Boost and mini-games.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Collecte -->
+  <div class="faq-category fade-in" data-cat="session">
+    <div class="faq-category-label" id="cat-session">Collecting</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q4">How does collecting work?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a4">Start a 12h session with one tap. Your $PSR balance grows automatically at your rate until the session ends.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q5">What determines my rate?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a5">Your base rate — set by Pulsar's total user count — plus your referral bonus, VIP boost and Boost ad bonus.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q6">Can I start a new session right away?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a6">Yes. As soon as one session ends, you can start another immediately.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Boost -->
+  <div class="faq-category fade-in" data-cat="boost">
+    <div class="faq-category-label" id="cat-boost">Boost</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q7">What does Boost do?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a7">Watch a rewarded ad for +2% rate for 1 hour. VIP members get the same boost with a tap, no ad required.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q8">How many times can I boost?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a8">No cap — chain as many boosts as you want, back-to-back, as long as a session is active.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Parrainage -->
+  <div class="faq-category fade-in" data-cat="referral">
+    <div class="faq-category-label" id="cat-referral">Referral</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q9">How does the referral bonus work?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a9">You get +1% rate for every friend who collects at least once every 48h. It pauses if they go inactive, and resumes when they're back.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q10">What does my friend get?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a10">A free 12h session's worth of PSR, credited instantly when they sign up with your code.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- VIP -->
+  <div class="faq-category fade-in" data-cat="vip">
+    <div class="faq-category-label" id="cat-vip">VIP</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q11">What are the VIP tiers?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a11">Four rate boosts to choose from — +0%, +5%, +10% or +15%. Every tier removes all ads.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q12">When does my VIP boost apply?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a12">Immediately, the moment you subscribe — no need to wait for a new session.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Mini-jeux -->
+  <div class="faq-category fade-in" data-cat="games">
+    <div class="faq-category-label" id="cat-games">Mini-games</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q13">How do mini-games work?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a13">DriftScan is an arcade dodging game — capture pulsars and avoid asteroids before your 1-minute fuel gauge empties or you lose all 3 lives.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q14">Is there a limit on how often I can play?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a14">Yes — a limited number of runs per session, with a 5-minute cooldown between them (1 minute for VIP, no ad needed).</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Classement -->
+  <div class="faq-category fade-in" data-cat="leaderboard">
+    <div class="faq-category-label" id="cat-leaderboard">Leaderboard</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q15">How is the leaderboard ranked?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a15">By balance, referrals or total earned — top 50 in each category, updated at the end of every session.</p></div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Confidentialité -->
+  <div class="faq-category fade-in" data-cat="privacy">
+    <div class="faq-category-label" id="cat-privacy">Privacy</div>
+    <div class="accordion">
+      <details class="acc-item">
+        <summary><span id="q16">Do you collect personal data?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a16">No — no email, no phone number, no personal information. Just a username and password.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q17">What if I lose my password?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a17">It currently can't be recovered. A recovery phrase feature is planned for a future update.</p></div>
+      </details>
+      <details class="acc-item">
+        <summary><span id="q18">Can I use my account on another device?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a18">Yes — as long as that device has never had another Pulsar account on it.</p></div>
+      </details>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Bottom CTA -->
+  <div class="bottom-cta fade-in">
+    <h2 id="cta-title">Still have questions?</h2>
+    <p id="cta-desc">Download Pulsar and find out for yourself. No email, no KYC.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.pulsar.mine" class="cta-btn" target="_blank" rel="noopener">
+      <span id="cta-btn-txt">Download on Google Play</span>
+    </a>
+  </div>
+
+</div>
+
+<script>
+const c = document.getElementById('stars');
+const starCount=window.innerWidth<768?40:80;
+for(let i=0;i<starCount;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  const sz=0.8+Math.random()*2;
+  s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--min-op:${0.05+Math.random()*0.15};--max-op:${0.3+Math.random()*0.5};--d:${2+Math.random()*4}s;--delay:${Math.random()*5}s;`;
+  c.appendChild(s);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// Category filter
+const filterBtns = document.querySelectorAll('.faq-filter-btn');
+const catSections = document.querySelectorAll('.faq-category');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.dataset.cat;
+    catSections.forEach(sec => {
+      sec.style.display = (cat === 'all' || sec.dataset.cat === cat) ? '' : 'none';
+    });
+  });
+});
+
+// Only one answer open at a time
+const accItems = document.querySelectorAll('.acc-item');
+accItems.forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      accItems.forEach(other => { if (other !== item) other.open = false; });
+    }
+  });
+});
+</script>
+
+<script>
+var langs=(navigator.languages||[navigator.language||'en']);
+const FR=langs.some(function(l){return l.toLowerCase().indexOf('fr')===0;});
+
+const T = {
+  pageTitle: "FAQ",
+  pageDesc: FR ? "R\u00e9ponses rapides \u00e0 tout sur Pulsar. Touche une question pour la d\u00e9plier, ou filtre par sujet ci-dessous." : "Quick answers to everything about Pulsar. Tap a question to expand it, or filter by topic below.",
+  filterAll: FR ? "Tout" : "All",
+  filterGeneral: FR ? "G\u00e9n\u00e9ral" : "General",
+  filterSession: FR ? "Collecte" : "Collecting",
+  filterBoost: "Boost",
+  filterReferral: FR ? "Parrainage" : "Referral",
+  filterVip: "VIP",
+  filterGames: FR ? "Mini-jeux" : "Mini-games",
+  filterLeaderboard: FR ? "Classement" : "Leaderboard",
+  filterPrivacy: FR ? "Confidentialit\u00e9" : "Privacy",
+  catGeneral: FR ? "G\u00e9n\u00e9ral" : "General",
+  catSession: FR ? "Collecte" : "Collecting",
+  catBoost: "Boost",
+  catReferral: FR ? "Parrainage" : "Referral",
+  catVip: "VIP",
+  catGames: FR ? "Mini-jeux" : "Mini-games",
+  catLeaderboard: FR ? "Classement" : "Leaderboard",
+  catPrivacy: FR ? "Confidentialit\u00e9" : "Privacy",
+  q1: FR ? "Pulsar est-il gratuit ?" : "Is Pulsar free?",
+  a1: FR ? "Oui. T\u00e9l\u00e9charger et utiliser Pulsar ne co\u00fbte rien. Les abonnements VIP sont optionnels." : "Yes. Downloading and using Pulsar costs nothing. VIP subscriptions are optional.",
+  q2: FR ? "Ai-je besoin d\u0027un email pour m\u0027inscrire ?" : "Do I need an email to sign up?",
+  a2: FR ? "Non. Choisis juste un pseudo et un mot de passe \u2014 pas d\u0027email, pas de t\u00e9l\u00e9phone, jamais." : "No. Just pick a username and password \u2014 no email, no phone number, ever.",
+  q3: FR ? "Qu\u0027est-ce que le $PSR ?" : "What is $PSR?",
+  a3: FR ? "Le $PSR est le token que tu gagnes en collectant dans Pulsar \u2014 via les collectes, le parrainage, le Boost et les mini-jeux." : "$PSR is the token you earn by collecting inside Pulsar \u2014 through sessions, referrals, Boost and mini-games.",
+  q4: FR ? "Comment fonctionne la collecte ?" : "How does collecting work?",
+  a4: FR ? "Lance une collecte de 12h d\u0027un tap. Ton solde $PSR grandit automatiquement \u00e0 ton taux jusqu\u0027\u00e0 la fin de la collecte." : "Start a 12h session with one tap. Your $PSR balance grows automatically at your rate until the session ends.",
+  q5: FR ? "Qu\u0027est-ce qui d\u00e9termine mon taux ?" : "What determines my rate?",
+  a5: FR ? "Ton taux de base \u2014 fix\u00e9 par le nombre total d\u0027utilisateurs de Pulsar \u2014 plus ton bonus de parrainage, ton boost VIP et ton bonus Boost." : "Your base rate \u2014 set by Pulsar's total user count \u2014 plus your referral bonus, VIP boost and Boost ad bonus.",
+  q6: FR ? "Puis-je relancer une collecte imm\u00e9diatement ?" : "Can I start a new session right away?",
+  a6: FR ? "Oui. D\u00e8s qu\u0027une collecte se termine, tu peux en relancer une autre imm\u00e9diatement." : "Yes. As soon as one session ends, you can start another immediately.",
+  q7: FR ? "\u00c0 quoi sert le Boost ?" : "What does Boost do?",
+  a7: FR ? "Regarde une pub r\u00e9compens\u00e9e pour +2% de taux pendant 1h. Les VIP obtiennent le m\u00eame boost d\u0027un tap, sans pub." : "Watch a rewarded ad for +2% rate for 1 hour. VIP members get the same boost with a tap, no ad required.",
+  q8: FR ? "Combien de fois puis-je booster ?" : "How many times can I boost?",
+  a8: FR ? "Sans limite \u2014 ench\u00eene autant de boosts que tu veux, tant qu\u0027une collecte est active." : "No cap \u2014 chain as many boosts as you want, back-to-back, as long as a session is active.",
+  q9: FR ? "Comment fonctionne le bonus de parrainage ?" : "How does the referral bonus work?",
+  a9: FR ? "Tu gagnes +1% de taux pour chaque ami qui collecte au moins une fois toutes les 48h. \u00c7a se met en pause s\u0027il devient inactif, et reprend \u00e0 son retour." : "You get +1% rate for every friend who collects at least once every 48h. It pauses if they go inactive, and resumes when they're back.",
+  q10: FR ? "Que re\u00e7oit mon ami ?" : "What does my friend get?",
+  a10: FR ? "L\u0027\u00e9quivalent d\u0027une collecte de 12h en PSR, cr\u00e9dit\u00e9 instantan\u00e9ment \u00e0 son inscription avec ton code." : "A free 12h session's worth of PSR, credited instantly when they sign up with your code.",
+  q11: FR ? "Quels sont les niveaux VIP ?" : "What are the VIP tiers?",
+  a11: FR ? "Quatre boosts de taux au choix \u2014 +0%, +5%, +10% ou +15%. Chaque niveau supprime toutes les pubs." : "Four rate boosts to choose from \u2014 +0%, +5%, +10% or +15%. Every tier removes all ads.",
+  q12: FR ? "Quand mon boost VIP s\u0027applique-t-il ?" : "When does my VIP boost apply?",
+  a12: FR ? "Imm\u00e9diatement, d\u00e8s que tu t\u0027abonnes \u2014 pas besoin d\u0027attendre une nouvelle collecte." : "Immediately, the moment you subscribe \u2014 no need to wait for a new session.",
+  q13: FR ? "Comment fonctionnent les mini-jeux ?" : "How do mini-games work?",
+  a13: FR ? "DriftScan est un jeu d\u0027esquive arcade \u2014 capture des pulsars et \u00e9vite les ast\u00e9ro\u00efdes avant que ta jauge de carburant d\u00271 minute ne s\u0027\u00e9puise ou que tu perdes tes 3 vies." : "DriftScan is an arcade dodging game \u2014 capture pulsars and avoid asteroids before your 1-minute fuel gauge empties or you lose all 3 lives.",
+  q14: FR ? "Y a-t-il une limite au nombre de parties ?" : "Is there a limit on how often I can play?",
+  a14: FR ? "Oui \u2014 un nombre limit\u00e9 de parties par collecte, avec 5 minutes de cooldown entre deux (1 minute pour les VIP, sans pub)." : "Yes \u2014 a limited number of runs per session, with a 5-minute cooldown between them (1 minute for VIP, no ad needed).",
+  q15: FR ? "Comment le classement est-il \u00e9tabli ?" : "How is the leaderboard ranked?",
+  a15: FR ? "Par solde, parrainages ou total gagn\u00e9 \u2014 top 50 dans chaque cat\u00e9gorie, mis \u00e0 jour \u00e0 la fin de chaque collecte." : "By balance, referrals or total earned \u2014 top 50 in each category, updated at the end of every session.",
+  q16: FR ? "Collectez-vous des donn\u00e9es personnelles ?" : "Do you collect personal data?",
+  a16: FR ? "Non \u2014 pas d\u0027email, pas de t\u00e9l\u00e9phone, pas d\u0027information personnelle. Juste un pseudo et un mot de passe." : "No \u2014 no email, no phone number, no personal information. Just a username and password.",
+  q17: FR ? "Que se passe-t-il si je perds mon mot de passe ?" : "What if I lose my password?",
+  a17: FR ? "Il ne peut actuellement pas \u00eatre r\u00e9cup\u00e9r\u00e9. Une fonctionnalit\u00e9 de phrase de r\u00e9cup\u00e9ration est pr\u00e9vue pour une future mise \u00e0 jour." : "It currently can't be recovered. A recovery phrase feature is planned for a future update.",
+  q18: FR ? "Puis-je utiliser mon compte sur un autre appareil ?" : "Can I use my account on another device?",
+  a18: FR ? "Oui \u2014 tant que cet appareil n\u0027a jamais eu d\u0027autre compte Pulsar dessus." : "Yes \u2014 as long as that device has never had another Pulsar account on it.",
+  navBack: FR ? "\u2190 Retour" : "\u2190 Back",
+  navCta: FR ? "T\u00e9l\u00e9charger" : "Download",
+  ctaTitle: FR ? "Encore des questions ?" : "Still have questions?",
+  ctaDesc: FR ? "T\u00e9l\u00e9charge Pulsar et d\u00e9couvre par toi-m\u00eame. Sans email, sans KYC." : "Download Pulsar and find out for yourself. No email, no KYC.",
+  ctaBtn: FR ? "T\u00e9l\u00e9charger sur Google Play" : "Download on Google Play",
+};
+
+if (FR) {
+  document.querySelector('.page-title').textContent = T.pageTitle;
+  document.querySelector('.page-desc').textContent = T.pageDesc;
+  document.getElementById('cat-general').textContent = T.catGeneral;
+  document.getElementById('cat-session').textContent = T.catSession;
+  document.getElementById('cat-boost').textContent = T.catBoost;
+  document.getElementById('cat-referral').textContent = T.catReferral;
+  document.getElementById('cat-vip').textContent = T.catVip;
+  document.getElementById('cat-games').textContent = T.catGames;
+  document.getElementById('cat-leaderboard').textContent = T.catLeaderboard;
+  document.getElementById('cat-privacy').textContent = T.catPrivacy;
+  const filterMap = {all:T.filterAll, general:T.filterGeneral, session:T.filterSession, boost:T.filterBoost, referral:T.filterReferral, vip:T.filterVip, games:T.filterGames, leaderboard:T.filterLeaderboard, privacy:T.filterPrivacy};
+  document.querySelectorAll('.faq-filter-btn').forEach(btn => {
+    if (filterMap[btn.dataset.cat]) btn.textContent = filterMap[btn.dataset.cat];
+  });
+  for (let i = 1; i <= 18; i++) {
+    const qEl = document.getElementById('q' + i);
+    const aEl = document.getElementById('a' + i);
+    if (qEl) qEl.textContent = T['q' + i];
+    if (aEl) aEl.textContent = T['a' + i];
+  }
+  document.querySelector('.nav-back').textContent = T.navBack;
+  document.querySelector('.nav-cta').textContent = T.navCta;
+  document.getElementById('cta-title').textContent = T.ctaTitle;
+  document.getElementById('cta-desc').textContent = T.ctaDesc;
+  document.getElementById('cta-btn-txt').textContent = T.ctaBtn;
+}
+</script>
+
+</body>
+</html>
