@@ -260,22 +260,25 @@ footer strong{color:var(--signal);}
 @media(max-width:900px){.stats{grid-template-columns:1fr;background:none;border:none;gap:10px;}.stat{border:0.5px solid var(--border);border-radius:12px;}}
 @media(max-width:600px){
   .wrap{padding:0 20px 60px;}
-  .hero-title{letter-spacing:8px;}
   .wpc .grid-2{grid-template-columns:1fr;}
   .hero{
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top:32px;
+    padding-bottom:24px;
     justify-content:space-between;
     min-height:92vh;
+    gap:0;
   }
-  .hero-logo{margin-top:0;margin-bottom:14px;}
-  .hero-title{margin-bottom:0;}
-  .hero-eyebrow{margin-top:8px;margin-bottom:20px;font-size:15px;}
-  .hero-sub1{font-size:17px;margin-top:32px;margin-bottom:4px;}
-  .hero-sub2{font-size:14px;margin-bottom:0;letter-spacing:1.5px;}
-  .hero-cta-wrap{margin-top:24px;padding-top:0;width:100%;}
-  .hero-cta{width:100%;justify-content:center;padding:16px 24px;font-size:15px;}
+  .hero-logo{width:100px;height:100px;margin-top:36px;margin-bottom:8px;}
+  .hero-logo img{width:90px;height:90px;}
+  .hero-title{font-size:clamp(48px,14vw,72px);letter-spacing:10px;margin-bottom:0;line-height:1;}
+  .hero-eyebrow{font-size:13px;letter-spacing:6px;margin-top:6px;margin-bottom:0;}
+  .hero-sub1{font-size:16px;margin-top:48px;margin-bottom:8px;}
+  .hero-sub2{font-size:13px;margin-bottom:0;margin-top:8px;letter-spacing:1.5px;}
+  .hero-cta-wrap{margin-top:auto;padding-top:0;padding-bottom:16px;width:100%;}
+  .hero-cta{width:100%;justify-content:center;padding:15px 20px;font-size:14px;gap:8px;}
+  .hero-cta svg{width:14px;height:14px;}
   .hsl{gap:14px;}
+  .hsl a{font-size:13px;}
   .scroll-btn{display:none;}
   .nav-badge{font-size:10px;letter-spacing:1px;padding:5px 10px;}
   .nav-wp{font-size:11px;padding:5px 10px;}
@@ -339,7 +342,7 @@ footer strong{color:var(--signal);}
     </div>
   </div>
 
-  <a href="/faq.html" class="faq-banner rv">
+  <a href="/faq/" class="faq-banner rv">
     <div class="faq-banner-left">
       <div class="faq-banner-label" id="faqbl">Need help?</div>
       <div class="faq-banner-title" id="f8t">FAQ</div>
@@ -508,14 +511,14 @@ function wikiScroll(dir){
     privacy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>'
   };
   var CARDS=[
-    {href:'/features/sessions.html',icon:'session',cls:'wiki-ion',t:T.f1t,d:T.f1d},
-    {href:'/features/referral.html',icon:'referral',cls:'wiki-signal',t:T.f3t,d:T.f3d},
-    {href:'/features/vip.html',icon:'vip',cls:'wiki-solar',t:T.f4t,d:T.f4d},
-    {href:'/features/boost.html',icon:'boost',cls:'wiki-nova',t:T.f5t,d:T.f5d},
-    {href:'/features/privacy.html',icon:'privacy',cls:'wiki-ion',t:T.f6t,d:T.f6d},
-    {href:'/features/leaderboard.html',icon:'leaderboard',cls:'wiki-signal',t:T.f9t,d:T.f9d},
-    {href:'/mini-games.html',icon:'games',cls:'wiki-solar',t:T.f7t,d:T.f7d},
-    {href:'/changelog.html',icon:'changelog',cls:'wiki-nova',t:T.f10t,d:T.f10d}
+    {href:'/features/sessions/',icon:'session',cls:'wiki-ion',t:T.f1t,d:T.f1d},
+    {href:'/features/referral/',icon:'referral',cls:'wiki-signal',t:T.f3t,d:T.f3d},
+    {href:'/features/vip/',icon:'vip',cls:'wiki-solar',t:T.f4t,d:T.f4d},
+    {href:'/features/boost/',icon:'boost',cls:'wiki-nova',t:T.f5t,d:T.f5d},
+    {href:'/features/privacy/',icon:'privacy',cls:'wiki-ion',t:T.f6t,d:T.f6d},
+    {href:'/features/leaderboard/',icon:'leaderboard',cls:'wiki-signal',t:T.f9t,d:T.f9d},
+    {href:'/mini-games/',icon:'games',cls:'wiki-solar',t:T.f7t,d:T.f7d},
+    {href:'/changelog/',icon:'changelog',cls:'wiki-nova',t:T.f10t,d:T.f10d}
   ];
   function cardHTML(c){
     return '<a href="'+c.href+'" class="wiki-card '+c.cls+'"><div class="wiki-card-icon">'+ICONS[c.icon]+'</div><div class="wiki-card-title">'+c.t+'</div><div class="wiki-card-desc">'+c.d+'</div><span class="wiki-card-arrow">&#8594;</span></a>';
@@ -526,18 +529,27 @@ function wikiScroll(dir){
   el.innerHTML=setHTML+setHTML+setHTML;
   var setWidth=0,resetting=false;
   function measure(){setWidth=el.scrollWidth/3;}
-  measure();
-  el.scrollLeft=setWidth;
-  window.addEventListener('resize',function(){var ratio=el.scrollLeft/(setWidth||1);measure();el.scrollLeft=setWidth*ratio;});
+  function init(){
+    measure();
+    if(setWidth>0){el.scrollLeft=setWidth;}
+    else{setTimeout(init,50);}
+  }
+  // Wait for layout
+  requestAnimationFrame(function(){setTimeout(init,50);});
+  window.addEventListener('resize',function(){
+    var ratio=el.scrollLeft/(setWidth||1);
+    measure();
+    if(setWidth>0)el.scrollLeft=setWidth*ratio;
+  });
   el.addEventListener('scroll',function(){
     if(!setWidth||resetting)return;
     var max=el.scrollWidth-el.clientWidth;
-    if(el.scrollLeft<=2){
+    if(el.scrollLeft<=1){
       resetting=true;el.scrollLeft+=setWidth;
-      requestAnimationFrame(function(){resetting=false;});
-    }else if(el.scrollLeft>=max-2){
+      setTimeout(function(){resetting=false;},50);
+    }else if(el.scrollLeft>=max-1){
       resetting=true;el.scrollLeft-=setWidth;
-      requestAnimationFrame(function(){resetting=false;});
+      setTimeout(function(){resetting=false;},50);
     }
   });
 })();
