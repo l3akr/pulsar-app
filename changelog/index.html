@@ -172,7 +172,8 @@ function compareVersions(a,b){
 
 // Is this a major bump? (second segment changed vs previous)
 function isMajorBump(curr,prev){
-  if(!prev)return false;
+  // Major if no prev (first entry) and minor version > 0, or if minor/major changed vs prev
+  if(!prev) return curr[1]>0||curr[0]>1;
   return curr[1]>prev[1]||curr[0]>prev[0];
 }
 
@@ -191,7 +192,6 @@ function getPreview(text,maxLen){
 // Format: 'v1.0.0' (filename without extension, must match /changelog/v1.0.0.txt or .md)
 var CHANGELOG_FILES = [
   'v1.1.9',
-  'v1.2.0',
 ];
 
 // Fetch and render changelogs
