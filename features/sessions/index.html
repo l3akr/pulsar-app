@@ -257,7 +257,7 @@
 
         <!-- Reward -->
         <div class="reward-box">
-          <div class="reward-val">Earned = Base × (1 + Referral ± Event) × Hours</div>
+          <div class="reward-val">Earned = Base × (1 + Referral + Event_Bonus) × (1 − Event_Malus) × Hours</div>
           <div class="reward-info">
             <h3>Calculated server-side, credited automatically</h3>
             <p>Your session's earnings are computed exclusively by Firebase Cloud Functions and added to your balance the moment the 12 hours are up — nothing to claim manually.</p>
