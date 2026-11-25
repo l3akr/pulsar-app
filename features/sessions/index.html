@@ -242,22 +242,22 @@
           <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
             <div class="element-icon" style="background:rgba(247,207,49,0.1);">♦</div>
             <div>
-              <div class="element-title" style="color:var(--solar);">VIP boost</div>
-              <div class="element-desc">0% to +15% depending on your subscription tier. VIP also removes all ads, including the session-launch ad.</div>
+              <div class="element-title" style="color:var(--solar);">VIP pass</div>
+              <div class="element-desc">No permanent rate bonus anymore. VIP skips the session-launch ad, makes station repairs cheaper and shortens waits between mini-games.</div>
             </div>
           </div>
           <div class="element" style="background:rgba(255,77,109,0.04);border-color:rgba(255,77,109,0.2);">
             <div class="element-icon" style="background:rgba(255,77,109,0.1);">▲</div>
             <div>
-              <div class="element-title" style="color:var(--nova);">Ad boost</div>
-              <div class="element-desc">+2% rate for 1 hour after watching a rewarded ad, once per session. Free for VIP members.</div>
+              <div class="element-title" style="color:var(--nova);">Random events</div>
+              <div class="element-desc">One event at most per session: powerful Pulsar (+5%) or damaged station (−25% until repaired).</div>
             </div>
           </div>
         </div>
 
         <!-- Reward -->
         <div class="reward-box">
-          <div class="reward-val">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
+          <div class="reward-val">Earned = Base × (1 + Referral ± Event) × Hours</div>
           <div class="reward-info">
             <h3>Calculated server-side, credited automatically</h3>
             <p>Your session's earnings are computed exclusively by Firebase Cloud Functions and added to your balance the moment the 12 hours are up — nothing to claim manually.</p>
@@ -320,8 +320,8 @@
     <div class="link-grid">
       <a href="/features/vip/" class="link-card">
         <div class="link-card-label" id="link1-label">Feature</div>
-        <div class="link-card-title" id="link1-title">VIP subscriptions</div>
-        <div class="link-card-desc" id="link1-desc">No ads · Rate boost up to +15%</div>
+        <div class="link-card-title" id="link1-title">VIP pass</div>
+        <div class="link-card-desc" id="link1-desc">One-time payment · No launch ads</div>
       </a>
       <a href="/features/referral/" class="link-card">
         <div class="link-card-label" id="link2-label">Feature</div>
@@ -393,10 +393,10 @@ const T = {
   el1Desc: FR ? "Fix\u00e9 par le palier actuel du nombre d\u0027utilisateurs. Il baisse au fur et \u00e0 mesure que Pulsar grandit \u2014 les premiers adoptants gagnent plus." : "Set by the current milestone tier. It drops as more users join Pulsar globally, so early adopters earn more.",
   el2Title: FR ? "Bonus de parrainage" : "Referral bonus",
   el2Desc: FR ? "+1% de taux pour chaque ami actif dans les 48h apr\u00e8s inscription avec ton code. Sans plafond, sans expiration." : "+1% rate for every friend who becomes active within 48h of signing up with your code. No cap, no expiry.",
-  el3Title: FR ? "Boost VIP" : "VIP boost",
-  el3Desc: FR ? "De 0% \u00e0 +15% selon ton abonnement. Le VIP supprime aussi toutes les pubs, y compris celle du lancement de session." : "0% to +15% depending on your subscription tier. VIP also removes all ads, including the session-launch ad.",
-  el4Title: FR ? "Boost publicitaire" : "Ad boost",
-  el4Desc: FR ? "+2% de taux pendant 1 heure apr\u00e8s avoir regard\u00e9 une pub r\u00e9compens\u00e9e, une fois par session. Gratuit pour les VIP." : "+2% rate for 1 hour after watching a rewarded ad, once per session. Free for VIP members.",
+  el3Title: FR ? "Pass VIP" : "VIP pass",
+  el3Desc: FR ? "Plus de bonus de taux permanent. Le VIP supprime la pub de lancement, rend les r\u00e9parations de station moins ch\u00e8res et r\u00e9duit l\u0027attente entre les mini-jeux." : "No permanent rate bonus anymore. VIP skips the session-launch ad, makes station repairs cheaper and shortens waits between mini-games.",
+  el4Title: FR ? "\u00c9v\u00e9nements al\u00e9atoires" : "Random events",
+  el4Desc: FR ? "Un \u00e9v\u00e9nement au maximum par session : Pulsar puissant (+5%) ou station endommag\u00e9e (\u221225% jusqu\u0027\u00e0 r\u00e9paration)." : "One event at most per session: powerful Pulsar (+5%) or damaged station (\u221225% until repaired).",
   rewardTitle: FR ? "Calcul\u00e9 c\u00f4t\u00e9 serveur, cr\u00e9dit\u00e9 automatiquement" : "Calculated server-side, credited automatically",
   rewardDesc: FR ? "Les gains de ta session sont calcul\u00e9s exclusivement par les Cloud Functions Firebase et ajout\u00e9s \u00e0 ton solde d\u00e8s la fin des 12 heures \u2014 rien \u00e0 r\u00e9clamer manuellement." : "Your session's earnings are computed exclusively by Firebase Cloud Functions and added to your balance the moment the 12 hours are up \u2014 nothing to claim manually.",
   tipsTitle: FR ? "Astuces pour maximiser ton taux" : "Tips to maximize your rate",
@@ -413,8 +413,8 @@ const T = {
   thGain: FR ? "Gain / session" : "Gain / session",
   internalTitle: FR ? "Explorer Pulsar" : "Explore Pulsar",
   link1Label: FR ? "Fonctionnalit\u00e9" : "Feature",
-  link1Title: FR ? "Abonnements VIP" : "VIP subscriptions",
-  link1Desc: FR ? "Sans pub \u00b7 Boost jusqu\u0027\u00e0 +15%" : "No ads · Rate boost up to +15%",
+  link1Title: FR ? "Pass VIP" : "VIP pass",
+  link1Desc: FR ? "Paiement unique \u00b7 Sans pub au lancement" : "One-time payment \u00b7 No launch ads",
   link2Label: FR ? "Fonctionnalit\u00e9" : "Feature",
   link2Title: FR ? "Programme de parrainage" : "Referral program",
   link2Desc: FR ? "+1% de taux par ami actif" : "+1% rate per active friend",
