@@ -280,7 +280,7 @@
                 <div class="reward-info">
                   <h3 id="reward-title">Tied to their activity</h3>
                   <p id="reward-desc">Your +1% keeps flowing only while your friend keeps collecting at least once every 48h — no activity, no bonus.</p>
-                  <div class="reward-formula">Earned = Base × (1 + Referral + VIP + Boost) × Hours</div>
+                  <div class="reward-formula">Earned = Base × (1 + Referral ± Event) × Hours</div>
                 </div>
               </div>
             </div>
@@ -292,7 +292,7 @@
               <ul class="tip-list">
                 <li id="tip1">Check the Referral tab in your Station to see at a glance which friends are currently active.</li>
                 <li id="tip2">Nudge inactive friends — your +1% pauses the moment they go 48h without a collection.</li>
-                <li id="tip3">Combine with VIP and Boost for the highest possible rate multiplier.</li>
+                <li id="tip3">Combine with a powerful Pulsar event for the highest possible rate multiplier.</li>
                 <li id="tip4">Your total referral bonus updates in real time — it drops if a friend goes quiet, and climbs when they're back.</li>
               </ul>
             </div>
@@ -330,13 +330,13 @@
       </a>
       <a href="/features/boost/" class="link-card">
         <div class="link-card-label" id="link2-label">Feature</div>
-        <div class="link-card-title" id="link2-title">Boost</div>
-        <div class="link-card-desc" id="link2-desc">One ad, +2% for 1h. Free for VIP.</div>
+        <div class="link-card-title" id="link2-title">Random events</div>
+        <div class="link-card-desc" id="link2-desc">Powerful Pulsar or damaged station. One per session.</div>
       </a>
       <a href="/features/vip/" class="link-card">
         <div class="link-card-label" id="link3-label">Feature</div>
-        <div class="link-card-title" id="link3-title">VIP subscriptions</div>
-        <div class="link-card-desc" id="link3-desc">No ads · Rate boost up to +15%</div>
+        <div class="link-card-title" id="link3-title">VIP pass</div>
+        <div class="link-card-desc" id="link3-desc">One-time payment · No launch ads</div>
       </a>
     </div>
   </div>
@@ -420,7 +420,7 @@ const T = {
   tipsTitle: FR ? "Astuces pour faire grimper ton taux" : "Tips to grow your rate",
   tip1: FR ? "V\u00e9rifie l\u0027onglet Parrainage de ta Station pour voir en un coup d\u0027\u0153il quels amis sont actifs en ce moment." : "Check the Referral tab in your Station to see at a glance which friends are currently active.",
   tip2: FR ? "Relance tes filleuls inactifs \u2014 ton +1% se met en pause d\u00e8s qu\u0027ils passent 48h sans collecte." : "Nudge inactive friends \u2014 your +1% pauses the moment they go 48h without a collection.",
-  tip3: FR ? "Combine avec le VIP et le Boost pour le multiplicateur de taux le plus \u00e9lev\u00e9 possible." : "Combine with VIP and Boost for the highest possible rate multiplier.",
+  tip3: FR ? "Profite d\u0027un Pulsar puissant pour le multiplicateur de taux le plus \u00e9lev\u00e9 possible." : "Combine with a powerful Pulsar event for the highest possible rate multiplier.",
   tip4: FR ? "Ton bonus total de parrainage se met \u00e0 jour en temps r\u00e9el \u2014 il baisse si un ami devient inactif, et remonte quand il revient." : "Your total referral bonus updates in real time \u2014 it drops if a friend goes quiet, and climbs when they're back.",
   rmLabel: FR ? "En un coup d\u0027\u0153il" : "At a glance",
   moreTitle: FR ? "Le programme de parrainage en un tableau" : "The referral program in one table",
@@ -446,11 +446,11 @@ const T = {
   link1Title: FR ? "Collecte" : "Session",
   link1Desc: FR ? "Un tap suffit. 12h plus tard, ton solde a grimp\u00e9." : "One tap. 12 hours later, your balance is up.",
   link2Label: FR ? "Fonctionnalit\u00e9" : "Feature",
-  link2Title: "Boost",
-  link2Desc: FR ? "Une pub, +2% pendant 1h. Gratuit en VIP." : "One ad, +2% for 1h. Free for VIP.",
+  link2Title: FR ? "\u00c9v\u00e9nements al\u00e9atoires" : "Random events",
+  link2Desc: FR ? "Pulsar puissant ou station endommag\u00e9e. Un par session." : "Powerful Pulsar or damaged station. One per session.",
   link3Label: FR ? "Fonctionnalit\u00e9" : "Feature",
-  link3Title: FR ? "Abonnements VIP" : "VIP subscriptions",
-  link3Desc: FR ? "Sans pub \u00b7 Boost jusqu\u0027\u00e0 +15%" : "No ads · Rate boost up to +15%",
+  link3Title: FR ? "Pass VIP" : "VIP pass",
+  link3Desc: FR ? "Paiement unique \u00b7 Sans pub au lancement" : "One-time payment \u00b7 No launch ads",
   ctaTitle: FR ? "Commence \u00e0 parrainer aujourd\u0027hui." : "Start referring today.",
   ctaDesc: FR ? "T\u00e9l\u00e9charge Pulsar: Space Rewards gratuitement sur Android. Sans email, sans KYC." : "Download Pulsar: Space Rewards for free on Android. No email, no KYC.",
   ctaBtn: FR ? "T\u00e9l\u00e9charger sur Google Play" : "Download on Google Play",
