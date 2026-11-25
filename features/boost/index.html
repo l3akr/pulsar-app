@@ -235,7 +235,7 @@
                 <div class="step">
                   <div class="step-num">Step 03</div>
                   <div class="step-title">React</div>
-                  <div class="step-desc">Repair for 1/4 of a session (discounted with VIP or an ad), or activate the bonus: 2h for VIP, 1h for others by watching an ad, +1h with a second ad.</div>
+                  <div class="step-desc">Repair for 1/4 of a session (45% off with VIP or an ad), or activate the bonus within 15 minutes: 2h for VIP, 1h for others via an ad, +1h with a second ad.</div>
                 </div>
               </div>
             </div>
@@ -249,28 +249,28 @@
                   <div class="element-icon" style="background:rgba(255,77,109,0.1);">⚡</div>
                   <div>
                     <div class="element-title" style="color:var(--nova);">Damaged station · −25%</div>
-                    <div class="element-desc">Your rate drops by 25% until you repair the station.</div>
+                    <div class="element-desc">−25% of your effective rate, applied immediately. It lasts until you repair, even after the session ends.</div>
                   </div>
                 </div>
                 <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
                   <div class="element-icon" style="background:rgba(0,229,195,0.08);">⏱</div>
                   <div>
                     <div class="element-title" style="color:var(--ion);">Repair</div>
-                    <div class="element-desc">Costs 1/4 of a session. VIP members, or watching an ad, reduce the cost.</div>
+                    <div class="element-desc">Fixed price: 1/4 of a session (3h) at your current rate, with a 20% discount — 45% for VIP or by watching an ad.</div>
                   </div>
                 </div>
                 <div class="element" style="background:rgba(153,69,255,0.04);border-color:rgba(153,69,255,0.2);">
                   <div class="element-icon" style="background:rgba(153,69,255,0.08);">∞</div>
                   <div>
                     <div class="element-title" style="color:var(--signal);">Powerful Pulsar · +5%</div>
-                    <div class="element-desc">Lasts 2 hours for VIP, 1 hour for others by watching an ad. A second ad adds 1 hour.</div>
+                    <div class="element-desc">+5% once activated. Activate within 15 minutes of the notification or it expires. 2h for VIP (no ad), 1h for others via an ad, +1h with a second ad.</div>
                   </div>
                 </div>
                 <div class="element" style="background:rgba(247,207,49,0.04);border-color:rgba(247,207,49,0.2);">
                   <div class="element-icon" style="background:rgba(247,207,49,0.1);">♦</div>
                   <div>
                     <div class="element-title" style="color:var(--solar);">One event per session</div>
-                    <div class="element-desc">Never more than one event per session, so effects never pile up.</div>
+                    <div class="element-desc">On average about one event per session. A malus never triggers if your balance is below 2× the repair price.</div>
                   </div>
                 </div>
               </div>
@@ -280,7 +280,7 @@
                 <div class="reward-info">
                   <h3 id="reward-title">Events stack with your rate</h3>
                   <p id="reward-desc">Event modifiers apply on top of your base rate and referral bonus. VIP no longer adds a permanent rate bonus.</p>
-                  <div class="reward-formula">Earned = Base × (1 + Referral ± Event) × Hours</div>
+                  <div class="reward-formula">Earned = Base × (1 + Referral + Event_Bonus) × (1 − Event_Malus) × Hours</div>
                 </div>
               </div>
             </div>
@@ -404,16 +404,16 @@ const T = {
   step2Desc: FR ? "Malus : station endommag\u00e9e, \u221225% jusqu\u0027\u00e0 r\u00e9paration. Bonus : Pulsar puissant, +5%." : "Malus: damaged station, \u221225% until repaired. Bonus: powerful Pulsar, +5%.",
   step3Num: FR ? "\u00c9tape 03" : "Step 03",
   step3Title: FR ? "R\u00e9agis" : "React",
-  step3Desc: FR ? "R\u00e9pare pour 1/4 de session (r\u00e9duction avec le VIP ou une pub), ou active le bonus : 2h pour les VIP, 1h pour les autres en regardant une pub, +1h avec une seconde pub." : "Repair for 1/4 of a session (discounted with VIP or an ad), or activate the bonus: 2h for VIP, 1h for others by watching an ad, +1h with a second ad.",
+  step3Desc: FR ? "R\u00e9pare pour 1/4 de session (\u221245% avec le VIP ou une pub), ou active le bonus dans les 15 minutes : 2h pour les VIP, 1h pour les autres via une pub, +1h avec une seconde pub." : "Repair for 1/4 of a session (45% off with VIP or an ad), or activate the bonus within 15 minutes: 2h for VIP, 1h for others via an ad, +1h with a second ad.",
   elemTitle: FR ? "M\u00e9caniques des \u00e9v\u00e9nements" : "Event mechanics",
   el1Title: FR ? "Station endommag\u00e9e \u00b7 \u221225%" : "Damaged station \u00b7 \u221225%",
-  el1Desc: FR ? "Ton taux baisse de 25% jusqu\u0027\u00e0 ce que tu r\u00e9pares la station." : "Your rate drops by 25% until you repair the station.",
+  el1Desc: FR ? "\u221225% de ton taux effectif, appliqu\u00e9 imm\u00e9diatement. Il dure jusqu\u0027\u00e0 la r\u00e9paration, m\u00eame apr\u00e8s la fin de la session." : "\u221225% of your effective rate, applied immediately. It lasts until you repair, even after the session ends.",
   el2Title: FR ? "R\u00e9paration" : "Repair",
-  el2Desc: FR ? "Co\u00fbte 1/4 de session. Les VIP, ou le visionnage d\u0027une pub, r\u00e9duisent le co\u00fbt." : "Costs 1/4 of a session. VIP members, or watching an ad, reduce the cost.",
+  el2Desc: FR ? "Prix fixe : 1/4 de session (3h) \u00e0 ton taux actuel, avec 20% de remise \u2014 45% pour les VIP ou en regardant une pub." : "Fixed price: 1/4 of a session (3h) at your current rate, with a 20% discount \u2014 45% for VIP or by watching an ad.",
   el3Title: FR ? "Pulsar puissant \u00b7 +5%" : "Powerful Pulsar \u00b7 +5%",
-  el3Desc: FR ? "Dure 2 heures pour les VIP, 1 heure pour les autres en regardant une pub. Une seconde pub ajoute 1 heure." : "Lasts 2 hours for VIP, 1 hour for others by watching an ad. A second ad adds 1 hour.",
+  el3Desc: FR ? "+5% une fois activ\u00e9. Active-le dans les 15 minutes suivant la notification, sinon il expire. 2h pour les VIP (sans pub), 1h pour les autres via une pub, +1h avec une seconde pub." : "+5% once activated. Activate within 15 minutes of the notification or it expires. 2h for VIP (no ad), 1h for others via an ad, +1h with a second ad.",
   el4Title: FR ? "Un \u00e9v\u00e9nement par session" : "One event per session",
-  el4Desc: FR ? "Jamais plus d\u0027un \u00e9v\u00e9nement par session : les effets ne s\u0027empilent pas." : "Never more than one event per session, so effects never pile up.",
+  el4Desc: FR ? "En moyenne environ un \u00e9v\u00e9nement par session. Un malus ne se d\u00e9clenche jamais si ton solde est inf\u00e9rieur \u00e0 2\u00d7 le prix de r\u00e9paration." : "On average about one event per session. A malus never triggers if your balance is below 2\u00d7 the repair price.",
   rewardTitle: FR ? "Les \u00e9v\u00e9nements s\u0027ajoutent \u00e0 ton taux" : "Events stack with your rate",
   rewardDesc: FR ? "Les modificateurs d\u0027\u00e9v\u00e9nement s\u0027appliquent par-dessus ton taux de base et ton bonus de parrainage. Le VIP n\u0027ajoute plus de bonus de taux permanent." : "Event modifiers apply on top of your base rate and referral bonus. VIP no longer adds a permanent rate bonus.",
   tipsTitle: FR ? "Astuces \u00e9v\u00e9nements" : "Tips for events",
