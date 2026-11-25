@@ -17,7 +17,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Is Pulsar free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Downloading and using Pulsar costs nothing. VIP subscriptions are optional."}},
+    {"@type":"Question","name":"Is Pulsar free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Downloading and using Pulsar costs nothing. VIP is an optional one-time payment."}},
     {"@type":"Question","name":"Do I need an email to sign up?","acceptedAnswer":{"@type":"Answer","text":"No. Just pick a username and password — no email, no phone number."}},
     {"@type":"Question","name":"How does collecting work?","acceptedAnswer":{"@type":"Answer","text":"Start a 12h session with one tap. Your $PSR balance grows automatically at your rate until it ends."}}
   ]
@@ -116,7 +116,7 @@
     <button class="faq-filter-btn active" data-cat="all">All</button>
     <button class="faq-filter-btn" data-cat="general">General</button>
     <button class="faq-filter-btn" data-cat="session">Collecting</button>
-    <button class="faq-filter-btn" data-cat="boost">Boost</button>
+    <button class="faq-filter-btn" data-cat="boost">Events</button>
     <button class="faq-filter-btn" data-cat="referral">Referral</button>
     <button class="faq-filter-btn" data-cat="vip">VIP</button>
     <button class="faq-filter-btn" data-cat="games">Mini-games</button>
@@ -130,7 +130,7 @@
     <div class="accordion">
       <details class="acc-item" open>
         <summary><span id="q1">Is Pulsar free?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a1">Yes. Downloading and using Pulsar costs nothing. VIP subscriptions are optional.</p></div>
+        <div class="acc-body"><p id="a1">Yes. Downloading and using Pulsar costs nothing. VIP is an optional one-time payment, with no auto-renewal.</p></div>
       </details>
       <details class="acc-item">
         <summary><span id="q2">Do I need an email to sign up?</span><span class="acc-icon">⌄</span></summary>
@@ -138,7 +138,7 @@
       </details>
       <details class="acc-item">
         <summary><span id="q3">What is $PSR?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a3">$PSR is the token you earn by collecting inside Pulsar — through sessions, referrals, Boost and mini-games.</p></div>
+        <div class="acc-body"><p id="a3">$PSR is the token you earn by collecting inside Pulsar — through sessions, referrals, random events and mini-games.</p></div>
       </details>
     </div>
   </div>
@@ -153,7 +153,7 @@
       </details>
       <details class="acc-item">
         <summary><span id="q5">What determines my rate?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a5">Your base rate — set by Pulsar's total user count — plus your referral bonus, VIP boost and Boost ad bonus.</p></div>
+        <div class="acc-body"><p id="a5">Your base rate — set by Pulsar's total user count — plus your referral bonus and the effect of a random event, if any (+5% or −25%).</p></div>
       </details>
       <details class="acc-item">
         <summary><span id="q6">Can I start a new session right away?</span><span class="acc-icon">⌄</span></summary>
@@ -164,15 +164,15 @@
 
   <!-- Boost -->
   <div class="faq-category fade-in" data-cat="boost">
-    <div class="faq-category-label" id="cat-boost">Boost</div>
+    <div class="faq-category-label" id="cat-boost">Random events</div>
     <div class="accordion">
       <details class="acc-item">
-        <summary><span id="q7">What does Boost do?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a7">Watch a rewarded ad for +2% rate for 1 hour. VIP members get the same boost with a tap, no ad required.</p></div>
+        <summary><span id="q7">What are random events?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a7">Since v1.2.0, each session can trigger one random event: a powerful Pulsar (+5%) or a damaged station (−25% until repaired). The classic ad boost no longer exists.</p></div>
       </details>
       <details class="acc-item">
-        <summary><span id="q8">How many times can I boost?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a8">No cap — chain as many boosts as you want, back-to-back, as long as a session is active.</p></div>
+        <summary><span id="q8">How do I fix a damaged station?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a8">Repairing costs 1/4 of a session. VIP members or watching an ad give a discount. For a powerful Pulsar: 2h for VIP, 1h for others via an ad, +1h with a second ad.</p></div>
       </details>
     </div>
   </div>
@@ -197,12 +197,12 @@
     <div class="faq-category-label" id="cat-vip">VIP</div>
     <div class="accordion">
       <details class="acc-item">
-        <summary><span id="q11">What are the VIP tiers?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a11">Four rate boosts to choose from — +0%, +5%, +10% or +15%. Every tier removes all ads.</p></div>
+        <summary><span id="q11">How does VIP work?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a11">VIP is a one-time payment for 1 week, 1 month, 3 months or 1 year — no auto-renewal. Purchases stack. It gives no rate bonus, but removes the launch ad, makes repairs cheaper and shortens mini-game waits.</p></div>
       </details>
       <details class="acc-item">
-        <summary><span id="q12">When does my VIP boost apply?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a12">Immediately, the moment you subscribe — no need to wait for a new session.</p></div>
+        <summary><span id="q12">What happens when my VIP ends?</span><span class="acc-icon">⌄</span></summary>
+        <div class="acc-body"><p id="a12">It simply stops — nothing is renewed. You get a notification before it expires, and existing subscriptions run until their end date.</p></div>
       </details>
     </div>
   </div>
@@ -217,7 +217,7 @@
       </details>
       <details class="acc-item">
         <summary><span id="q14">Is there a limit on how often I can play?</span><span class="acc-icon">⌄</span></summary>
-        <div class="acc-body"><p id="a14">Yes — a limited number of runs per session, with a 5-minute cooldown between them (1 minute for VIP, no ad needed).</p></div>
+        <div class="acc-body"><p id="a14">Yes — a limited number of runs per session, with a wait between them that is shorter for VIP members.</p></div>
       </details>
     </div>
   </div>
@@ -315,7 +315,7 @@ const T = {
   filterAll: FR ? "Tout" : "All",
   filterGeneral: FR ? "G\u00e9n\u00e9ral" : "General",
   filterSession: FR ? "Collecte" : "Collecting",
-  filterBoost: "Boost",
+  filterBoost: FR ? "\u00c9v\u00e9nements" : "Events",
   filterReferral: FR ? "Parrainage" : "Referral",
   filterVip: "VIP",
   filterGames: FR ? "Mini-jeux" : "Mini-games",
@@ -323,40 +323,40 @@ const T = {
   filterPrivacy: FR ? "Confidentialit\u00e9" : "Privacy",
   catGeneral: FR ? "G\u00e9n\u00e9ral" : "General",
   catSession: FR ? "Collecte" : "Collecting",
-  catBoost: "Boost",
+  catBoost: FR ? "\u00c9v\u00e9nements al\u00e9atoires" : "Random events",
   catReferral: FR ? "Parrainage" : "Referral",
   catVip: "VIP",
   catGames: FR ? "Mini-jeux" : "Mini-games",
   catLeaderboard: FR ? "Classement" : "Leaderboard",
   catPrivacy: FR ? "Confidentialit\u00e9" : "Privacy",
   q1: FR ? "Pulsar est-il gratuit ?" : "Is Pulsar free?",
-  a1: FR ? "Oui. T\u00e9l\u00e9charger et utiliser Pulsar ne co\u00fbte rien. Les abonnements VIP sont optionnels." : "Yes. Downloading and using Pulsar costs nothing. VIP subscriptions are optional.",
+  a1: FR ? "Oui. T\u00e9l\u00e9charger et utiliser Pulsar ne co\u00fbte rien. Le VIP est un paiement unique optionnel, sans renouvellement automatique." : "Yes. Downloading and using Pulsar costs nothing. VIP is an optional one-time payment, with no auto-renewal.",
   q2: FR ? "Ai-je besoin d\u0027un email pour m\u0027inscrire ?" : "Do I need an email to sign up?",
   a2: FR ? "Non. Choisis juste un pseudo et un mot de passe \u2014 pas d\u0027email, pas de t\u00e9l\u00e9phone, jamais." : "No. Just pick a username and password \u2014 no email, no phone number, ever.",
   q3: FR ? "Qu\u0027est-ce que le $PSR ?" : "What is $PSR?",
-  a3: FR ? "Le $PSR est le token que tu gagnes en collectant dans Pulsar \u2014 via les collectes, le parrainage, le Boost et les mini-jeux." : "$PSR is the token you earn by collecting inside Pulsar \u2014 through sessions, referrals, Boost and mini-games.",
+  a3: FR ? "Le $PSR est le token que tu gagnes en collectant dans Pulsar \u2014 via les collectes, le parrainage, les \u00e9v\u00e9nements al\u00e9atoires et les mini-jeux." : "$PSR is the token you earn by collecting inside Pulsar \u2014 through sessions, referrals, random events and mini-games.",
   q4: FR ? "Comment fonctionne la collecte ?" : "How does collecting work?",
   a4: FR ? "Lance une collecte de 12h d\u0027un tap. Ton solde $PSR grandit automatiquement \u00e0 ton taux jusqu\u0027\u00e0 la fin de la collecte." : "Start a 12h session with one tap. Your $PSR balance grows automatically at your rate until the session ends.",
   q5: FR ? "Qu\u0027est-ce qui d\u00e9termine mon taux ?" : "What determines my rate?",
-  a5: FR ? "Ton taux de base \u2014 fix\u00e9 par le nombre total d\u0027utilisateurs de Pulsar \u2014 plus ton bonus de parrainage, ton boost VIP et ton bonus Boost." : "Your base rate \u2014 set by Pulsar's total user count \u2014 plus your referral bonus, VIP boost and Boost ad bonus.",
+  a5: FR ? "Ton taux de base \u2014 fix\u00e9 par le nombre total d\u0027utilisateurs de Pulsar \u2014 plus ton bonus de parrainage et l\u0027effet d\u0027un \u00e9v\u00e9nement al\u00e9atoire, le cas \u00e9ch\u00e9ant (+5% ou \u221225%)." : "Your base rate \u2014 set by Pulsar\u0027s total user count \u2014 plus your referral bonus and the effect of a random event, if any (+5% or \u221225%).",
   q6: FR ? "Puis-je relancer une collecte imm\u00e9diatement ?" : "Can I start a new session right away?",
   a6: FR ? "Oui. D\u00e8s qu\u0027une collecte se termine, tu peux en relancer une autre imm\u00e9diatement." : "Yes. As soon as one session ends, you can start another immediately.",
-  q7: FR ? "\u00c0 quoi sert le Boost ?" : "What does Boost do?",
-  a7: FR ? "Regarde une pub r\u00e9compens\u00e9e pour +2% de taux pendant 1h. Les VIP obtiennent le m\u00eame boost d\u0027un tap, sans pub." : "Watch a rewarded ad for +2% rate for 1 hour. VIP members get the same boost with a tap, no ad required.",
-  q8: FR ? "Combien de fois puis-je booster ?" : "How many times can I boost?",
-  a8: FR ? "Sans limite \u2014 ench\u00eene autant de boosts que tu veux, tant qu\u0027une collecte est active." : "No cap \u2014 chain as many boosts as you want, back-to-back, as long as a session is active.",
+  q7: FR ? "Que sont les \u00e9v\u00e9nements al\u00e9atoires ?" : "What are random events?",
+  a7: FR ? "Depuis la v1.2.0, chaque collecte peut d\u00e9clencher un \u00e9v\u00e9nement al\u00e9atoire : un Pulsar puissant (+5%) ou une station endommag\u00e9e (\u221225% jusqu\u0027\u00e0 r\u00e9paration). Le boost publicitaire classique n\u0027existe plus." : "Since v1.2.0, each session can trigger one random event: a powerful Pulsar (+5%) or a damaged station (\u221225% until repaired). The classic ad boost no longer exists.",
+  q8: FR ? "Comment r\u00e9parer une station endommag\u00e9e ?" : "How do I fix a damaged station?",
+  a8: FR ? "R\u00e9parer co\u00fbte 1/4 de session. Les VIP ou le visionnage d\u0027une pub donnent une r\u00e9duction. Pour un Pulsar puissant : 2h pour les VIP, 1h pour les autres via une pub, +1h avec une seconde pub." : "Repairing costs 1/4 of a session. VIP members or watching an ad give a discount. For a powerful Pulsar: 2h for VIP, 1h for others via an ad, +1h with a second ad.",
   q9: FR ? "Comment fonctionne le bonus de parrainage ?" : "How does the referral bonus work?",
   a9: FR ? "Tu gagnes +1% de taux pour chaque ami qui collecte au moins une fois toutes les 48h. \u00c7a se met en pause s\u0027il devient inactif, et reprend \u00e0 son retour." : "You get +1% rate for every friend who collects at least once every 48h. It pauses if they go inactive, and resumes when they're back.",
   q10: FR ? "Que re\u00e7oit mon ami ?" : "What does my friend get?",
   a10: FR ? "L\u0027\u00e9quivalent d\u0027une collecte de 12h en PSR, cr\u00e9dit\u00e9 instantan\u00e9ment \u00e0 son inscription avec ton code." : "A free 12h session's worth of PSR, credited instantly when they sign up with your code.",
-  q11: FR ? "Quels sont les niveaux VIP ?" : "What are the VIP tiers?",
-  a11: FR ? "Quatre boosts de taux au choix \u2014 +0%, +5%, +10% ou +15%. Chaque niveau supprime toutes les pubs." : "Four rate boosts to choose from \u2014 +0%, +5%, +10% or +15%. Every tier removes all ads.",
-  q12: FR ? "Quand mon boost VIP s\u0027applique-t-il ?" : "When does my VIP boost apply?",
-  a12: FR ? "Imm\u00e9diatement, d\u00e8s que tu t\u0027abonnes \u2014 pas besoin d\u0027attendre une nouvelle collecte." : "Immediately, the moment you subscribe \u2014 no need to wait for a new session.",
+  q11: FR ? "Comment fonctionne le VIP ?" : "How does VIP work?",
+  a11: FR ? "Le VIP est un paiement unique pour 1 semaine, 1 mois, 3 mois ou 1 an \u2014 sans renouvellement automatique. Les achats se cumulent. Il ne donne pas de bonus de taux, mais supprime la pub de lancement, rend les r\u00e9parations moins ch\u00e8res et r\u00e9duit l\u0027attente des mini-jeux." : "VIP is a one-time payment for 1 week, 1 month, 3 months or 1 year \u2014 no auto-renewal. Purchases stack. It gives no rate bonus, but removes the launch ad, makes repairs cheaper and shortens mini-game waits.",
+  q12: FR ? "Que se passe-t-il \u00e0 la fin de mon VIP ?" : "What happens when my VIP ends?",
+  a12: FR ? "Il s\u0027arr\u00eate simplement \u2014 rien n\u0027est renouvel\u00e9. Tu re\u00e7ois une notification avant l\u0027expiration, et les abonnements existants vont jusqu\u0027\u00e0 leur terme." : "It simply stops \u2014 nothing is renewed. You get a notification before it expires, and existing subscriptions run until their end date.",
   q13: FR ? "Comment fonctionnent les mini-jeux ?" : "How do mini-games work?",
   a13: FR ? "DriftScan est un jeu d\u0027esquive arcade \u2014 capture des pulsars et \u00e9vite les ast\u00e9ro\u00efdes avant que ta jauge de carburant d\u00271 minute ne s\u0027\u00e9puise ou que tu perdes tes 3 vies." : "DriftScan is an arcade dodging game \u2014 capture pulsars and avoid asteroids before your 1-minute fuel gauge empties or you lose all 3 lives.",
   q14: FR ? "Y a-t-il une limite au nombre de parties ?" : "Is there a limit on how often I can play?",
-  a14: FR ? "Oui \u2014 un nombre limit\u00e9 de parties par collecte, avec 5 minutes de cooldown entre deux (1 minute pour les VIP, sans pub)." : "Yes \u2014 a limited number of runs per session, with a 5-minute cooldown between them (1 minute for VIP, no ad needed).",
+  a14: FR ? "Oui \u2014 un nombre limit\u00e9 de parties par collecte, avec une attente entre deux, plus courte pour les VIP." : "Yes \u2014 a limited number of runs per session, with a wait between them that is shorter for VIP members.",
   q15: FR ? "Comment le classement est-il \u00e9tabli ?" : "How is the leaderboard ranked?",
   a15: FR ? "Par solde, parrainages ou total gagn\u00e9 \u2014 top 50 dans chaque cat\u00e9gorie, mis \u00e0 jour \u00e0 la fin de chaque collecte." : "By balance, referrals or total earned \u2014 top 50 in each category, updated at the end of every session.",
   q16: FR ? "Collectez-vous des donn\u00e9es personnelles ?" : "Do you collect personal data?",
