@@ -254,7 +254,7 @@
                   <div class="element-icon" style="background:rgba(153,69,255,0.08);">♦</div>
                   <div>
                     <div class="element-title" style="color:var(--signal);">Cheaper repairs</div>
-                    <div class="element-desc">Repairing a damaged station (random event) costs less for VIP members.</div>
+                    <div class="element-desc">Repair discount goes from 20% to 45% for VIP members.</div>
                   </div>
                 </div>
                 <div class="element" style="background:rgba(0,229,195,0.04);border-color:rgba(0,229,195,0.2);">
@@ -278,7 +278,7 @@
                 <div class="reward-info">
                   <h3>One payment, no commitment</h3>
                   <p>VIP perks apply to every session while your pass is active. There is no permanent rate bonus: your rate comes from your base rate, referrals and random events.</p>
-                  <div class="reward-formula">Earned = Base × (1 + Referral ± Event) × Hours</div>
+                  <div class="reward-formula">Earned = Base × (1 + Referral + Event_Bonus) × (1 − Event_Malus) × Hours</div>
                 </div>
               </div>
             </div>
@@ -304,15 +304,15 @@
   <section class="fade-in">
     <div class="section-label" id="rm-label">Durations</div>
     <h2 id="more-title">Choose your duration</h2>
-    <p id="rm-desc">Four durations, one-time payment. Prices are shown in the app in your local currency.</p>
+    <p id="rm-desc">Four durations, one-time payment, stackable. Pay once via Google Play, nothing renews.</p>
     <div class="pricing-box">
       <h3 id="tbl-title">VIP durations</h3>
       <table>
-        <tr><th id="th-tier">Duration</th><th id="th-1mo">Payment</th><th id="th-3mo">Auto-renewal</th></tr>
-        <tr><td id="row1-a">1 week</td><td class="c-pay">One-time</td><td class="c-ren">None</td></tr>
-        <tr><td id="row2-a">1 month</td><td class="c-pay">One-time</td><td class="c-ren">None</td></tr>
-        <tr><td id="row3-a">3 months</td><td class="c-pay">One-time</td><td class="c-ren">None</td></tr>
-        <tr class="current"><td id="row4-a">1 year</td><td class="c-pay">One-time</td><td class="c-ren">None</td></tr>
+        <tr><th id="th-tier">Duration</th><th id="th-1mo">Price</th><th id="th-3mo">Price / day</th></tr>
+        <tr><td id="row1-a">1 week</td><td class="c-pay">€1.99</td><td class="c-ren">≈ €0.28</td></tr>
+        <tr><td id="row2-a">1 month</td><td class="c-pay">€4.99</td><td class="c-ren">≈ €0.17</td></tr>
+        <tr><td id="row3-a">3 months</td><td class="c-pay">€11.99</td><td class="c-ren">≈ €0.13</td></tr>
+        <tr class="current"><td id="row4-a">1 year</td><td class="c-pay">€39.99</td><td class="c-ren">≈ €0.11</td></tr>
       </table>
     </div>
   </section>
@@ -408,7 +408,7 @@ const T = {
   el1Title: FR ? "Z\u00e9ro pub au lancement" : "No launch ads",
   el1Desc: FR ? "Les collectes d\u00e9marrent sans la pub." : "Sessions start without the ad.",
   el2Title: FR ? "R\u00e9parations moins ch\u00e8res" : "Cheaper repairs",
-  el2Desc: FR ? "R\u00e9parer une station endommag\u00e9e (\u00e9v\u00e9nement al\u00e9atoire) co\u00fbte moins cher pour les VIP." : "Repairing a damaged station (random event) costs less for VIP members.",
+  el2Desc: FR ? "La remise sur la r\u00e9paration passe de 20% \u00e0 45% pour les VIP." : "Repair discount goes from 20% to 45% for VIP members.",
   el3Title: FR ? "Bonus \u00e9nergie 2h, sans pub" : "2h energy bonus, no ad",
   el3Desc: FR ? "Le bonus Pulsar puissant dure 2 heures sans regarder de pub (1 heure pour les autres, via une pub)." : "The powerful Pulsar bonus lasts 2 hours without watching an ad (1 hour for others, via an ad).",
   el4Title: FR ? "Mini-jeux plus rapides" : "Faster mini-games",
@@ -422,11 +422,11 @@ const T = {
   tip4: FR ? "Les abonn\u00e9s existants gardent leur formule jusqu\u0027\u00e0 la fin. Tu re\u00e7ois une notification avant l\u0027expiration." : "Existing subscribers keep their plan until it ends. You get a notification before expiry.",
   rmLabel: FR ? "Dur\u00e9es" : "Durations",
   moreTitle: FR ? "Choisis ta dur\u00e9e" : "Choose your duration",
-  rmDesc: FR ? "Quatre dur\u00e9es, paiement unique. Les prix sont affich\u00e9s dans l\u0027app, dans ta devise." : "Four durations, one-time payment. Prices are shown in the app in your local currency.",
+  rmDesc: FR ? "Quatre dur\u00e9es, paiement unique, cumulables. Tu paies une fois via Google Play, rien ne se renouvelle." : "Four durations, one-time payment, stackable. Pay once via Google Play, nothing renews.",
   tblTitle: FR ? "Dur\u00e9es VIP" : "VIP durations",
   thTier: FR ? "Dur\u00e9e" : "Duration",
-  th1mo: FR ? "Paiement" : "Payment",
-  th3mo: FR ? "Renouvellement auto" : "Auto-renewal",
+  th1mo: FR ? "Prix" : "Price",
+  th3mo: FR ? "Prix / jour" : "Price / day",
   th12mo_unused: FR ? "12 mois" : "12 months",
   row1a: FR ? "1 semaine" : "1 week",
   row2a: FR ? "1 mois" : "1 month",
@@ -493,8 +493,9 @@ if (FR) {
   document.getElementById('row2-a').textContent = T.row2a;
   document.getElementById('row3-a').textContent = T.row3a;
   document.getElementById('row4-a').textContent = T.row4a;
-  document.querySelectorAll('.c-pay').forEach(function(e){e.textContent = FR ? 'Unique' : 'One-time';});
-  document.querySelectorAll('.c-ren').forEach(function(e){e.textContent = FR ? 'Aucun' : 'None';});
+  var _p=['1,99 \u20ac','4,99 \u20ac','11,99 \u20ac','39,99 \u20ac'],_d=['\u2248 0,28 \u20ac','\u2248 0,17 \u20ac','\u2248 0,13 \u20ac','\u2248 0,11 \u20ac'];
+  document.querySelectorAll('.c-pay').forEach(function(e,i){e.textContent=_p[i];});
+  document.querySelectorAll('.c-ren').forEach(function(e,i){e.textContent=_d[i];});
   document.getElementById('internal-title').textContent = T.internalTitle;
   document.getElementById('link1-label').textContent = T.link1Label;
   document.getElementById('link1-title').textContent = T.link1Title;
