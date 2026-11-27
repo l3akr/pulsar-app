@@ -1,10 +1,16 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.pulsar.mine",
-    "sha256_cert_fingerprints": [
-      "B0:BA:5C:BE:58:3C:DB:D3:38:10:1B:56:56:EA:13:14:06:9D:8F:94:DB:1E:B0:94:2F:0F:A3:A9:FA:0C:0F:2E"
-    ]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pulsar.mine",
+      "sha256_cert_fingerprints": [
+        "B0:BA:5C:BE:58:3C:DB:D3:38:10:1B:56:56:EA:13:14:06:9D:8F:94:DB:1E:B0:94:2F:0F:A3:A9:FA:0C:0F:2E",
+        "B7:5C:AC:DD:B7:A0:E4:66:47:0F:CB:26:2E:3A:FA:62:A0:4D:A8:0E:2D:0F:1F:EA:24:92:79:6D:65:4E:E7:AC"
+      ]
+    }
   }
-}]
+]
